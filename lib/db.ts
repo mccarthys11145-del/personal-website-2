@@ -13,7 +13,10 @@ if (typeof window === 'undefined') {
     if (process.env.NODE_ENV !== 'production') {
       globalForPrisma.prisma = prisma
     }
-  } catch {
+  } catch (err: any) {
+    if (err?.code !== 'MODULE_NOT_FOUND') {
+      throw err
+    }
     prisma = undefined
   }
 }
