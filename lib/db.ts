@@ -1,9 +1,21 @@
-import { PrismaClient } from '@prisma/client'
+// Prisma is optional during build to avoid Next.js compilation errors on
+// environments where `@prisma/client` isn't installed. We attempt to require
+// it at runtime and fall back to `undefined` when the package is missing.
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined
+let prisma: any
+
+if (typeof window === 'undefined') {
+  try {
+    const { PrismaClient } = require('@prisma/client')
+    const globalForPrisma = globalThis as { prisma?: any }
+    prisma = globalForPrisma.prisma ?? new PrismaClient()
+
+    if (process.env.NODE_ENV !== 'production') {
+      globalForPrisma.prisma = prisma
+    }
+  } catch {
+    prisma = undefined
+  }
 }
 
-export const prisma = globalForPrisma.prisma ?? new PrismaClient()
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+export { prisma }
