@@ -168,6 +168,76 @@ const blogPosts = {
     category: "Professional Development",
     date: "2023-12-11",
     readTime: "9 min read"
+  },
+  'understanding-depression-anxiety': {
+    title: "Understanding Depression and Anxiety: A Practical Guide for Patients and Families",
+    excerpt: "Clear signs to watch for, what treatment usually looks like, and how families can help.",
+    content: `
+      <p><strong>If you’re in crisis right now:</strong> Call or text <strong>988</strong> (Suicide & Crisis Lifeline) or go to the nearest emergency room. Support is free, confidential, and available 24/7.</p>
+
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>Depression and anxiety are common and treatable. Screening helps catch them early. [1–3]</li>
+        <li>Effective care often includes <strong>talk therapy (like CBT)</strong>, <strong>medication</strong>, or <strong>both</strong>, matched to symptom severity and patient preference. [1,4]</li>
+        <li>If you’re worried about safety (yours or a loved one’s), reach out immediately to emergency services or <strong>988</strong>. [5–7]</li>
+      </ul>
+
+      <h2>What these conditions are</h2>
+      <p><strong>Depression</strong> affects mood, energy, sleep, appetite, and concentration. It’s more than “feeling down.”<br />
+      <strong>Anxiety disorders</strong> involve persistent, excessive worry or fear that interferes with daily life.</p>
+      <p>These conditions are common worldwide and can impact physical health if untreated. The good news: there are several proven options to help most people feel better. [2,3]</p>
+
+      <h2>Common signs</h2>
+      <ul>
+        <li>Ongoing low mood, loss of interest, fatigue, sleep changes, appetite changes, difficulty concentrating, feelings of guilt or worthlessness (depression).</li>
+        <li>Excessive worry that’s hard to control, restlessness, muscle tension, irritability, poor sleep, panic attacks (anxiety).</li>
+        <li>Thoughts of self‑harm or suicide need same‑day attention. Call <strong>988</strong> or emergency services. [5–7]</li>
+      </ul>
+
+      <h2>Screening and first steps</h2>
+      <p>Primary care and mental health clinicians use brief questionnaires and focused interviews to screen for depression and anxiety. National task force guidance supports <strong>routine screening for depression in adults</strong> and <strong>screening for anxiety in adults under 65</strong> when systems are in place to ensure follow‑up. [3,8,9]</p>
+
+      <h2>What treatment usually looks like</h2>
+      <p>Your plan should match <strong>symptom severity</strong>, <strong>your preferences</strong>, and <strong>any other health conditions</strong>.</p>
+      <ul>
+        <li><strong>Psychotherapy:</strong> Cognitive behavioral therapy (CBT) and related approaches help many people reduce symptoms and prevent relapse. [1,4]</li>
+        <li><strong>Medication:</strong> Antidepressants (e.g., SSRIs/SNRIs) can reduce depression and several anxiety disorders. Medication choice considers symptoms, side effects, interactions, and goals. [1,4]</li>
+        <li><strong>Combined care:</strong> For moderate to severe depression, combining <strong>therapy + medication</strong> can be more effective than either alone. [1,4]</li>
+        <li><strong>Follow‑up and relapse prevention:</strong> Good care includes check‑ins to adjust the plan, plus skills for maintaining gains. [1,4]</li>
+      </ul>
+
+      <h2>How families can help</h2>
+      <ul>
+        <li>Encourage evaluation and <strong>stick with treatment long enough</strong> to see results.</li>
+        <li>Offer practical support: rides, reminders, help with daily tasks during tough weeks.</li>
+        <li>If safety is a concern, act now: call <strong>988</strong> or emergency services and stay with the person until help is connected. [5–7]</li>
+      </ul>
+
+      <h2>When to seek urgent help</h2>
+      <ul>
+        <li>You or a loved one have <strong>active thoughts of self‑harm</strong>, plans, or intent.</li>
+        <li>Sudden, severe worsening of mood or anxiety.</li>
+        <li>New confusion or concerning behavior.</li>
+      </ul>
+      <p><strong>Call 988</strong> (voice/text) or use chat at 988lifeline.org. [5–7]</p>
+
+      <hr />
+      <h2>References</h2>
+      <ol>
+        <li>NICE. <em>Depression in adults: treatment and management (NG222).</em> 2022 (reviewed 2024). https://www.nice.org.uk/guidance/ng222</li>
+        <li>WHO. <em>Depressive disorder (depression) fact sheet.</em> 2023. https://www.who.int/news-room/fact-sheets/detail/depression</li>
+        <li>USPSTF. <em>Screening for Depression and Suicide Risk in Adults.</em> Final statement, 2023. https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-depression-suicide-risk-adults</li>
+        <li>NICE. <em>NG222 recommendations (treatment by severity).</em> 2022. https://www.nice.org.uk/guidance/ng222/chapter/Recommendations</li>
+        <li>SAMHSA. <em>988 Suicide & Crisis Lifeline.</em> https://www.samhsa.gov/mental-health/988</li>
+        <li>988 Lifeline. <em>What to expect when you call, text, or chat.</em> https://988lifeline.org/get-help/what-to-expect/</li>
+        <li>988 Lifeline. <em>Home page and access methods.</em> https://988lifeline.org/</li>
+        <li>USPSTF. <em>Anxiety Disorders in Adults: Screening.</em> Final statement, 2023. https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/anxiety-adults-screening</li>
+        <li>NIMH. <em>Depression: overview and resources.</em> https://www.nimh.nih.gov/health/topics/depression</li>
+      </ol>
+    `,
+    category: "Mental Health",
+    date: "2025-08-13",
+    readTime: "6 min read"
   }
 }
 
