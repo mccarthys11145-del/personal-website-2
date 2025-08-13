@@ -24,6 +24,15 @@ const blogPosts = [
     featured: true
   },
   {
+    id: 7,
+    title: "Understanding Depression and Anxiety: A Practical Guide for Patients and Families",
+    excerpt: "Clear signs to watch for, what treatment usually looks like, and how families can help.",
+    category: "Mental Health",
+    date: "2025-08-13",
+    readTime: "6 min read",
+    slug: "understanding-depression-anxiety"
+  },
+  {
     id: 2,
     title: "Breaking Down Barriers to Psychiatric Care",
     excerpt: "Addressing stigma and accessibility challenges in mental healthcare, and how we can create more inclusive treatment environments.",
