@@ -68,7 +68,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400 text-sm">Lehigh Valley, PA</span>
+                <span className="text-gray-400 text-sm">6081 Hamilton Blvd, Suite 600, Allentown, PA 18106</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-blue-400" />
+                <span className="text-gray-400 text-sm">(484) 357‑1916</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-blue-400" />
