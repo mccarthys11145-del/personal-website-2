@@ -7,7 +7,9 @@ import PatientTestimonials from '@/components/patient-testimonials'
 import CallToAction from '@/components/call-to-action'
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: {
+    absolute: 'tephen McCarthy, PA-C | Psychiatry & Addiction Medicine | Lehigh Valley',
+  },
   description: 'Stephen McCarthy PA-C - Experienced physician assistant and clinical director at Lehigh Valley Wellness, specializing in psychiatry, mental health, and comprehensive patient care.',
 }
 

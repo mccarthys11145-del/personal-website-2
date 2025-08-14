@@ -14,7 +14,7 @@ const patientTestimonials = [
   {
     id: 1,
     name: "Sarah M.",
-    location: "Lehigh Valley, PA",
+    location: "Allentown, PA",
     rating: 5,
     testimonial: "Stephen McCarthy PA-C provided exceptional care during a very difficult time in my life. His compassionate approach and thorough understanding of mental health issues made all the difference in my recovery journey.",
     category: "Patient Care"

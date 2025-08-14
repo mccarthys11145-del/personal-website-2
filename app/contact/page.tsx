@@ -112,7 +112,9 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold mb-2">Practice Location</h3>
                 <p className="text-gray-600 text-sm">
                   Lehigh Valley Wellness<br />
-                  Lehigh Valley, PA
+                  6081 Hamilton Blvd, Suite 600<br />
+                  Allentown, PA 18106<br />
+                  (484) 357‑1916
                 </p>
               </CardContent>
             </Card>
@@ -282,7 +284,11 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <MapPin className="h-4 w-4 text-gray-400" />
-                      <span className="text-gray-600">Lehigh Valley, Pennsylvania</span>
+                      <span className="text-gray-600">6081 Hamilton Blvd, Suite 600, Allentown, PA 18106</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-gray-400" />
+                      <span className="text-gray-600">(484) 357‑1916</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Globe className="h-4 w-4 text-gray-400" />

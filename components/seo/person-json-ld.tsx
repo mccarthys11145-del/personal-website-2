@@ -7,6 +7,7 @@ export function PersonJsonLd() {
     "jobTitle": "Physician Assistant",
     "description": "Experienced physician assistant and clinical director specializing in psychiatry, mental health, and comprehensive patient care in the Lehigh Valley region.",
     "url": "https://stephenmccarthypa.com",
+    "telephone": "(484) 357‑1916",
     "sameAs": [
       "https://www.linkedin.com/in/stephenmccarthypa",
       "https://twitter.com/stephenmccarthypa"
@@ -16,10 +17,13 @@ export function PersonJsonLd() {
       "name": "Lehigh Valley Wellness",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Lehigh Valley",
+        "streetAddress": "6081 Hamilton Blvd, Suite 600",
+        "addressLocality": "Allentown",
         "addressRegion": "PA",
+        "postalCode": "18106",
         "addressCountry": "US"
-      }
+      },
+      "telephone": "(484) 357‑1916"
     },
     "hasCredential": [
       {
