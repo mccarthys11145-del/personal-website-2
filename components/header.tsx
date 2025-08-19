@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Community', href: '/community-involvement' },
   { name: 'Blog', href: '/blog' },
   { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Media', href: '/media-press' },
+  { name: 'Profiles & Media', href: '/media-press' },
   { name: 'Contact', href: '/contact' },
 ]
 

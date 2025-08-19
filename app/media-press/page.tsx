@@ -7,9 +7,63 @@ import { Button } from '@/components/ui/button'
 import { Calendar, ExternalLink, Award, Newspaper, Star, Trophy } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Media & Press',
-  description: 'Read about Stephen McCarthy PA-C\'s professional recognition, media coverage, and positive contributions to healthcare in the Lehigh Valley region.',
+  title: 'Profiles & Media',
+  description:
+    "Explore Stephen McCarthy PA-C's professional profiles and media coverage highlighting contributions to healthcare in the Lehigh Valley region.",
 }
+
+const professionalProfiles = [
+  {
+    id: 1,
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/stephenmccarthypa',
+  },
+  {
+    id: 2,
+    title: 'About.me',
+    url: 'https://about.me/stephen_mccarthy_pa',
+  },
+  {
+    id: 3,
+    title: 'Doximity',
+    url: 'https://www.doximity.com/profiles/4f59e131-2854-44ed-aed6-f5f7924c1284/edit',
+  },
+  {
+    id: 4,
+    title: 'Healthgrades',
+    url: 'https://www.healthgrades.com/providers/stephen-mccarthy-xylmbxj',
+  },
+  {
+    id: 5,
+    title: 'WebMD',
+    url: 'https://doctor.webmd.com/doctor/stephen-mccarthy-b2739995-fe66-4603-b61e-f00b7c1dc991-overview',
+  },
+  {
+    id: 6,
+    title: 'US News',
+    url: 'https://health.usnews.com/physician-assistants/stephen-mccarthy-2025298',
+  },
+  {
+    id: 7,
+    title: 'Doximity (Public)',
+    url: 'https://www.doximity.com/pub/stephen-mccarthy-pa',
+  },
+  {
+    id: 8,
+    title: 'Healthline Care Directory',
+    url: 'https://care.healthline.com/find-care/provider/stephen-mccarthy-1912308743',
+  },
+  {
+    id: 9,
+    title: 'Medical News Today Directory',
+    url: 'https://connect.medicalnewstoday.com/provider/stephen-mccarthy-1912308743',
+  },
+  {
+    id: 10,
+    title: 'MapQuest (Lehigh Valley Wellness)',
+    url: 'https://www.mapquest.com/us/pennsylvania/lehigh-valley-wellness-stephen-mccarthy-pa-c-516952565',
+  },
+]
 
 const pressReleases = [
   {
@@ -93,7 +147,7 @@ const mediaHighlights = [
   }
 ]
 
-export default function MediaPressPage() {
+export default function ProfilesMediaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
@@ -102,11 +156,49 @@ export default function MediaPressPage() {
         <div className="container mx-auto px-4 relative z-10 max-w-6xl">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Media & Press Coverage
+              Profiles & Media
             </h1>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Professional recognition, media coverage, and positive contributions to healthcare in the Lehigh Valley region
+              Professional profiles, media coverage, and contributions to healthcare in the Lehigh Valley region
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Profiles */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <ExternalLink className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Professional Profiles
+            </h2>
+            <p className="text-xl text-gray-600">
+              Connect with Stephen across professional networks and directories
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {professionalProfiles.map((profile) => (
+              <Card key={profile.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle>{profile.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Button asChild variant="outline" className="w-full">
+                    <a
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center"
+                    >
+                      Visit Profile
+                      <ExternalLink className="h-4 w-4 ml-2" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
