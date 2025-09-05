@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 }
 
 export default function ProfessionalJourneyPage() {
+
+  const pdfPath = '/Medical%20Weight%20Loss%20%E2%80%94%20Patient%20Guide.pdf'
   const pdfPath = '/resources/Medical%20Weight%20Loss%20%E2%80%94%20Patient%20Guide.pdf'
   const pdfUrl = `https://stephenmccarthypa.com${pdfPath}`
 
@@ -328,11 +330,16 @@ export default function ProfessionalJourneyPage() {
                       • Concise, evidence-based overview of how medical weight loss works in our Allentown practice
                     </li>
                     <li>• What to expect at your first visit</li>
+                    <li>• Downloadable patient guide</li>
+                  </ul>
+                  </CardContent>
+                </Card>
+              </Link>
                   </ul>
                 </CardContent>
               </Card>
             </Link>
-          </div>
+         </div>
         </div>
       </section>
 
