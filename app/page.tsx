@@ -8,9 +8,11 @@ import CallToAction from '@/components/call-to-action'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'tephen McCarthy, PA-C | Psychiatry & Addiction Medicine | Lehigh Valley',
+    absolute: 'Stephen McCarthy, PA-C | Psychiatry & Addiction Medicine | Allentown',
   },
-  description: 'Stephen McCarthy PA-C - Experienced physician assistant and clinical director at Lehigh Valley Wellness, specializing in psychiatry, mental health, and comprehensive patient care.',
+  description:
+    'Stephen McCarthy PA-C - Experienced physician assistant and clinical director at Lehigh Valley Wellness, specializing in psychiatry, mental health, and comprehensive patient care.',
+  keywords: ['PA', 'PA-C', 'Allentown'],
 }
 
 export default function HomePage() {
