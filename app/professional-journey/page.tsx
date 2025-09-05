@@ -13,7 +13,9 @@ export const metadata: Metadata = {
 }
 
 export default function ProfessionalJourneyPage() {
+
   const pdfPath = '/Medical%20Weight%20Loss%20%E2%80%94%20Patient%20Guide.pdf'
+  const pdfPath = '/resources/Medical%20Weight%20Loss%20%E2%80%94%20Patient%20Guide.pdf'
   const pdfUrl = `https://stephenmccarthypa.com${pdfPath}`
 
   return (
@@ -333,7 +335,11 @@ export default function ProfessionalJourneyPage() {
                   </CardContent>
                 </Card>
               </Link>
-          </div>
+                  </ul>
+                </CardContent>
+              </Card>
+            </Link>
+         </div>
         </div>
       </section>
 
