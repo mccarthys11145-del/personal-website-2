@@ -1,6 +1,8 @@
 
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
+import Script from 'next/script'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { GraduationCap, Award, Briefcase, MapPin, Calendar, Star } from 'lucide-react'
@@ -11,8 +13,29 @@ export const metadata: Metadata = {
 }
 
 export default function ProfessionalJourneyPage() {
+  const pdfPath = '/Medical%20Weight%20Loss%20%E2%80%94%20Patient%20Guide.pdf'
+  const pdfUrl = `https://stephenmccarthypa.com${pdfPath}`
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <Script
+        id="medical-weight-loss-guide"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Professional Journey',
+            hasPart: {
+              '@type': 'MediaObject',
+              name: 'Medical Weight Loss — Patient Guide',
+              encodingFormat: 'application/pdf',
+              url: pdfUrl,
+            },
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-emerald-600 to-emerald-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -296,17 +319,20 @@ export default function ProfessionalJourneyPage() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-3">Insurance & Accessibility</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Major insurance acceptance</li>
-                  <li>• Affordable care options</li>
-                  <li>• Community accessibility</li>
-                  <li>• Patient-centered billing</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <Link href={pdfPath} target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold mb-3">Medical Weight Loss</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>
+                      • Concise, evidence-based overview of how medical weight loss works in our Allentown practice
+                    </li>
+                    <li>• What to expect at your first visit</li>
+                    <li>• Downloadable patient guide</li>
+                  </ul>
+                  </CardContent>
+                </Card>
+              </Link>
           </div>
         </div>
       </section>
