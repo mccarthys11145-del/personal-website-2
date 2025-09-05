@@ -43,8 +43,7 @@ export default function Hero() {
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Stephen McCarthy
-                <span className="block text-blue-600">PA-C</span>
+                Stephen McCarthy, PA-C | Psychiatry & Addiction Medicine | Allentown
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
                 Experienced Physician Assistant & Clinical Director specializing in{' '}
