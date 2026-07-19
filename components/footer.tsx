@@ -1,100 +1,39 @@
-
-import Link from 'next/link'
-import { Stethoscope, MapPin, Phone, Mail } from 'lucide-react'
+import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 max-w-6xl py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <Link href="/" className="flex items-center space-x-3 mb-4">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Stethoscope className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <div className="font-bold text-lg">Stephen McCarthy</div>
-                <div className="text-sm text-blue-400">PA-C</div>
-              </div>
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Dedicated to providing compassionate, comprehensive healthcare and mental wellness services to the Lehigh Valley community.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link href="/professional-journey" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Professional Journey
-                </Link>
-              </li>
-              <li>
-                <Link href="/testimonials" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Expertise</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400 text-sm">General Psychiatry</li>
-              <li className="text-gray-400 text-sm">Child/Adolescent Care</li>
-              <li className="text-gray-400 text-sm">Geriatric Psychiatry</li>
-              <li className="text-gray-400 text-sm">Addiction Medicine</li>
-              <li className="text-gray-400 text-sm">Telehealth Services</li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Practice Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400 text-sm">6081 Hamilton Blvd, Suite 600, Allentown, PA 18106</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400 text-sm">(484) 357‑1916</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400 text-sm">Professional Inquiries</span>
-              </div>
-              <div className="text-gray-400 text-sm">
-                <p>In-Person & Telehealth</p>
-                <p>Evening Hours Available</p>
-              </div>
-            </div>
-          </div>
+    <footer className="site-footer">
+      <div className="shell footer-grid">
+        <div>
+          <div className="footer-brand">Stephen McCarthy</div>
+          <p className="footer-summary">
+            A source based professional profile and writing archive focused on psychiatric language,
+            clinical reasoning, and the difference between naming a pattern and explaining it.
+          </p>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Stephen McCarthy PA-C. Professional healthcare services.
-          </div>
-          <div className="mt-4 md:mt-0 text-gray-400 text-sm">
-            <span>Lehigh Valley Wellness • Pennsylvania</span>
-          </div>
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/professional-record">Professional record</Link></li>
+            <li><Link href="/writing">Writing</Link></li>
+            <li><Link href="/profiles-and-sources">Profiles and sources</Link></li>
+          </ul>
         </div>
+
+        <div>
+          <h2>Practice information</h2>
+          <p>Lehigh Valley Wellness</p>
+          <p>6081 Hamilton Boulevard, Suite 600</p>
+          <p>Allentown, Pennsylvania 18106</p>
+          <p><a href="tel:+14843571916">484 357 1916</a></p>
+        </div>
+      </div>
+
+      <div className="shell footer-bottom">
+        <p>© {new Date().getFullYear()} Stephen McCarthy. Last factual review July 19, 2026.</p>
+        <p>This personal site does not provide medical advice or collect medical information.</p>
       </div>
     </footer>
   )

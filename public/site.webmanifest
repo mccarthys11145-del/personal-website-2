@@ -1,0 +1,21 @@
+{
+  "name": "Stephen McCarthy",
+  "short_name": "Stephen McCarthy",
+  "description": "Professional profile and writing by Stephen McCarthy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#12202b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
