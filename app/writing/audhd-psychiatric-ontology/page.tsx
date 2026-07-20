@@ -333,7 +333,7 @@ export default function AudhdOntologyPage() {
 
             <div className="article-footer-nav">
               <Link className="button secondary" href="/writing">Back to writing</Link>
-              <Link className="button primary" href="/professional-record">Professional record</Link>
+              <Link className="button primary" href="/professional-record">Licensure</Link>
             </div>
           </div>
         </div>

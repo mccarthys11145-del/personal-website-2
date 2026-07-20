@@ -13,8 +13,7 @@
 ### Added
 
 * Conservative biography and role description
-* Dated professional record with authoritative source links
-* Neutral context for official regulatory and court records
+* Licensure statement for Pennsylvania and Utah
 * Profiles and sources index
 * Privacy safe contact page
 * New essay on AuDHD, psychiatric ontology, reification, and circular explanation

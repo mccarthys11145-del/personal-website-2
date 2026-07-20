@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld"
 export const metadata: Metadata = {
   title: { absolute: "Stephen McCarthy | Physician Assistant and Mental Health Writer" },
   description:
-    "Stephen McCarthy is a physician assistant in Allentown, Pennsylvania, with a clinical background in psychiatric care and addiction treatment. Read his professional record and writing on psychiatric ontology.",
+    "Stephen McCarthy is a physician assistant in Allentown, Pennsylvania, with a clinical background in psychiatric care and addiction treatment. Read his writing on psychiatric ontology.",
   alternates: { canonical: "/" },
 }
 
@@ -33,20 +33,16 @@ export default function HomePage() {
             <h1>Clinical experience. Clear language. Claims that can be checked.</h1>
             <p className="hero-lead">
               Stephen McCarthy is a physician assistant with a clinical background in psychiatric care,
-              addiction treatment, and inpatient and outpatient settings. This site separates verified
-              professional facts from commentary and shows the source trail for time sensitive claims.
+              addiction treatment, and inpatient and outpatient settings. This site shares his writing on psychiatric language and clinical reasoning.
             </p>
             <div className="button-row">
               <Link className="button primary" href="/writing/audhd-psychiatric-ontology">
                 Read the latest essay
               </Link>
               <Link className="button secondary" href="/professional-record">
-                View professional record
+                Licensure
               </Link>
             </div>
-            <p className="review-note">
-              Factual review completed July 19, 2026. License status can change and should be checked at the source.
-            </p>
           </div>
 
           <div className="portrait-panel">
@@ -84,10 +80,8 @@ export default function HomePage() {
             </article>
             <article>
               <span className="fact-number">02</span>
-              <h3>Dated license status</h3>
-              <p>
-                Pennsylvania and Utah license status is reported with the July 2026 lookup date and authority links.
-              </p>
+              <h3>Licensure</h3>
+              <p>Licensed in Pennsylvania and Utah.</p>
             </article>
             <article>
               <span className="fact-number">03</span>

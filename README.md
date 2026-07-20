@@ -4,7 +4,7 @@ This repository contains the consolidated production site for `www.stephenmccart
 
 ## Editorial standard
 
-The site separates stable identity facts, time sensitive professional facts, and commentary. Current license claims include a review date and a link to the responsible authority. It does not publish unverified awards, testimonials, patient counts, ratings, certification claims, accepting patient claims, insurance claims, or prescribing claims.
+The site provides a concise professional profile and writing archive.
 
 ## Privacy and contact design
 

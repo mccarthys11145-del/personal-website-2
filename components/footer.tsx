@@ -16,7 +16,7 @@ export default function Footer() {
           <h2>Explore</h2>
           <ul>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="/professional-record">Professional record</Link></li>
+            <li><Link href="/professional-record">Licensure</Link></li>
             <li><Link href="/writing">Writing</Link></li>
             <li><Link href="/profiles-and-sources">Profiles and sources</Link></li>
           </ul>
@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
 
       <div className="shell footer-bottom">
-        <p>© {new Date().getFullYear()} Stephen McCarthy. Last factual review July 19, 2026.</p>
+        <p>© {new Date().getFullYear()} Stephen McCarthy.</p>
         <p>This personal site does not provide medical advice or collect medical information.</p>
       </div>
     </footer>
