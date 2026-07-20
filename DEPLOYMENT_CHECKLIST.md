@@ -7,7 +7,7 @@
 5. Confirm that no environment variable or database is required.
 6. Assign `www.stephenmccarthypa.com` only after the production deployment reaches Ready.
 7. Keep `stephenmccarthypa.com` redirected permanently to the `www` hostname.
-8. Verify the homepage, article, professional record, profiles and sources, contact page, sitemap, robots file, RSS feed, and social image on production.
+8. Verify the homepage, article, licensure page, profiles and sources, contact page, sitemap, robots file, RSS feed, and social image on production.
 9. Inspect canonical tags and structured data on the live domain.
 10. Submit the final sitemap in Google Search Console and Bing Webmaster Tools.
 11. Record the deployed commit, Vercel deployment identifier, and deployment date.

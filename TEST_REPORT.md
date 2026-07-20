@@ -21,7 +21,7 @@ July 19, 2026 consolidation release
 
 ## Visual checks
 
-Desktop and mobile rendering were tested with Chromium at 1440 by 1000 and 390 by 844. The home page, article, professional record, and mobile navigation showed no horizontal overflow, page errors, or console errors.
+Desktop and mobile rendering were tested with Chromium at 1440 by 1000 and 390 by 844. The home page, article, licensure page, and mobile navigation showed no horizontal overflow, page errors, or console errors.
 
 ## Dependency note
 

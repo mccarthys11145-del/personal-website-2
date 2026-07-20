@@ -8,9 +8,9 @@ The release:
 
 1. Removes unsupported awards, ratings, testimonials, patient totals, media claims, certification claims, service promises, availability claims, insurance claims, telehealth claims, and prescribing claims.
 2. Uses the role description physician assistant and does not use the title doctor.
-3. Presents time sensitive license information with a July 2026 review date and links to the responsible authorities.
+3. States that Stephen McCarthy is licensed in Pennsylvania and Utah.
 4. Uses `https://lehighwellness.org/` as the sole practice domain.
-5. Adds a professional record that distinguishes present licensing facts from historical regulatory and court records.
+5. Adds a concise licensure page.
 6. Removes the public message form, contact API, Prisma path, and any mechanism that could collect medical information.
 7. Adds a privacy safe contact page that routes clinical matters to the practice.
 8. Adds controlled profile and authoritative source pages.

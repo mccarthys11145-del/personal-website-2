@@ -48,13 +48,7 @@ export default function AboutPage() {
               and what they cannot explain without independent causal evidence. The central concern is precision, not denial.
               Symptoms, distress, and impairment can be real even when the ontology of a diagnostic category remains unsettled.
             </p>
-            <p>
-              This site uses the role description “physician assistant.” It does not use the title “doctor,” and it does not infer
-              current certification, employment, specialty credentials, federal registration, or prescribing authority from an NPI or directory listing.
-            </p>
-            <Link className="text-link" href="/professional-record">
-              Review the dated professional record <span aria-hidden="true">→</span>
-            </Link>
+            <p>Stephen McCarthy is licensed in Pennsylvania and Utah.</p>
           </div>
         </div>
       </section>
@@ -74,11 +68,9 @@ export default function AboutPage() {
               </p>
             </article>
             <article className="plain-card">
-              <span className="card-kicker">Time sensitive facts</span>
-              <h3>Status with a date</h3>
-              <p>
-                License and practice information includes a review date because a status without a date can become stale camouflage.
-              </p>
+              <span className="card-kicker">Licensure</span>
+              <h3>Pennsylvania and Utah</h3>
+              <p>Licensed in Pennsylvania and Utah.</p>
             </article>
             <article className="plain-card">
               <span className="card-kicker">Commentary</span>
