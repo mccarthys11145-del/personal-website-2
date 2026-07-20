@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { createPageMetadata } from "@/lib/site-metadata"
@@ -26,29 +27,39 @@ export default function WritingPage() {
       <section className="section-pad">
         <div className="shell writing-list">
           <article className="article-card featured-article-card">
-            <div className="article-meta">
-              <span>Psychiatric ontology</span>
-              <time dateTime="2026-07-19">July 19, 2026</time>
-              <span>14 minute read</span>
-            </div>
-            <h2>
-              <Link href="/writing/audhd-psychiatric-ontology">
-                AuDHD, psychiatric ontology, and the difference between naming and explaining
+            <Image
+              className="article-card-graphic"
+              src="/evidence-map.svg"
+              alt="Diagram connecting observed facts, source records, classification, and independent evidence to a clinical question"
+              width={960}
+              height={620}
+              sizes="(max-width: 860px) 100vw, 42vw"
+            />
+            <div className="article-card-content">
+              <div className="article-meta">
+                <span>Psychiatric ontology</span>
+                <time dateTime="2026-07-19">July 19, 2026</time>
+                <span>14 minute read</span>
+              </div>
+              <h2>
+                <Link href="/writing/audhd-psychiatric-ontology">
+                  AuDHD, psychiatric ontology, and the difference between naming and explaining
+                </Link>
+              </h2>
+              <p>
+                AuDHD can be useful shorthand for the co occurrence of autism and ADHD. It does not, by itself, establish a third disease entity or a causal mechanism.
+                The article develops a broader argument: a diagnosis may classify a symptom pattern, but the label alone cannot explain the symptoms used to create it.
+              </p>
+              <div className="tag-row" aria-label="Topics">
+                <span>AuDHD</span>
+                <span>Diagnosis</span>
+                <span>Reification</span>
+                <span>Clinical reasoning</span>
+              </div>
+              <Link className="text-link" href="/writing/audhd-psychiatric-ontology">
+                Read the essay <span aria-hidden="true">→</span>
               </Link>
-            </h2>
-            <p>
-              AuDHD can be useful shorthand for the co occurrence of autism and ADHD. It does not, by itself, establish a third disease entity or a causal mechanism.
-              The article develops a broader argument: a diagnosis may classify a symptom pattern, but the label alone cannot explain the symptoms used to create it.
-            </p>
-            <div className="tag-row" aria-label="Topics">
-              <span>AuDHD</span>
-              <span>Diagnosis</span>
-              <span>Reification</span>
-              <span>Clinical reasoning</span>
             </div>
-            <Link className="text-link" href="/writing/audhd-psychiatric-ontology">
-              Read the essay <span aria-hidden="true">→</span>
-            </Link>
           </article>
         </div>
       </section>

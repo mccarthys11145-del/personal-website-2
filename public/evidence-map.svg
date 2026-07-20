@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence map</title>
+  <desc id="desc">An abstract diagram of source notes connected to a central clinical question.</desc>
+  <rect width="960" height="620" rx="42" fill="#edf0e9"/>
+  <path d="M0 482c173-101 282-12 414-92 151-91 314-69 546-181v411H0z" fill="#d6e2d3"/>
+  <g stroke="#6f826d" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M231 189 456 294M728 190 504 294M237 462 455 345M730 452 506 344"/>
+  </g>
+  <g fill="#fff" stroke="#6f826d" stroke-width="3">
+    <rect x="121" y="124" width="220" height="130" rx="20"/>
+    <rect x="618" y="124" width="220" height="130" rx="20"/>
+    <rect x="121" y="397" width="220" height="130" rx="20"/>
+    <rect x="618" y="397" width="220" height="130" rx="20"/>
+    <circle cx="480" cy="320" r="78" fill="#12202b" stroke="#12202b"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="231" y="174" fill="#344550" font-size="19" font-weight="700">Observed facts</text>
+    <text x="231" y="209" fill="#65727a" font-size="16">timing · context · impact</text>
+    <text x="728" y="174" fill="#344550" font-size="19" font-weight="700">Source records</text>
+    <text x="728" y="209" fill="#65727a" font-size="16">studies · notes · standards</text>
+    <text x="231" y="447" fill="#344550" font-size="19" font-weight="700">Classification</text>
+    <text x="231" y="482" fill="#65727a" font-size="16">useful category?</text>
+    <text x="728" y="447" fill="#344550" font-size="19" font-weight="700">Independent evidence</text>
+    <text x="728" y="482" fill="#65727a" font-size="16">supports a mechanism?</text>
+    <text x="480" y="308" fill="#f5f1e8" font-size="19" font-weight="700">Clinical</text>
+    <text x="480" y="335" fill="#f5f1e8" font-size="19" font-weight="700">question</text>
+  </g>
+</svg>
