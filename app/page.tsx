@@ -113,6 +113,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-pad reasoning-graphic-section" aria-labelledby="reasoning-graphic-title">
+        <div className="shell reasoning-graphic-grid">
+          <div className="reasoning-graphic-copy">
+            <p className="eyebrow">A practical visual guide</p>
+            <h2 id="reasoning-graphic-title">Three jobs, not one shortcut.</h2>
+            <p>
+              Good clinical language starts by recording what is present. A category may then help organize that record,
+              while explanation remains a separate question for evidence to answer.
+            </p>
+            <Link className="text-link" href="/writing/audhd-psychiatric-ontology">
+              See the distinction in the essay <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <Image
+            className="reasoning-graphic"
+            src="/clinical-reasoning.svg"
+            alt="Diagram showing observation, classification, and explanation as separate stages of clinical reasoning"
+            width={960}
+            height={620}
+            sizes="(max-width: 860px) 100vw, 48vw"
+          />
+        </div>
+      </section>
+
       <section className="section-pad principles-section">
         <div className="shell">
           <div className="section-heading">

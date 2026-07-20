@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Clinical reasoning from observation to explanation</title>
+  <desc id="desc">An editorial diagram with three connected stages: observe, classify, and explain.</desc>
+  <rect width="960" height="620" rx="42" fill="#12202b"/>
+  <circle cx="810" cy="112" r="174" fill="#27647a" opacity=".35"/>
+  <circle cx="100" cy="590" r="178" fill="#b95f35" opacity=".28"/>
+  <path d="M110 162H850" stroke="#f5f1e8" stroke-opacity=".28" stroke-width="2"/>
+  <text x="110" y="112" fill="#dd9a72" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">CLINICAL REASONING</text>
+  <text x="110" y="420" fill="#f5f1e8" font-family="Georgia, serif" font-size="52">Keep the levels distinct.</text>
+  <g fill="none" stroke="#f5f1e8" stroke-width="3">
+    <circle cx="204" cy="270" r="54"/>
+    <circle cx="480" cy="270" r="54"/>
+    <circle cx="756" cy="270" r="54"/>
+    <path d="M262 270h150m28 0h150" stroke-opacity=".55"/>
+    <path d="m394 258 18 12-18 12m270-24 18 12-18 12"/>
+  </g>
+  <g fill="#f5f1e8" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="204" y="278" font-size="21" font-weight="700">Observe</text>
+    <text x="480" y="278" font-size="21" font-weight="700">Classify</text>
+    <text x="756" y="278" font-size="21" font-weight="700">Explain</text>
+    <text x="204" y="350" font-size="17" fill-opacity=".72">what is happening?</text>
+    <text x="480" y="350" font-size="17" fill-opacity=".72">what pattern fits?</text>
+    <text x="756" y="350" font-size="17" fill-opacity=".72">what caused it?</text>
+  </g>
+  <text x="110" y="468" fill="#f5f1e8" fill-opacity=".7" font-family="Arial, sans-serif" font-size="19">A label can organize evidence without supplying a mechanism.</text>
+</svg>

@@ -357,6 +357,7 @@ h3 {
 
 .portrait-frame img {
   width: 100%;
+  height: auto;
   aspect-ratio: 0.875;
   object-fit: cover;
 }
@@ -603,8 +604,47 @@ h3 {
 
 .about-image img {
   width: 100%;
+  height: auto;
   aspect-ratio: 0.875;
   object-fit: cover;
+}
+
+.reasoning-graphic-section {
+  overflow: hidden;
+  background: #eef3f4;
+}
+
+.reasoning-graphic-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(380px, 1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+}
+
+.reasoning-graphic-copy p:not(.eyebrow) {
+  max-width: 590px;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.reasoning-graphic {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.featured-article-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.article-card-graphic {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
 }
 
 .prose {
@@ -1205,6 +1245,8 @@ h3 {
 
   .hero-grid,
   .feature-grid,
+  .reasoning-graphic-grid,
+  .featured-article-card,
   .quote-wrap,
   .about-grid,
   .split-callout,
