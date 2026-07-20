@@ -1,45 +1,43 @@
-[README.md](https://github.com/user-attachments/files/21589759/README.md)
+# Stephen McCarthy professional website
 
-# Stephen McCarthy PA-C - Personal Website
+This repository contains the consolidated production site for `www.stephenmccarthypa.com`.
 
-This is the deployment-ready version of Stephen McCarthy PA-C's personal website, optimized for Vercel deployment.
+## Editorial standard
 
-## 🚀 Quick Deploy to Vercel
+The site separates stable identity facts, time sensitive professional facts, and commentary. Current license claims include a review date and a link to the responsible authority. It does not publish unverified awards, testimonials, patient counts, ratings, certification claims, accepting patient claims, insurance claims, or prescribing claims.
 
-1. **Download this entire folder**
-2. **Go to [vercel.com](https://vercel.com)** and create account
-3. **Drag and drop this folder** to Vercel dashboard
-4. **Click Deploy** - Vercel will auto-detect Next.js
+## Privacy and contact design
 
-## 📁 What's Included
+The personal site has no intake form, database, or contact API. It does not collect medical information or protected health information. Practice inquiries are directed to the confirmed practice website and telephone number.
 
-- ✅ Complete Next.js application
-- ✅ Professional photos and assets
-- ✅ Optimized for performance
-- ✅ Mobile responsive design
-- ✅ SEO optimized
-- ✅ Contact forms and blog functionality
+## Local development
 
-## 🎯 Features
+```bash
+npm install
+npm run typecheck
+npm run build
+npm run dev
+```
 
-- **Professional homepage** with hero section
-- **About page** with personal story
-- **Blog section** with healthcare articles
-- **Contact form** for patient inquiries
-- **Testimonials** and professional achievements
-- **Community involvement** showcase
+## Validation
 
-## 🔧 Technical Details
+See `TEST_REPORT.md` for the completed build, route, content, structured data, and responsive rendering checks.
 
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **Components**: Radix UI
-- **Animations**: Framer Motion
-- **Deployment**: Optimized for Vercel
+## Deployment
 
-## 📞 Support
+1. Connect this repository to the selected Vercel production project.
+2. Require a successful preview build before merging.
+3. Assign both custom domains only after the production deployment reaches Ready.
+4. Keep `www.stephenmccarthypa.com` canonical and redirect the apex domain to `www`.
+5. Verify the sitemap, robots file, canonical tags, redirects, structured data, and priority pages after deployment.
+6. Follow `DEPLOYMENT_CHECKLIST.md` and record the deployed commit and deployment identifier.
 
-For updates or changes to this website, contact the developer who created this project.
+## Priority pages
 
----
-*Ready for immediate deployment to Vercel*
+* `/`
+* `/about`
+* `/professional-record`
+* `/writing`
+* `/writing/audhd-psychiatric-ontology`
+* `/profiles-and-sources`
+* `/contact`
