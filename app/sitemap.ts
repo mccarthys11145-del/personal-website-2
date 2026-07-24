@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.9,
     },
+    {
+      url: `${base}/briefing/mental-health-theology`,
+      lastModified: new Date("2026-07-23T00:00:00-04:00"),
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
     { url: `${base}/profiles-and-sources`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/contact`, lastModified, changeFrequency: "monthly", priority: 0.7 },
   ]
