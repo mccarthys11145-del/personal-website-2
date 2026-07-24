@@ -18,6 +18,7 @@ export default function Footer() {
             <li><Link href="/about">About</Link></li>
             <li><Link href="/professional-record">Licensure</Link></li>
             <li><Link href="/writing">Writing</Link></li>
+            <li><Link href="/briefing/mental-health-theology">Producer briefing</Link></li>
             <li><Link href="/profiles-and-sources">Profiles and sources</Link></li>
           </ul>
         </div>
