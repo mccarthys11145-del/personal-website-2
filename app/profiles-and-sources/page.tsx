@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { createPageMetadata } from "@/lib/site-metadata"
 
@@ -43,6 +44,24 @@ export default function SourcesPage() {
 
       <section className="section-pad">
         <div className="shell">
+          <div className="section-heading compact">
+            <p className="eyebrow">Featured link</p>
+            <h2>Read the latest producer briefing.</h2>
+          </div>
+          <div className="link-card-grid">
+            <Link className="link-card" href="/briefing/mental-health-theology">
+              <span>
+                <strong>Mental Health Is the New Theology of the West</strong>
+                <small>Producer briefing · video, exhibits, and sources</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="section-heading compact">
+            <p className="eyebrow">Professional links</p>
+            <h2>Profiles and practice.</h2>
+          </div>
           <div className="link-card-grid">
             {profiles.map((profile) => (
               <a className="link-card" href={profile.href} key={profile.href} target="_blank" rel="noopener noreferrer">

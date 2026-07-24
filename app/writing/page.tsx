@@ -29,6 +29,41 @@ export default function WritingPage() {
           <article className="article-card featured-article-card">
             <Image
               className="article-card-graphic"
+              src="/mental-health-theology-og.png"
+              alt="Mental Health Is the New Theology of the West producer briefing"
+              width={1200}
+              height={630}
+              sizes="(max-width: 860px) 100vw, 42vw"
+            />
+            <div className="article-card-content">
+              <div className="article-meta">
+                <span>Producer briefing</span>
+                <time dateTime="2026-07-23">July 23, 2026</time>
+                <span>Video and source guide</span>
+              </div>
+              <h2>
+                <Link href="/briefing/mental-health-theology">
+                  Mental Health Is the New Theology of the West
+                </Link>
+              </h2>
+              <p>
+                A producer briefing that separates the reality of suffering from the claim that a diagnostic
+                label explains it, with exhibits, a captioned opening video, and linked source material.
+              </p>
+              <div className="tag-row" aria-label="Topics">
+                <span>Diagnostic reification</span>
+                <span>Mental-health culture</span>
+                <span>Clinical reasoning</span>
+              </div>
+              <Link className="text-link" href="/briefing/mental-health-theology">
+                Read the producer briefing <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </article>
+
+          <article className="article-card featured-article-card">
+            <Image
+              className="article-card-graphic"
               src="/evidence-map.svg"
               alt="Diagram connecting observed facts, source records, classification, and independent evidence to a clinical question"
               width={960}
