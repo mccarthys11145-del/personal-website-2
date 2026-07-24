@@ -9,6 +9,7 @@ const navigation = [
   { href: "/about", label: "About" },
   { href: "/professional-record", label: "Licensure" },
   { href: "/writing", label: "Writing" },
+  { href: "/briefing/mental-health-theology", label: "Briefing" },
   { href: "/profiles-and-sources", label: "Sources" },
   { href: "/contact", label: "Contact" },
 ]

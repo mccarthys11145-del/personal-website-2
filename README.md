@@ -39,5 +39,6 @@ See `TEST_REPORT.md` for the completed build, route, content, structured data, a
 * `/professional-record`
 * `/writing`
 * `/writing/audhd-psychiatric-ontology`
+* `/briefing/mental-health-theology`
 * `/profiles-and-sources`
 * `/contact`

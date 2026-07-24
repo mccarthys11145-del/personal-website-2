@@ -36,8 +36,8 @@ export default function HomePage() {
               addiction treatment, and inpatient and outpatient settings. This site shares his writing on psychiatric language and clinical reasoning.
             </p>
             <div className="button-row">
-              <Link className="button primary" href="/writing/audhd-psychiatric-ontology">
-                Read the latest essay
+              <Link className="button primary" href="/briefing/mental-health-theology">
+                Read the latest briefing
               </Link>
               <Link className="button secondary" href="/professional-record">
                 Licensure
@@ -90,6 +90,24 @@ export default function HomePage() {
                 No invented testimonials, ratings, patient totals, media coverage, awards, or unsupported certification claims.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad featured-writing">
+        <div className="shell feature-grid">
+          <div>
+            <p className="eyebrow">Producer briefing · July 23, 2026</p>
+            <h2>Mental Health Is the New Theology of the West</h2>
+          </div>
+          <div>
+            <p className="feature-deck">
+              A source-led producer briefing on diagnostic reification, commercialized mental-health language,
+              and the difference between describing distress and claiming to explain it.
+            </p>
+            <Link className="text-link" href="/briefing/mental-health-theology">
+              Read the producer briefing <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
