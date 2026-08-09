@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title,
     description,
     publishedTime: "2026-07-23T00:00:00-04:00",
-    modifiedTime: "2026-07-23T00:00:00-04:00",
+    modifiedTime: "2026-08-08T00:00:00-04:00",
     authors: ["Stephen McCarthy"],
     section: "Producer briefing",
     tags: [
@@ -127,7 +127,7 @@ export default function MentalHealthTheologyBriefingPage() {
     name: title,
     description,
     datePublished: "2026-07-23",
-    dateModified: "2026-07-23",
+    dateModified: "2026-08-08",
     inLanguage: "en-US",
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
     author: { "@id": "https://www.stephenmccarthypa.com/#person" },
@@ -159,6 +159,8 @@ export default function MentalHealthTheologyBriefingPage() {
           />
 
           <nav className="briefing-jump-nav" aria-label="Briefing sections">
+            <a href="#final-video">Final video</a>
+            <a href="#rough-cut">Rough cut</a>
             <a href="#argument">Argument</a>
             <a href="#exhibits">Exhibits</a>
             <a href="#limits">Limits</a>
@@ -179,15 +181,15 @@ export default function MentalHealthTheologyBriefingPage() {
                 Stephen McCarthy · Physician Assistant working in psychiatry · Allentown, Pennsylvania
               </p>
               <div className="button-row">
-                <a className="button primary" href="#opening">
-                  Watch the 90-second opening
+                <a className="button primary" href="#final-video">
+                  Watch the finished pitch
                 </a>
                 <a className="button secondary" href="#exhibits">
                   Review the evidence
                 </a>
               </div>
               <p className="review-note">
-                Sources and public examples reviewed July 23, 2026. Arguments are identified as arguments.
+                Updated August 8, 2026. Sources and arguments remain identified with their evidentiary limits.
               </p>
             </div>
 
@@ -239,81 +241,79 @@ export default function MentalHealthTheologyBriefingPage() {
         </div>
       </section>
 
-      <section className="briefing-video-section section-pad-sm" id="opening" aria-labelledby="opening-heading">
+      <section
+        className="briefing-video-section section-pad-sm"
+        id="final-video"
+        aria-labelledby="final-video-heading"
+      >
         <div className="shell briefing-video-grid">
           <div className="briefing-video-frame">
             <video
               controls
               playsInline
               preload="metadata"
-              poster="/mental-health-theology-opening-poster.png"
-              aria-label="Stephen McCarthy — captioned 90-second opening excerpt"
+              poster="/mental-health-theology-final-poster.jpg"
+              aria-label="Stephen McCarthy — finished Mental Health Is the New Theology of the West pitch"
             >
-              <source src="/mental-health-theology-opening.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src="/mental-health-theology-opening.vtt"
-                srcLang="en"
-                label="English"
-              />
+              <source src="/mental-health-theology-final.mp4" type="video/mp4" />
               Your browser does not support embedded video.{" "}
-              <a href="/mental-health-theology-opening.mp4">Download the captioned opening</a>.
+              <a href="/mental-health-theology-final.mp4">Download the finished pitch</a>.
             </video>
           </div>
           <div className="briefing-video-copy">
-            <p className="eyebrow light">90-second opening · captioned</p>
-            <h2 id="opening-heading">When diagnosis becomes unfalsifiable.</h2>
+            <p className="eyebrow light">Finished pitch · documentary graphics cut</p>
+            <h2 id="final-video-heading">The completed argument.</h2>
             <p>
-              The written opening states the central claim. McCarthy then argues that masking, autistic
-              burnout, and “hidden ADHD” can absorb evidence that should test a diagnosis—and asks what
-              people are being invited to “open up” into.
+              This finished version combines the spoken argument with documentary evidence, restrained
+              explanatory graphics, original continuing-education advertisements, and source-based course
+              excerpts. Finishing is restrained and localized; the underlying performance and timing remain intact.
             </p>
             <blockquote>
-              “If nothing can prove your conclusions wrong, then you are doing theology.”
+              “The suffering is real. The theology is the mistake.”
             </blockquote>
-            <a
-              className="text-link briefing-light-link"
-              href="https://www.youtube.com/watch?v=PmZEHOUVZ9Q"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Watch the full 7:44 advisory <span aria-hidden="true">→</span>
-            </a>
             <p className="briefing-video-disclosure">
-              The required opening text is followed by excerpts from 05:48–06:23 and 07:01–07:44 of{" "}
-              <em>PHA-001: Diagnostic Fan Fiction</em>. Both transitions are marked by brief fades.
+              Web version: 1080p H.264/AAC. The preserved production master remains 3840 × 2160.
             </p>
-            <details className="briefing-transcript">
-              <summary>Read the 90-second transcript</summary>
-              <div>
-                <p>
-                  The West did not become less religious. It changed religions. Mental health now supplies
-                  invisible causes, authorized interpreters, confession, redemption, ritual language, and moral
-                  exclusion. The clinical error beneath it is simple: psychiatry creates a label from symptoms
-                  and then says that the label caused the symptoms.
-                </p>
-                <p>
-                  Nothing can suggest that this diagnosis is wrong. The course arrives with the conclusion
-                  and then makes everything else point towards it. The person doesn&apos;t meet the criteria for
-                  autism. Well, they&apos;re masking it. If the antidepressant didn&apos;t work, then it&apos;s autistic
-                  burnout. And if the patient has a lot of anxiety, well, that&apos;s hidden ADHD.
-                </p>
-                <p>
-                  This is not competent diagnosis or clinical reasoning, and if nothing can prove your conclusions
-                  wrong, then you are doing theology. This is religion. And honestly, these courses do feel more
-                  like religious experiences.
-                </p>
-                <p>
-                  But opening up into what? Opening up into a field where the experts and clinicians think that
-                  disorders are hiding behind symptoms like goblins in the attic, a field where ADHD and autism
-                  become master keys for depression, anxiety symptoms, personality disorders, and any kind of
-                  treatment resistance, any kind of medication failure or therapy failure.
-                  This is not mental health care. This is brain rot. You do not need more news articles, more people,
-                  more posters telling men to open up this month. We need better clinical reasoning when they do,
-                  and that&apos;s why mental health is getting stupid and we need to start pushing back.
-                </p>
-              </div>
-            </details>
+            <a className="text-link briefing-light-link" href="#rough-cut">
+              Compare the rough cut <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="briefing-video-section section-pad-sm"
+        id="rough-cut"
+        aria-labelledby="rough-cut-heading"
+      >
+        <div className="shell briefing-video-grid">
+          <div className="briefing-video-frame">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/mental-health-theology-rough-cut-poster.jpg"
+              aria-label="Stephen McCarthy — original Mental Health Theology rough cut"
+            >
+              <source src="/mental-health-theology-rough-cut.mp4" type="video/mp4" />
+              Your browser does not support embedded video.{" "}
+              <a href="/mental-health-theology-rough-cut.mp4">Download the rough cut</a>.
+            </video>
+          </div>
+          <div className="briefing-video-copy">
+            <p className="eyebrow light">Original rough cut · preserved for comparison</p>
+            <h2 id="rough-cut-heading">The argument before final evidence and polish.</h2>
+            <p>
+              This earlier production cut is retained as a transparent record of the editorial development.
+              Compare its direct visual treatment with the finished version&apos;s evidence hierarchy, typography,
+              restrained motion, and final visual finishing.
+            </p>
+            <blockquote>
+              “A classification is not a pathogen.”
+            </blockquote>
+            <p className="briefing-video-disclosure">
+              Web version: 1080p H.264/AAC. The preserved rough-cut master remains 3840 × 2160.
+            </p>
           </div>
         </div>
       </section>
