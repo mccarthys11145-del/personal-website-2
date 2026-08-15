@@ -10,14 +10,14 @@ export async function GET() {
     <link>${base}/writing</link>
     <description>Essays on psychiatric ontology, diagnostic language, and clinical reasoning.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 04:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 04:00:00 GMT</lastBuildDate>
     <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mental Health Is the New Theology of the West</title>
       <link>${base}/briefing/mental-health-theology</link>
       <guid isPermaLink="true">${base}/briefing/mental-health-theology</guid>
       <pubDate>Thu, 23 Jul 2026 04:00:00 GMT</pubDate>
-      <description>A producer briefing on diagnostic reification, mental-health culture, and clinical reasoning.</description>
+      <description>A producer briefing featuring the final 2:29 TCN submission on diagnostic reification, trauma-category expansion, and therapeutic culture.</description>
     </item>
     <item>
       <title>AuDHD, Psychiatric Ontology, and the Difference Between Naming and Explaining</title>

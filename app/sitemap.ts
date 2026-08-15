@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${base}/briefing/mental-health-theology`,
-      lastModified: new Date("2026-07-23T00:00:00-04:00"),
+      lastModified: new Date("2026-08-15T00:00:00-04:00"),
       changeFrequency: "yearly",
       priority: 0.9,
     },
