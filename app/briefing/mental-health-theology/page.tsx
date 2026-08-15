@@ -6,10 +6,9 @@ import { JsonLd } from "@/components/json-ld"
 
 const title = "Mental Health Is the New Theology of the West"
 const description =
-  "The final 2:29 TCN submission and producer briefing by Stephen McCarthy on diagnostic reification, hidden-cause marketing, trauma-category expansion, and therapeutic language as institutional authority."
+  "A concise producer briefing by Stephen McCarthy on how psychiatric labels can become causal stories, identities, markets, and moral authority."
 const path = "/briefing/mental-health-theology"
 const canonical = `https://www.stephenmccarthypa.com${path}`
-// Add the public YouTube URL after publication. Nothing is rendered while this remains empty.
 const publishedVideoUrl = ""
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     authors: ["Stephen McCarthy"],
     section: "Producer briefing",
     tags: [
-      "psychiatric ontology",
+      "psychiatric classification",
       "diagnostic reification",
       "mental health culture",
       "clinical reasoning",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
         url: "/mental-health-theology-og.png",
         width: 1200,
         height: 630,
-        alt: "Mental Health Is the New Theology of the West — producer briefing by Stephen McCarthy",
+        alt: "Mental Health Is the New Theology of the West",
       },
     ],
   },
@@ -49,73 +48,87 @@ export const metadata: Metadata = {
 }
 
 const interviewQuestions = [
-  "What exactly is a psychiatric disorder when the diagnosis is constructed from symptoms and judgment?",
+  "What does a psychiatric diagnosis explain beyond the observations used to assign it?",
   "When does a useful classification become a fictional causal entity?",
-  "How do associated research findings become new symptoms and diagnostic evidence?",
-  "Can a disorder be underdiagnosed when the correct prevalence depends upon a judgment of impairment?",
-  "How did therapeutic language become a moral code that governs who may speak?",
-  "Can psychiatric medications be useful without validating the disease story attached to the diagnosis?",
+  "How do associated research findings become new symptoms and diagnostic clues?",
+  "Why is the public meaning of trauma much broader than the event standard for PTSD?",
+  "How did therapeutic language acquire moral and institutional authority?",
 ]
 
 const sources = [
   {
     type: "Classification standard",
-    label: "American Psychiatric Association — DSM overview",
+    label: "American Psychiatric Association: DSM overview",
     href: "https://www.psychiatry.org/psychiatrists/practice/dsm",
   },
   {
     type: "Conceptual anchor",
-    label: "Hyman — The Diagnosis of Mental Disorders: The Problem of Reification",
+    label: "Hyman: The Problem of Reification",
     href: "https://pubmed.ncbi.nlm.nih.gov/17716032/",
   },
   {
     type: "Conceptual anchor",
-    label: "Kendell and Jablensky — Validity and Utility of Psychiatric Diagnoses",
+    label: "Kendell and Jablensky: Validity and Utility of Psychiatric Diagnoses",
     href: "https://pubmed.ncbi.nlm.nih.gov/12505793/",
   },
   {
     type: "Causal explanation",
-    label: "Maung — Diagnosis and Causal Explanation in Psychiatry",
+    label: "Maung: Diagnosis and Causal Explanation in Psychiatry",
     href: "https://www.sciencedirect.com/science/article/pii/S136984861630067X",
   },
   {
-    type: "Differential diagnosis",
-    label: "CDC — Diagnosing ADHD",
+    type: "Diagnostic guidance",
+    label: "CDC: Diagnosing ADHD",
     href: "https://www.cdc.gov/adhd/signs-symptoms/index.html",
   },
   {
+    type: "Syndrome definition",
+    label: "Singer et al.: The Sepsis 3 consensus definitions",
+    href: "https://jamanetwork.com/journals/jama/fullarticle/2492881",
+  },
+  {
+    type: "Trauma definition",
+    label: "SAMHSA: Trauma and Violence",
+    href: "https://www.samhsa.gov/mental-health/trauma-violence",
+  },
+  {
+    type: "PTSD standard",
+    label: "National Center for PTSD: DSM criteria",
+    href: "https://www.ptsd.va.gov/professional/treat/essentials/dsm5_ptsd.asp",
+  },
+  {
     type: "Associated feature",
-    label: "Willcutt et al. — Executive-function theory of ADHD meta-analysis",
+    label: "Willcutt et al.: Executive function and ADHD",
     href: "https://pubmed.ncbi.nlm.nih.gov/15950006/",
   },
   {
     type: "Associated feature",
-    label: "Beheshti et al. — Emotion dysregulation in adult ADHD meta-analysis",
+    label: "Beheshti et al.: Emotion dysregulation and adult ADHD",
     href: "https://pubmed.ncbi.nlm.nih.gov/32164655/",
   },
   {
     type: "Research construct",
-    label: "Hupfeld et al. — Living “in the zone”: hyperfocus in adult ADHD",
+    label: "Hupfeld et al.: Hyperfocus in adult ADHD",
     href: "https://pubmed.ncbi.nlm.nih.gov/30267329/",
   },
   {
     type: "Marketing specimen",
-    label: "eCare — ADHD and autism masterclass public page",
+    label: "eCare: ADHD and autism masterclass",
     href: "https://www.ecarebehavioralinstitute.com/courses/misdiagnosed-adhd-autism-masterclass-differential-diagnosis-neuro-affirming-interventions-rv/",
   },
   {
     type: "Marketing specimen",
-    label: "eCare — Hidden Narcissistic Wounds Masterclass public page",
+    label: "eCare: Hidden Narcissistic Wounds Masterclass",
     href: "https://webinar.ecarebehavioralinstitute.com/narcissistic-masterclass-47-lta-b",
   },
   {
     type: "Methods specimen",
-    label: "Morning Consult and The Trevor Project — Issues Impacting LGBTQ Youth",
+    label: "Morning Consult and The Trevor Project poll",
     href: "https://www.thetrevorproject.org/wp-content/uploads/2023/01/Issues-Impacting-LGBTQ-Youth-MC-Poll_Public-2.pdf",
   },
   {
-    type: "Long-form video",
-    label: "PHA-001 — Diagnostic Fan Fiction",
+    type: "Long form video",
+    label: "PHA 001: Diagnostic Fan Fiction",
     href: "https://www.youtube.com/watch?v=PmZEHOUVZ9Q",
   },
 ]
@@ -151,9 +164,9 @@ export default function MentalHealthTheologyBriefingPage() {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     "@id": `${canonical}#final-video-object`,
-    name: `${title} — Final TCN Submission`,
+    name: `${title}: Final TCN Submission`,
     description:
-      "Stephen McCarthy's final 2:29 TCN submission on diagnostic reification, hidden-cause marketing, trauma-category expansion, and the religious structure of therapeutic language.",
+      "Stephen McCarthy presents a concise argument about diagnostic reification, category expansion, and therapeutic authority.",
     thumbnailUrl: ["https://www.stephenmccarthypa.com/mental-health-theology-final-poster.jpg"],
     uploadDate: "2026-08-15T00:00:00-04:00",
     duration: "PT2M29S",
@@ -180,59 +193,58 @@ export default function MentalHealthTheologyBriefingPage() {
           />
 
           <nav className="briefing-jump-nav" aria-label="Briefing sections">
-            <a href="#final-video">Final TCN video</a>
-            <a href="#rough-cut">Rough cut</a>
+            <a href="#final-video">Video</a>
             <a href="#argument">Argument</a>
-            <a href="#exhibits">Exhibits</a>
+            <a href="#exhibits">Evidence</a>
             <a href="#limits">Limits</a>
-            <a href="#sources">Evidence</a>
+            <a href="#sources">Sources</a>
             <a href="#questions">Questions</a>
             <a href="#about">About</a>
           </nav>
 
           <div className="briefing-hero-grid">
             <div>
-              <p className="eyebrow">A briefing for a long-form conversation</p>
+              <p className="eyebrow">Producer briefing</p>
               <h1>Mental health is the new theology of the West.</h1>
               <p className="briefing-hero-deck">
-                How descriptive psychiatric classifications can become causal stories, identities,
-                moral authority, and a commercial system.
+                Psychiatry uses labels to describe patterns of symptoms. Public culture increasingly treats
+                those labels as hidden causes, personal identities, and moral authority. This page explains
+                the jump.
               </p>
               <p className="briefing-byline">
                 Stephen McCarthy · Physician Assistant working in psychiatry · Allentown, Pennsylvania
               </p>
               <div className="button-row">
                 <a className="button primary" href="#final-video">
-                  Watch the final TCN submission
+                  Watch the submission
                 </a>
-                <a className="button secondary" href="#exhibits">
-                  Review the evidence
+                <a className="button secondary" href="#argument">
+                  Read the argument
                 </a>
               </div>
               <p className="review-note">
-                Final TCN submission published August 15, 2026. Sources and arguments remain identified with
-                their evidentiary limits.
+                Condensed August 15, 2026 for faster reading and clearer review.
               </p>
             </div>
 
             <aside className="briefing-premise" aria-label="Argument summary">
-              <span className="card-kicker">The argument in one sentence</span>
+              <span className="card-kicker">The whole argument</span>
               <p>
-                Psychiatry creates classifications from observations, then public culture treats those
-                classifications as invisible causes—and builds identities, markets, and moral authority around them.
+                A label can describe a pattern. It cannot explain that pattern without evidence beyond the
+                observations used to create it.
               </p>
               <dl>
                 <div>
-                  <dt>Clinical error</dt>
-                  <dd>Classification becomes cause</dd>
+                  <dt>Useful</dt>
+                  <dd>A label can organize a pattern</dd>
                 </div>
                 <div>
-                  <dt>Cultural result</dt>
-                  <dd>Identity becomes authority</dd>
+                  <dt>Error</dt>
+                  <dd>The pattern is treated as its own cause</dd>
                 </div>
                 <div>
-                  <dt>Standard</dt>
-                  <dd>State only what the evidence permits</dd>
+                  <dt>Result</dt>
+                  <dd>The label gains explanatory and moral power</dd>
                 </div>
               </dl>
             </aside>
@@ -243,23 +255,9 @@ export default function MentalHealthTheologyBriefingPage() {
       <section className="briefing-scope-strip" aria-label="Scope of the argument">
         <div className="shell">
           <p>
-            <strong>Suffering is real. Diagnosis can be useful. Medication can help.</strong>
-            <span>The question is what the label actually explains.</span>
+            <strong>Suffering is real. Diagnosis can help. Medication can work.</strong>
+            <span>A useful classification is still not a causal mechanism.</span>
           </p>
-        </div>
-      </section>
-
-      <section className="briefing-editorial-fit" aria-labelledby="editorial-fit-heading">
-        <div className="shell briefing-editorial-fit-grid">
-          <p className="eyebrow">Why this fits TCN</p>
-          <div>
-            <h2 id="editorial-fit-heading">An adjacent inquiry into therapeutic authority.</h2>
-            <p>
-              <em>The Religion Business</em> examines what happens when belief becomes institutional authority
-              and a commercial product. This briefing extends that inquiry to therapeutic culture, where
-              descriptive classifications can acquire causal, moral, and commercial force.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -275,7 +273,7 @@ export default function MentalHealthTheologyBriefingPage() {
               playsInline
               preload="metadata"
               poster="/mental-health-theology-final-poster.jpg"
-              aria-label="Stephen McCarthy — final Mental Health Is the New Theology of the West TCN submission"
+              aria-label="Stephen McCarthy final Mental Health Is the New Theology of the West submission"
             >
               <source src="/mental-health-theology-final.mp4" type="video/mp4" />
               <track
@@ -286,29 +284,20 @@ export default function MentalHealthTheologyBriefingPage() {
                 default
               />
               Your browser does not support embedded video.{" "}
-              <a href="/mental-health-theology-final.mp4">Download the final TCN submission</a>.
+              <a href="/mental-health-theology-final.mp4">Download the video</a>.
             </video>
           </div>
           <div className="briefing-video-copy">
             <p className="eyebrow light">Final TCN submission · 2:29</p>
-            <h2 id="final-video-heading">The complete argument, in its final cut.</h2>
+            <h2 id="final-video-heading">The case in 2 minutes and 29 seconds.</h2>
             <p>
-              This completed video traces a single reasoning error from diagnosis to culture: reification. It uses
-              a sepsis analogy, clinician-facing continuing-education advertisements, and the gap between DSM PTSD
-              Criterion A and SAMHSA&apos;s broader trauma definition before showing how therapy-speak can take on the
-              structure of religion.
+              The video begins with the sepsis analogy, moves through continuing education advertising and
+              the expanding meaning of trauma, then shows how a clinical vocabulary can become a belief
+              system.
             </p>
             <blockquote>
-              “Suffering is real, but this field has taken the human longing for redemption and turned it into a
-              medical specialty.”
+              “A classification is not a pathogen.”
             </blockquote>
-            <p className="briefing-video-disclosure">
-              Web version: 1920 × 1080 H.264/AAC at 29.97 fps, with English captions. The production master remains
-              3840 × 2160.
-            </p>
-            <a className="text-link briefing-light-link" href="#rough-cut">
-              Compare the rough cut <span aria-hidden="true">→</span>
-            </a>
             {publishedVideoUrl ? (
               <a
                 className="text-link briefing-light-link"
@@ -323,171 +312,113 @@ export default function MentalHealthTheologyBriefingPage() {
         </div>
       </section>
 
-      <section
-        className="briefing-video-section section-pad-sm"
-        id="rough-cut"
-        aria-labelledby="rough-cut-heading"
-      >
-        <div className="shell briefing-video-grid">
-          <div className="briefing-video-frame">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster="/mental-health-theology-rough-cut-poster.jpg"
-              aria-label="Stephen McCarthy — original Mental Health Theology rough cut"
-            >
-              <source src="/mental-health-theology-rough-cut.mp4" type="video/mp4" />
-              Your browser does not support embedded video.{" "}
-              <a href="/mental-health-theology-rough-cut.mp4">Download the rough cut</a>.
-            </video>
-          </div>
-          <div className="briefing-video-copy">
-            <p className="eyebrow light">Earlier rough cut · 1:27 · preserved for comparison</p>
-            <h2 id="rough-cut-heading">The shorter argument before the final submission.</h2>
-            <p>
-              This earlier cut is retained as a transparent record of the editorial development. The final 2:29
-              submission adds the full sepsis comparison, the definition gap around trauma, a clearer evidentiary
-              sequence, and the completed religious analogy.
-            </p>
-            <blockquote>
-              “A classification is not a pathogen.”
-            </blockquote>
-            <p className="briefing-video-disclosure">
-              Web version: 1080p H.264/AAC. The preserved rough-cut master remains 3840 × 2160.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad briefing-argument" id="argument" aria-labelledby="argument-heading">
         <div className="article-shell briefing-argument-layout">
           <aside className="briefing-argument-aside" aria-label="Briefing notes">
-            <div className="aside-card">
-              <p className="aside-title">Document</p>
-              <p>Producer briefing</p>
-            </div>
             <div className="aside-card">
               <p className="aside-title">Core distinction</p>
               <p>Description, classification, and explanation are different jobs.</p>
             </div>
             <div className="aside-card">
-              <p className="aside-title">Reading standard</p>
-              <p>Every exhibit includes the strongest defense and the narrowest conclusion.</p>
+              <p className="aside-title">Main analogy</p>
+              <p>A syndrome does not identify its particular cause.</p>
+            </div>
+            <div className="aside-card">
+              <p className="aside-title">Standard</p>
+              <p>Say only what the evidence permits.</p>
             </div>
           </aside>
 
           <div className="article-body prose briefing-prose">
-            <p className="eyebrow">Concise written thesis</p>
-            <h2 id="argument-heading">The classification became the cause.</h2>
+            <p className="eyebrow">My argument</p>
+            <h2 id="argument-heading">Psychiatry often mistakes a description for an explanation.</h2>
             <p className="lead-paragraph">
-              To say that mental health has become the new theology of the West is not to say that
-              suffering is imaginary or that clinicians are priests. It is a structural analogy.
+              My claim is narrow. Many psychiatric diagnoses summarize what a person reports and what a
+              clinician observes. The label is then used to explain those same observations.
             </p>
             <p>
-              A theology offers an account of invisible causes, a vocabulary for interpreting ordinary
-              events, authorized interpreters, rituals of confession and redemption, and rules for separating
-              the enlightened from the dangerous. Parts of popular mental-health culture increasingly perform
-              those functions.
-            </p>
-            <p>
-              Its language now reaches far beyond the clinic. A diagnosis can reorganize a biography,
-              recast a relationship, explain a conflict, establish an identity, and authorize moral judgments
-              about who is safe, validating, healed, or harmful. “Opening up” can become a duty; “processing”
-              can become a rite; affirmation can become a test of virtue. Disagreement is no longer merely
-              disagreement. It can be redescribed as invalidation, trauma, or evidence that the dissenter is unsafe.
-            </p>
-            <h3 className="briefing-thesis-subhead">Classification and cause</h3>
-            <p>
-              The argument begins when a descriptive classification is treated as if it caused the observations
-              used to assign it. Many common psychiatric diagnoses are assigned from patterns of reported
-              experience, observed behavior, time course, exclusions, and judgments of impairment. Those
-              classifications can be useful. They allow clinicians
-              to communicate, organize evidence, estimate risk, select treatments, and make services available.
-              But a useful classification is not automatically an independently existing cause.
+              That is where the theology comparison begins. A theology explains visible events through
+              invisible forces, gives authority to interpreters, and supplies a moral vocabulary. Popular
+              mental health language now often does this. A label can rewrite a biography. Therapy words
+              can decide who is healed, unsafe, toxic, or disordered. Even disagreement can be treated as
+              proof of pathology.
             </p>
 
-            <div className="briefing-logic" role="figure" aria-label="The circular explanation">
+            <h3 className="briefing-thesis-subhead">The key error</h3>
+            <p>
+              A diagnosis can be useful. It can organize information, guide care, support research, and
+              unlock services. But usefulness is not causation. Many diagnoses are built from symptoms,
+              duration, exclusions, and impairment. The label does not, by itself, identify what produced
+              the pattern in this person.
+            </p>
+
+            <div className="briefing-logic" role="figure" aria-label="Syndrome and cause comparison">
               <div>
-                <span>Inattention + duration + impairment</span>
+                <span>Observed findings</span>
                 <b aria-hidden="true">→</b>
-                <span>ADHD classification</span>
+                <span>Syndrome or classification</span>
               </div>
               <div>
-                <span>ADHD classification</span>
+                <span>Syndrome or classification</span>
                 <b aria-hidden="true">⇢</b>
-                <span>Cause of inattention?</span>
+                <span>Specific cause?</span>
               </div>
-              <p>The second arrow requires independent causal evidence.</p>
+              <p>The second arrow requires evidence that did not come from the label itself.</p>
             </div>
 
             <p>
-              Consider ADHD. Inattention helps define the diagnosis. If the diagnosis is then invoked as the
-              explanation for the same inattention—“the person cannot concentrate because they have ADHD”—the
-              label has been asked to do more work than the assessment established. It may summarize a pattern
-              and correlate with other findings. It does not, by itself, identify the mechanism producing poor
-              concentration in a particular person. Sleep loss, depression, anxiety, medication effects, substance
-              use, medical illness, developmental traits, stress, and environment still have to be considered.
-            </p>
-            <h3 className="briefing-thesis-subhead">How categories expand</h3>
-            <p>
-              The same reversal can drive construct expansion. Researchers may begin with people already assigned a
-              label and identify an average associated feature. Public educators can then convert the association into
-              “what the disorder looks like,” then into a mechanism, then into another clue that someone has the disorder.
-              Executive-function problems, emotional dysregulation, and hyperfocus may all be legitimate subjects
-              of research. But an associated feature does not become a diagnostic criterion or causal explanation
-              simply because it appears more often in a classified group.
+              Sepsis shows the error. It is a syndrome, not a specific infection. Meeting sepsis criteria
+              does not identify the organism or source. Diagnosing a particular bacterial infection from
+              sepsis criteria alone would confuse the syndrome with its cause.
             </p>
             <p>
-              In the interpretive pattern at issue, once the boundary between criterion, association, and mechanism
-              dissolves, almost any observation can confirm the favored story. Poor concentration points to ADHD; intense concentration becomes ADHD hyperfocus.
-              Social difficulty points to autism; social competence becomes masking. Strong emotion and numbness both
-              become dysregulation. Treatment response confirms the diagnosis; treatment nonresponse reveals the
-              “hidden” diagnosis. The framework becomes difficult to disconfirm because contrary evidence is absorbed
-              as further proof.
+              Yet the same reasoning appears when inattention helps establish ADHD and ADHD is then given
+              as the reason for the inattention. The label may still be useful. It simply has not answered
+              the causal question. Sleep loss, anxiety, depression, medication effects, substance use,
+              medical illness, development, and environment still matter.
             </p>
-            <h3 className="briefing-thesis-subhead">From interpretation to market</h3>
+
+            <h3 className="briefing-thesis-subhead">How the category grows</h3>
             <p>
-              This is where the theology becomes a business. Continuing-education companies and masterclasses sell
-              training to identify diagnoses or patterns described as masked, subtle, or hidden beneath familiar
-              presentations: ADHD or autism misattributed to anxiety, depression, or personality disorders, and
-              “narcissistic abuse” framed through hidden wounds and manipulation. The claim here must remain precise.
-              A public advertisement proves what is being marketed. It does not prove everything taught inside a paid
-              course, presenter intent, or patient harm. The specimen is the advertised reasoning, not the seller.
+              Research finds group differences. Public education turns them into traits. Social media turns
+              them into diagnostic clues. Executive dysfunction, emotional dysregulation, and hyperfocus
+              are legitimate subjects of study. A group association is not automatically a formal criterion,
+              a unique feature, or a personal cause.
             </p>
             <p>
-              The same pattern enters politics when psychological language is treated as causal evidence. A survey can
-              legitimately show that respondents report a negative mental-health impact and attribute it to debates about restrictive laws.
-              Those reports matter. But self-attribution is not an independent clinical measure, and it does not by itself
-              establish deterioration, magnitude of clinical change, or causation. A political judgment can be reasonable while the medical
-              claim remains methodologically unproven.
+              Poor concentration points to ADHD. Intense concentration becomes hyperfocus. Social difficulty
+              points to autism. Social competence becomes masking. A theory that explains every possible
+              observation no longer risks being wrong.
             </p>
-            <h3 className="briefing-thesis-subhead">What better reasoning requires</h3>
+
+            <h3 className="briefing-thesis-subhead">How the language gains authority</h3>
             <p>
-              The cost of this error is not merely philosophical. When the label becomes the explanation, clinicians may
-              stop asking what is actually producing or maintaining the person&apos;s distress. When every contradiction can
-              be renamed as masking, trauma, or hidden pathology, differential diagnosis gives way to confirmation.
-              When a classification becomes an identity and a moral status, revision can feel like betrayal rather than
-              better reasoning.
+              Trauma shows how a category can swell. PTSD Criterion A requires exposure to death, threatened
+              death, serious injury, or sexual violence. SAMHSA uses a much broader public health definition:
+              an event, series of events, or circumstances experienced as physically or emotionally harmful
+              or life threatening, with lasting adverse effects.
             </p>
             <p>
-              A more defensible model is more modest. Begin with symptoms, time course, context, impairment,
-              developmental history, sleep, medical contributors, substances, medication effects, relationships, environment,
-              and competing hypotheses. Ask what evidence would make the preferred diagnosis less likely. Use a disorder
-              label when it improves communication or care, but do not confuse the label with the mechanism that still needs
-              to be found.
+              The definitions are not equivalent. The SAMHSA definition does not require death, serious
+              injury, sexual violence, catastrophe, or a comparable external event. Because emotional harm
+              is defined through the person’s experience rather than an external event threshold, the
+              eligible class can include any negative experience that is experienced as emotionally harmful
+              and produces lasting adverse effects. The broad concept can then borrow the medical seriousness
+              of PTSD even when the event would not qualify for PTSD.
             </p>
             <p>
-              This argument does not require denying psychiatric suffering, rejecting diagnosis, or opposing medication.
-              Suffering is real. Diagnoses can have practical value. Medications can help. Group associations can be genuine
-              and clinically useful. None of those facts licenses a descriptive category to become an invisible causal agent,
-              an all-purpose identity, or an unquestionable moral authority.
+              Hidden pathology also sells. Courses promise to reveal masked autism, missed ADHD, narcissistic
+              wounds, and abuse patterns that ordinary assessment supposedly overlooks. Some courses may be
+              careful. The public sales pitch still rewards one answer: the real cause is hidden, and the
+              trained interpreter can see it.
             </p>
+
+            <h3 className="briefing-thesis-subhead">What better reasoning looks like</h3>
             <p>
-              Parts of Western public culture have built institutions, markets, identities, and rules of belonging
-              around mental-health language. The question is not whether mental-health care should disappear.
-              The question is whether a field meant to relieve suffering can recover the humility to distinguish what it has
-              observed, what it has classified, what it has inferred, and what it actually knows.
+              The answer is not to abolish diagnosis. It is to put the label back in its place. Start with
+              symptoms, time course, context, impairment, development, sleep, medical factors, substances,
+              medication effects, relationships, environment, and competing explanations. Ask what would
+              make the favored explanation wrong. Use the label when it helps. Keep searching for the cause.
             </p>
           </div>
         </div>
@@ -496,11 +427,10 @@ export default function MentalHealthTheologyBriefingPage() {
       <section className="section-pad briefing-exhibits-section" id="exhibits" aria-labelledby="exhibits-heading">
         <div className="shell">
           <div className="section-heading left briefing-section-heading">
-            <p className="eyebrow">Four clean exhibits</p>
-            <h2 id="exhibits-heading">Four ways classification is asked to explain more than it establishes.</h2>
+            <p className="eyebrow">Five checks</p>
+            <h2 id="exhibits-heading">Five places where the evidence stops before the story does.</h2>
             <p>
-              Each exhibit separates what the source establishes, the strongest reasonable defense,
-              and the narrowest conclusion the evidence permits.
+              These examples show the exact point where a useful observation becomes a larger claim.
             </p>
           </div>
 
@@ -510,52 +440,33 @@ export default function MentalHealthTheologyBriefingPage() {
                 <span className="sr-only">Exhibit </span>01
               </div>
               <div className="briefing-exhibit-copy">
-                <p className="eyebrow">Classification → causal agent</p>
-                <h3>When ADHD is used to explain the symptom that helped establish it.</h3>
+                <p className="eyebrow">Label versus mechanism</p>
+                <h3>ADHD is not an explanation for inattention.</h3>
                 <p>
-                  ADHD is identified through a pattern that includes persistent inattention and/or
-                  hyperactivity-impulsivity, considered alongside development, setting, impairment,
-                  and alternative explanations. A circular move occurs if inattention helps establish
-                  ADHD and the label is then offered, without independent causal evidence, as the reason
-                  for the same inattention.
+                  ADHD is assigned from a pattern that includes symptoms, persistence, setting, impairment,
+                  development, and exclusions. The circular move begins when the label is used as the cause
+                  of the same observations without independent evidence.
                 </p>
                 <div className="briefing-defense-grid">
                   <div>
-                    <span>Strongest defense</span>
-                    <p>
-                      ADHD may refer to a real, incompletely understood syndrome and can predict clinically relevant outcomes.
-                    </p>
+                    <span>What the label can do</span>
+                    <p>Support communication, research, prognosis, treatment selection, and access to care.</p>
                   </div>
                   <div>
-                    <span>Narrow conclusion</span>
-                    <p>
-                      A diagnosis can organize observations. The diagnosis alone is not a patient-specific causal explanation.
-                    </p>
+                    <span>What it cannot do alone</span>
+                    <p>Identify the mechanism producing the symptoms in one person.</p>
                   </div>
                 </div>
                 <p className="briefing-source-line">
                   Source anchors:{" "}
-                  <a
-                    href="https://www.psychiatry.org/psychiatrists/practice/dsm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    APA DSM overview
-                  </a>{" "}
-                  and{" "}
-                  <a
-                    href="https://www.cdc.gov/adhd/signs-symptoms/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="https://jamanetwork.com/journals/jama/fullarticle/2492881" target="_blank" rel="noopener noreferrer">
+                    the Sepsis 3 consensus definition
+                  </a>,{" "}
+                  <a href="https://www.cdc.gov/adhd/signs-symptoms/index.html" target="_blank" rel="noopener noreferrer">
                     CDC diagnostic guidance
                   </a>, and{" "}
-                  <a
-                    href="https://pubmed.ncbi.nlm.nih.gov/17716032/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Hyman on diagnostic reification
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/17716032/" target="_blank" rel="noopener noreferrer">
+                    Hyman on reification
                   </a>.
                 </p>
               </div>
@@ -568,10 +479,7 @@ export default function MentalHealthTheologyBriefingPage() {
                   sizes="(max-width: 900px) 94vw, 38vw"
                 />
                 <figcaption>
-                  The diagram moves from observations—including inattention, anxiety, mood change, and relationship
-                  conflict—to labels such as ADHD, autism, and personality disorder. Its “goblin error” is the extra
-                  step in which the label is then treated as the hidden cause of the same observations. A classification
-                  can summarize observations; the extra causal arrow needs extra evidence.
+                  The unsupported step is not observation to classification. It is classification to hidden cause.
                 </figcaption>
               </figure>
             </article>
@@ -582,66 +490,46 @@ export default function MentalHealthTheologyBriefingPage() {
               </div>
               <div className="briefing-exhibit-copy">
                 <p className="eyebrow">Construct expansion</p>
-                <h3>How association can become trait, mechanism, and diagnostic clue.</h3>
+                <h3>Group averages can become diagnostic fan fiction.</h3>
                 <p>
-                  Executive dysfunction, emotional dysregulation, and hyperfocus may be valid research constructs
-                  or associated features. That does not automatically make them formal criteria, unique to ADHD,
-                  or proof of a single cause.
+                  A feature found more often in a diagnosed group can be real and useful. It does not follow
+                  that the feature is universal, unique to the disorder, a formal criterion, or evidence of
+                  one cause.
                 </p>
                 <div className="briefing-defense-grid">
                   <div>
-                    <span>Strongest defense</span>
-                    <p>
-                      Criteria are not exhaustive, and associated features can improve recognition and formulation.
-                    </p>
+                    <span>Reasonable defense</span>
+                    <p>Formal criteria do not describe every clinically relevant feature.</p>
                   </div>
                   <div>
-                    <span>Narrow conclusion</span>
-                    <p>
-                      The status of a claim must survive its translation from research into public education.
-                    </p>
+                    <span>Necessary limit</span>
+                    <p>Every move from association to trait, mechanism, or diagnostic proof needs new evidence.</p>
                   </div>
                 </div>
                 <p className="briefing-source-line">
                   Research anchors:{" "}
-                  <a
-                    href="https://pubmed.ncbi.nlm.nih.gov/15950006/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    executive-function meta-analysis
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/15950006/" target="_blank" rel="noopener noreferrer">
+                    executive function
                   </a>,{" "}
-                  <a
-                    href="https://pubmed.ncbi.nlm.nih.gov/32164655/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    emotion-dysregulation meta-analysis
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/32164655/" target="_blank" rel="noopener noreferrer">
+                    emotion dysregulation
                   </a>, and{" "}
-                  <a
-                    href="https://pubmed.ncbi.nlm.nih.gov/30267329/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    hyperfocus study
-                  </a>. These establish group-level associations or reported experiences—not formal criteria,
-                  universality, or a patient-specific cause.
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/30267329/" target="_blank" rel="noopener noreferrer">
+                    hyperfocus
+                  </a>.
                 </p>
               </div>
-              <div className="briefing-chain" role="figure" aria-label="Proposed construct expansion chain">
-                <span>Classified cohort</span>
+              <div className="briefing-chain" role="figure" aria-label="Construct expansion chain">
+                <span>Diagnosed group</span>
                 <b aria-hidden="true">→</b>
                 <span>Average association</span>
                 <b aria-hidden="true">→</b>
-                <span>“ADHD trait”</span>
+                <span>Disorder trait</span>
                 <b aria-hidden="true">→</b>
-                <span>Proposed mechanism</span>
+                <span>Mechanism</span>
                 <b aria-hidden="true">→</b>
                 <span>New diagnostic clue</span>
-                <p>
-                  This is a proposed translation to audit, not a finding established by the studies above.
-                  Each arrow is a new proposition and needs its own evidence.
-                </p>
+                <p>Each arrow is a new claim. None is automatic.</p>
               </div>
             </article>
 
@@ -650,35 +538,63 @@ export default function MentalHealthTheologyBriefingPage() {
                 <span className="sr-only">Exhibit </span>03
               </div>
               <div className="briefing-exhibit-copy">
-                <p className="eyebrow">Commercial theology</p>
-                <h3>Marketing promises access to what ordinary assessment may miss.</h3>
+                <p className="eyebrow">Category expansion</p>
+                <h3>Trauma is doing two different jobs.</h3>
                 <p>
-                  eCare&apos;s current catalog markets training to recognize ADHD and autism in presentations
-                  described as masked, subtle, or co-occurring, and to avoid misattributing them to anxiety,
-                  depression, or personality disorders. A separate sponsored post addresses “narcissistic abuse
-                  clients.” It is a commercially marketed interpretive style—the credentialed expert sees what
-                  ordinary assessment supposedly misses.
+                  PTSD uses a narrow event requirement. SAMHSA uses a broad public health definition based
+                  on experienced harm and lasting effects. Both can serve a purpose. They should not be
+                  treated as interchangeable.
                 </p>
-                <div className="briefing-marketing-quotes">
-                  <blockquote>“Masked, subtle, or co-occurring” presentations</blockquote>
-                  <blockquote>“What your narcissistic abuse client rehearses in the mirror.”</blockquote>
-                </div>
                 <div className="briefing-defense-grid">
                   <div>
-                    <span>Strongest defense</span>
-                    <p>
-                      Advertising compresses nuance. The live ADHD page says the training does not replace
-                      standardized diagnostic procedures, formal training, or supervised experience.
-                    </p>
+                    <span>PTSD Criterion A</span>
+                    <p>Death, threatened death, serious injury, or sexual violence.</p>
+                  </div>
+                  <div>
+                    <span>SAMHSA definition</span>
+                    <p>Experienced physical or emotional harm, or life threat, followed by lasting adverse effects.</p>
+                  </div>
+                </div>
+                <p className="briefing-source-line">
+                  Compare{" "}
+                  <a href="https://www.ptsd.va.gov/professional/treat/essentials/dsm5_ptsd.asp" target="_blank" rel="noopener noreferrer">
+                    the PTSD event standard
+                  </a>{" "}
+                  with{" "}
+                  <a href="https://www.samhsa.gov/mental-health/trauma-violence" target="_blank" rel="noopener noreferrer">
+                    the SAMHSA definition
+                  </a>.
+                </p>
+              </div>
+              <div className="briefing-poll-card" aria-label="Trauma definition comparison">
+                <span className="briefing-poll-stat">A ≠ B</span>
+                <p className="briefing-poll-label">A broad public health category is not a PTSD event criterion.</p>
+                <blockquote>
+                  The wider the category becomes, the more important it is to state which definition is being used.
+                </blockquote>
+              </div>
+            </article>
+
+            <article className="briefing-exhibit">
+              <div className="briefing-exhibit-number">
+                <span className="sr-only">Exhibit </span>04
+              </div>
+              <div className="briefing-exhibit-copy">
+                <p className="eyebrow">Market and authority</p>
+                <h3>Hidden pathology is a good product.</h3>
+                <p>
+                  Public continuing education pages market expertise in masked or missed ADHD and autism,
+                  as well as hidden narcissistic wounds and narcissistic abuse. The advertisements establish
+                  what is being sold: access to patterns that ordinary assessment may miss.
+                </p>
+                <div className="briefing-defense-grid">
+                  <div>
+                    <span>Reasonable defense</span>
+                    <p>Advertising compresses nuance, and missed diagnoses are possible.</p>
                   </div>
                   <div>
                     <span>Narrow conclusion</span>
-                    <p>
-                      The public marketing uses the category “narcissistic abuse client” before the public material
-                      shows how that category is operationalized, and it sells recognition of hidden patterns. It does
-                      not show whether or how the paid course distinguishes reported abuse from diagnosis of an absent
-                      third party.
-                    </p>
+                    <p>The public market rewards interpretive frameworks built around concealed pathology.</p>
                   </div>
                 </div>
                 <p className="briefing-source-line">
@@ -688,7 +604,7 @@ export default function MentalHealthTheologyBriefingPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    eCare ADHD/autism masterclass page
+                    ADHD and autism masterclass
                   </a>{" "}
                   and{" "}
                   <a
@@ -697,140 +613,116 @@ export default function MentalHealthTheologyBriefingPage() {
                     rel="noopener noreferrer"
                   >
                     Hidden Narcissistic Wounds Masterclass
-                  </a>. The sponsored-post capture comes from the project source archive.
+                  </a>.
                 </p>
               </div>
               <figure className="briefing-ad-figure">
                 <Image
                   src="/ecare-narcissistic-abuse-ad.png"
-                  alt="Sponsored eCare Behavioral Health Institute post marketing nine continuing-education credits on narcissistic abuse for 47 dollars"
+                  alt="Sponsored continuing education post about narcissistic abuse"
                   width={1075}
                   height={1478}
                   sizes="(max-width: 900px) 90vw, 32vw"
                 />
                 <figcaption>
-                  This exhibit evaluates the public marketing language, not undisclosed paid-course content.
+                  This exhibit addresses the public marketing language, not undisclosed course content or presenter intent.
                 </figcaption>
               </figure>
             </article>
-
-            <article className="briefing-exhibit briefing-methods-exhibit">
-              <div className="briefing-exhibit-number">
-                <span className="sr-only">Exhibit </span>04
-              </div>
-              <div className="briefing-exhibit-copy">
-                <p className="eyebrow">Political medicalization</p>
-                <h3>What a perception poll can—and cannot—establish.</h3>
-                <p>
-                  In an online Morning Consult poll, 86% of the sampled trans and/or non-binary subgroup
-                  selected a negative response when asked how recent debates about state laws restricting
-                  transgender rights had affected their mental health. The poll records respondents&apos; self-reported
-                  negative perceived impact. It does not independently measure clinical change or identify a causal effect.
-                </p>
-                <div className="briefing-defense-grid">
-                  <div>
-                    <span>What it establishes</span>
-                    <p>
-                      Respondents in the subgroup selected negative answers to a question about perceived impact.
-                    </p>
-                  </div>
-                  <div>
-                    <span>What it does not establish alone</span>
-                    <p>
-                      Clinical deterioration, magnitude of clinical change, or an independently identified causal effect.
-                    </p>
-                  </div>
-                </div>
-                <p className="briefing-source-line">
-                  Original source:{" "}
-                  <a
-                    href="https://www.thetrevorproject.org/wp-content/uploads/2023/01/Issues-Impacting-LGBTQ-Youth-MC-Poll_Public-2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Morning Consult and The Trevor Project polling presentation
-                  </a>.
-                </p>
-              </div>
-              <div className="briefing-poll-card" aria-label="Poll methods summary">
-                <span className="briefing-poll-stat">86%</span>
-                <p className="briefing-poll-label">
-                  of the sampled trans and/or non-binary subgroup selected a negative response
-                </p>
-                <blockquote>
-                  “How have recent debates about state laws restricting the rights of transgender people impacted your mental health?”
-                </blockquote>
-                <dl>
-                  <div>
-                    <dt>Mode</dt>
-                    <dd>Online poll</dd>
-                  </div>
-                  <div>
-                    <dt>Full sample</dt>
-                    <dd>716 LGBTQ youth, ages 13–24</dd>
-                  </div>
-                  <div>
-                    <dt>Field dates</dt>
-                    <dd>Oct. 23–Nov. 2, 2022</dd>
-                  </div>
-                  <div>
-                    <dt>Full-sample margin</dt>
-                    <dd>±4 percentage points</dd>
-                  </div>
-                  <div>
-                    <dt>Subgroup size</dt>
-                    <dd>Not reported</dd>
-                  </div>
-                  <div>
-                    <dt>Subgroup margin</dt>
-                    <dd>Not reported</dd>
-                  </div>
-                </dl>
-                <p className="briefing-poll-note">
-                  The ±4-point margin applies to the full sample. Participant attribution is evidence; it is not,
-                  by itself, a causal design.
-                </p>
-              </div>
-            </article>
           </div>
+
+          <article className="briefing-exhibit briefing-methods-exhibit">
+            <div className="briefing-exhibit-number">
+              <span className="sr-only">Methods note </span>05
+            </div>
+            <div className="briefing-exhibit-copy">
+              <p className="eyebrow">Perception versus causation</p>
+              <h3>A perception poll measures perception.</h3>
+              <p>
+                In a Morning Consult poll, 86 percent of the sampled trans and nonbinary subgroup selected
+                a negative response when asked how debates over restrictive state laws affected their mental
+                health. The result records self reported attribution. It does not independently measure
+                clinical change or isolate causation.
+              </p>
+              <div className="briefing-defense-grid">
+                <div>
+                  <span>What it establishes</span>
+                  <p>Many respondents perceived a negative effect and said so.</p>
+                </div>
+                <div>
+                  <span>What it does not establish alone</span>
+                  <p>Magnitude of clinical change, diagnosis, or an independently identified causal effect.</p>
+                </div>
+              </div>
+              <p className="briefing-source-line">
+                Original source:{" "}
+                <a
+                  href="https://www.thetrevorproject.org/wp-content/uploads/2023/01/Issues-Impacting-LGBTQ-Youth-MC-Poll_Public-2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Morning Consult and The Trevor Project polling presentation
+                </a>.
+              </p>
+            </div>
+            <div className="briefing-poll-card" aria-label="Poll methods summary">
+              <span className="briefing-poll-stat">86%</span>
+              <p className="briefing-poll-label">selected a negative response</p>
+              <dl>
+                <div>
+                  <dt>Mode</dt>
+                  <dd>Online poll</dd>
+                </div>
+                <div>
+                  <dt>Full sample</dt>
+                  <dd>716 LGBTQ youth, ages 13 to 24</dd>
+                </div>
+                <div>
+                  <dt>Field dates</dt>
+                  <dd>October 23 to November 2, 2022</dd>
+                </div>
+                <div>
+                  <dt>Subgroup size</dt>
+                  <dd>Not reported</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
         </div>
       </section>
 
       <section className="section-pad briefing-limits" id="limits" aria-labelledby="limits-heading">
         <div className="shell briefing-limits-grid">
           <div>
-            <p className="eyebrow light">What I am not claiming</p>
-            <h2 id="limits-heading">Precision is the argument.</h2>
+            <p className="eyebrow light">What this argument does not claim</p>
+            <h2 id="limits-heading">The target is the causal story, not the patient.</h2>
             <p>
-              The critique is aimed at explanatory overreach, not at patients, the reality of distress,
-              or the practical work of care.
+              The critique concerns what labels are allowed to explain. It is not an argument against
+              patients, treatment, or the reality of distress.
             </p>
           </div>
           <ul>
             <li>Psychiatric suffering is real.</li>
             <li>Diagnosis can have practical value.</li>
             <li>Medication can help.</li>
-            <li>Group associations can be legitimate and useful findings.</li>
-            <li>ADHD, autism, masking, missed diagnosis, trauma, and abuse are not inventions.</li>
-            <li>
-              “Theology” is an analogy for authority, ritual, unfalsifiability, and commerce—not a claim
-              that every clinician shares a creed or that religion is pathological.
-            </li>
+            <li>Group associations can be legitimate findings.</li>
+            <li>Missed diagnosis, trauma, and abuse can occur.</li>
+            <li>Theology is an analogy for authority, ritual, belief, and commerce.</li>
           </ul>
         </div>
         <div className="shell briefing-limits-statement">
-          None of those facts permits a descriptive label to become an invisible causal entity.
+          A useful label is still not an invisible causal agent.
         </div>
       </section>
 
       <section className="section-pad briefing-sources" id="sources" aria-labelledby="sources-heading">
         <div className="shell">
           <div className="section-heading left briefing-section-heading">
-            <p className="eyebrow">Evidence standard</p>
-            <h2 id="sources-heading">Evidence anchors and public specimens.</h2>
+            <p className="eyebrow">Sources</p>
+            <h2 id="sources-heading">Conceptual anchors and public specimens.</h2>
             <p>
-              These links anchor the conceptual literature, diagnostic guidance, marketing examples, and
-              poll methods used above. Named examples are specimens; the institutional reasoning error is the subject.
+              The conceptual literature supports the distinction between classification and cause. The
+              advertisements and poll show how claims are presented in public.
             </p>
           </div>
           <div className="briefing-source-grid">
@@ -843,8 +735,8 @@ export default function MentalHealthTheologyBriefingPage() {
             ))}
           </div>
           <p className="briefing-verification-note">
-            Public web examples and poll metadata last checked July 23, 2026. A marketing page establishes
-            what is being marketed; it is not a substitute for reviewing an entire paid course.
+            A public advertisement establishes what is marketed. It does not establish the full content of
+            a paid course, the intent of its presenter, or patient harm.
           </p>
         </div>
       </section>
@@ -852,11 +744,11 @@ export default function MentalHealthTheologyBriefingPage() {
       <section className="section-pad briefing-questions-section" id="questions" aria-labelledby="questions-heading">
         <div className="shell briefing-questions-grid">
           <div>
-            <p className="eyebrow">Six proposed interview questions</p>
-            <h2 id="questions-heading">A conversation built to go past the slogan.</h2>
+            <p className="eyebrow">Interview questions</p>
+            <h2 id="questions-heading">Five questions worth asking on camera.</h2>
             <p>
-              Each question opens a different layer of the same problem: what kind of thing a diagnosis is,
-              what it can explain, and what follows when the culture treats it as more than the evidence established.
+              The conversation begins with a simple distinction: what has been observed, what has been
+              classified, and what has actually been explained?
             </p>
           </div>
           <ol className="briefing-questions">
@@ -884,16 +776,15 @@ export default function MentalHealthTheologyBriefingPage() {
           <div>
             <p className="eyebrow">About the proposed guest</p>
             <h2 id="about-heading">Stephen McCarthy</h2>
-            <p className="briefing-about-role">Physician Assistant working in psychiatry · Allentown, Pennsylvania</p>
+            <p className="briefing-about-role">
+              Physician Assistant working in psychiatry · Allentown, Pennsylvania
+            </p>
             <div className="prose">
               <p>
-                Stephen McCarthy is a Physician Assistant working in psychiatry with approximately eleven years
-                of clinical experience. He writes and speaks as ThePsychPA about diagnostic standards, clinical
-                reasoning, psychiatric language, and the movement of professional ideas into popular culture and
-                public policy. His focus is the gap between useful clinical description and unsupported causal
-                explanation: what a diagnosis records, what evidence can establish, and what remains unknown.
-                His target is not patients, treatment, or the reality of suffering, but conceptual overreach by
-                institutions and educators. He is based in Allentown, Pennsylvania.
+                Stephen McCarthy is a Physician Assistant with approximately eleven years of clinical
+                experience. He writes as ThePsychPA about diagnostic standards, psychiatric language,
+                clinical reasoning, and the movement of professional ideas into public culture. His focus
+                is the gap between a useful description and an unsupported explanation.
               </p>
             </div>
             <div className="button-row">
@@ -910,8 +801,8 @@ export default function MentalHealthTheologyBriefingPage() {
               </Link>
             </div>
             <p className="small-note">
-              Professional and media correspondence is routed through the controlled LinkedIn profile.
-              Clinical matters belong with the practice channel on the <Link href="/contact">contact page</Link>.
+              Media correspondence is routed through LinkedIn. Clinical matters belong with the practice
+              channel on the <Link href="/contact">contact page</Link>.
             </p>
           </div>
         </div>
