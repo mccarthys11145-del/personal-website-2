@@ -6,9 +6,11 @@ import { JsonLd } from "@/components/json-ld"
 
 const title = "Mental Health Is the New Theology of the West"
 const description =
-  "A producer briefing by Stephen McCarthy on psychiatric classification, diagnostic reification, construct expansion, commercial authority, and political medicalization."
+  "The final 2:29 TCN submission and producer briefing by Stephen McCarthy on diagnostic reification, hidden-cause marketing, trauma-category expansion, and therapeutic language as institutional authority."
 const path = "/briefing/mental-health-theology"
 const canonical = `https://www.stephenmccarthypa.com${path}`
+// Add the public YouTube URL after publication. Nothing is rendered while this remains empty.
+const publishedVideoUrl = ""
 
 export const metadata: Metadata = {
   title,
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     title,
     description,
     publishedTime: "2026-07-23T00:00:00-04:00",
-    modifiedTime: "2026-08-08T00:00:00-04:00",
+    modifiedTime: "2026-08-15T00:00:00-04:00",
     authors: ["Stephen McCarthy"],
     section: "Producer briefing",
     tags: [
@@ -127,7 +129,7 @@ export default function MentalHealthTheologyBriefingPage() {
     name: title,
     description,
     datePublished: "2026-07-23",
-    dateModified: "2026-08-08",
+    dateModified: "2026-08-15",
     inLanguage: "en-US",
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
     author: { "@id": "https://www.stephenmccarthypa.com/#person" },
@@ -145,9 +147,28 @@ export default function MentalHealthTheologyBriefingPage() {
     ],
   }
 
+  const videoJson = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${canonical}#final-video-object`,
+    name: `${title} — Final TCN Submission`,
+    description:
+      "Stephen McCarthy's final 2:29 TCN submission on diagnostic reification, hidden-cause marketing, trauma-category expansion, and the religious structure of therapeutic language.",
+    thumbnailUrl: ["https://www.stephenmccarthypa.com/mental-health-theology-final-poster.jpg"],
+    uploadDate: "2026-08-15T00:00:00-04:00",
+    duration: "PT2M29S",
+    contentUrl: "https://www.stephenmccarthypa.com/mental-health-theology-final.mp4",
+    inLanguage: "en-US",
+    isFamilyFriendly: true,
+    creator: { "@id": "https://www.stephenmccarthypa.com/#person" },
+    isPartOf: { "@id": `${canonical}#webpage` },
+    ...(publishedVideoUrl ? { sameAs: publishedVideoUrl } : {}),
+  }
+
   return (
     <>
       <JsonLd data={pageJson} />
+      <JsonLd data={videoJson} />
 
       <header className="briefing-hero">
         <div className="shell">
@@ -159,7 +180,7 @@ export default function MentalHealthTheologyBriefingPage() {
           />
 
           <nav className="briefing-jump-nav" aria-label="Briefing sections">
-            <a href="#final-video">Final video</a>
+            <a href="#final-video">Final TCN video</a>
             <a href="#rough-cut">Rough cut</a>
             <a href="#argument">Argument</a>
             <a href="#exhibits">Exhibits</a>
@@ -182,14 +203,15 @@ export default function MentalHealthTheologyBriefingPage() {
               </p>
               <div className="button-row">
                 <a className="button primary" href="#final-video">
-                  Watch the finished pitch
+                  Watch the final TCN submission
                 </a>
                 <a className="button secondary" href="#exhibits">
                   Review the evidence
                 </a>
               </div>
               <p className="review-note">
-                Updated August 8, 2026. Sources and arguments remain identified with their evidentiary limits.
+                Final TCN submission published August 15, 2026. Sources and arguments remain identified with
+                their evidentiary limits.
               </p>
             </div>
 
@@ -253,30 +275,50 @@ export default function MentalHealthTheologyBriefingPage() {
               playsInline
               preload="metadata"
               poster="/mental-health-theology-final-poster.jpg"
-              aria-label="Stephen McCarthy — finished Mental Health Is the New Theology of the West pitch"
+              aria-label="Stephen McCarthy — final Mental Health Is the New Theology of the West TCN submission"
             >
               <source src="/mental-health-theology-final.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/mental-health-theology-final.vtt"
+                srcLang="en"
+                label="English"
+                default
+              />
               Your browser does not support embedded video.{" "}
-              <a href="/mental-health-theology-final.mp4">Download the finished pitch</a>.
+              <a href="/mental-health-theology-final.mp4">Download the final TCN submission</a>.
             </video>
           </div>
           <div className="briefing-video-copy">
-            <p className="eyebrow light">Finished pitch · documentary graphics cut</p>
-            <h2 id="final-video-heading">The completed argument.</h2>
+            <p className="eyebrow light">Final TCN submission · 2:29</p>
+            <h2 id="final-video-heading">The complete argument, in its final cut.</h2>
             <p>
-              This finished version combines the spoken argument with documentary evidence, restrained
-              explanatory graphics, original continuing-education advertisements, and source-based course
-              excerpts. Finishing is restrained and localized; the underlying performance and timing remain intact.
+              This completed video traces a single reasoning error from diagnosis to culture: reification. It uses
+              a sepsis analogy, clinician-facing continuing-education advertisements, and the gap between DSM PTSD
+              Criterion A and SAMHSA&apos;s broader trauma definition before showing how therapy-speak can take on the
+              structure of religion.
             </p>
             <blockquote>
-              “The suffering is real. The theology is the mistake.”
+              “Suffering is real, but this field has taken the human longing for redemption and turned it into a
+              medical specialty.”
             </blockquote>
             <p className="briefing-video-disclosure">
-              Web version: 1080p H.264/AAC. The preserved production master remains 3840 × 2160.
+              Web version: 1920 × 1080 H.264/AAC at 29.97 fps, with English captions. The production master remains
+              3840 × 2160.
             </p>
             <a className="text-link briefing-light-link" href="#rough-cut">
               Compare the rough cut <span aria-hidden="true">→</span>
             </a>
+            {publishedVideoUrl ? (
+              <a
+                className="text-link briefing-light-link"
+                href={publishedVideoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch on YouTube <span aria-hidden="true">↗</span>
+              </a>
+            ) : null}
           </div>
         </div>
       </section>
@@ -301,12 +343,12 @@ export default function MentalHealthTheologyBriefingPage() {
             </video>
           </div>
           <div className="briefing-video-copy">
-            <p className="eyebrow light">Original rough cut · preserved for comparison</p>
-            <h2 id="rough-cut-heading">The argument before final evidence and polish.</h2>
+            <p className="eyebrow light">Earlier rough cut · 1:27 · preserved for comparison</p>
+            <h2 id="rough-cut-heading">The shorter argument before the final submission.</h2>
             <p>
-              This earlier production cut is retained as a transparent record of the editorial development.
-              Compare its direct visual treatment with the finished version&apos;s evidence hierarchy, typography,
-              restrained motion, and final visual finishing.
+              This earlier cut is retained as a transparent record of the editorial development. The final 2:29
+              submission adds the full sepsis comparison, the definition gap around trauma, a clearer evidentiary
+              sequence, and the completed religious analogy.
             </p>
             <blockquote>
               “A classification is not a pathogen.”
