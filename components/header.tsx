@@ -7,6 +7,7 @@ import { useState } from "react"
 const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/consulting", label: "Consulting" },
   { href: "/professional-record", label: "Licensure" },
   { href: "/writing", label: "Writing" },
   { href: "/briefing/mental-health-theology", label: "Briefing" },
@@ -30,7 +31,7 @@ export default function Header() {
           <span className="brand-mark" aria-hidden="true">SM</span>
           <span className="brand-copy">
             <strong>Stephen McCarthy</strong>
-            <small>Physician assistant and writer</small>
+            <small>Physician assistant and consultant</small>
           </span>
         </Link>
 
