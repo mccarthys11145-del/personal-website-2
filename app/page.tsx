@@ -4,9 +4,9 @@ import Link from "next/link"
 import { JsonLd } from "@/components/json-ld"
 
 export const metadata: Metadata = {
-  title: { absolute: "Stephen McCarthy | Physician Assistant and Mental Health Writer" },
+  title: { absolute: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant" },
   description:
-    "Stephen McCarthy is a physician assistant in Allentown, Pennsylvania, with a clinical background in psychiatric care and addiction treatment. Read his writing on psychiatric ontology.",
+    "Stephen McCarthy is a physician assistant and behavioral health consultant in Allentown, Pennsylvania, with experience in psychiatric care, clinical AI review, documentation, workflow design, and medical writing.",
   alternates: { canonical: "/" },
 }
 
@@ -17,7 +17,7 @@ export default function HomePage() {
     "@id": "https://www.stephenmccarthypa.com/#profilepage",
     url: "https://www.stephenmccarthypa.com",
     name: "Stephen McCarthy professional profile",
-    dateModified: "2026-07-19",
+    dateModified: "2026-08-30",
     inLanguage: "en-US",
     mainEntity: { "@id": "https://www.stephenmccarthypa.com/#person" },
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
@@ -29,18 +29,19 @@ export default function HomePage() {
       <section className="hero section-pad">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Physician assistant · Allentown, Pennsylvania</p>
-            <h1>Clinical experience. Clear language. Claims that can be checked.</h1>
+            <p className="eyebrow">Physician assistant · Behavioral health consultant · Allentown, Pennsylvania</p>
+            <h1>Clinical experience. Clear language. Systems that can be checked.</h1>
             <p className="hero-lead">
               Stephen McCarthy is a physician assistant with a clinical background in psychiatric care,
-              addiction treatment, and inpatient and outpatient settings. This site shares his writing on psychiatric language and clinical reasoning.
+              addiction treatment, clinical leadership, documentation review, and digital workflow development.
+              He provides behavioral health AI and workflow consulting and writes about psychiatric language and clinical reasoning.
             </p>
             <div className="button-row">
-              <Link className="button primary" href="/briefing/mental-health-theology">
-                Read the latest briefing
+              <Link className="button primary" href="/consulting">
+                Explore consulting
               </Link>
-              <Link className="button secondary" href="/professional-record">
-                Licensure
+              <Link className="button secondary" href="/briefing/mental-health-theology">
+                Read the latest briefing
               </Link>
             </div>
           </div>
@@ -58,7 +59,7 @@ export default function HomePage() {
             </div>
             <div className="portrait-caption">
               <span>Stephen McCarthy</span>
-              <span>Physician assistant and writer</span>
+              <span>Physician assistant, consultant, and writer</span>
             </div>
           </div>
         </div>
@@ -75,7 +76,7 @@ export default function HomePage() {
               <span className="fact-number">01</span>
               <h3>Professional identity</h3>
               <p>
-                Name, education, NPI, and clinical background are presented conservatively and linked to records where available.
+                Name, education, NPI, clinical background, and service scope are presented conservatively and linked to records where available.
               </p>
             </article>
             <article>
@@ -87,7 +88,7 @@ export default function HomePage() {
               <span className="fact-number">03</span>
               <h3>No ornamental claims</h3>
               <p>
-                No invented testimonials, ratings, patient totals, media coverage, awards, or unsupported certification claims.
+                No invented testimonials, ratings, patient totals, media coverage, awards, client outcomes, or unsupported certification claims.
               </p>
             </article>
           </div>
@@ -97,12 +98,29 @@ export default function HomePage() {
       <section className="section-pad featured-writing">
         <div className="shell feature-grid">
           <div>
-            <p className="eyebrow">Producer briefing · July 23, 2026</p>
+            <p className="eyebrow">Behavioral health consulting</p>
+            <h2>Clinical AI and workflow review</h2>
+          </div>
+          <div>
+            <p className="feature-deck">
+              A fixed scope review for behavioral health practices and health technology teams that need experienced psychiatric clinical judgment applied to AI outputs, documentation systems, patient communication, prompts, templates, or workflows.
+            </p>
+            <Link className="text-link" href="/consulting">
+              Review the consulting offer <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad featured-writing">
+        <div className="shell feature-grid">
+          <div>
+            <p className="eyebrow">Producer briefing · August 15, 2026</p>
             <h2>Mental Health Is the New Theology of the West</h2>
           </div>
           <div>
             <p className="feature-deck">
-              A source-led producer briefing on diagnostic reification, commercialized mental-health language,
+              A source led producer briefing on diagnostic reification, commercialized mental health language,
               and the difference between describing distress and claiming to explain it.
             </p>
             <Link className="text-link" href="/briefing/mental-health-theology">
@@ -197,9 +215,12 @@ export default function HomePage() {
           </blockquote>
           <div>
             <p>
-              The distinction matters because patients deserve language that clarifies what is known, what is inferred, and what remains uncertain.
+              The distinction matters because patients and organizations deserve language that clarifies what is known, what is inferred, and what remains uncertain.
             </p>
-            <Link className="button secondary light-button" href="/about">About the approach</Link>
+            <div className="button-row">
+              <Link className="button secondary light-button" href="/consulting">Consulting</Link>
+              <Link className="text-link" href="/about">About the approach <span aria-hidden="true">→</span></Link>
+            </div>
           </div>
         </div>
       </section>
