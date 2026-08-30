@@ -20,7 +20,8 @@ export function SiteJsonLd() {
       "@id": `${base}/#website`,
       url: base,
       name: "Stephen McCarthy",
-      description: "Professional profile and writing by Stephen McCarthy, a physician assistant based in Allentown, Pennsylvania.",
+      description:
+        "Professional profile, behavioral health consulting, and writing by Stephen McCarthy, a physician assistant based in Allentown, Pennsylvania.",
       inLanguage: "en-US",
       publisher: { "@id": `${base}/#person` },
     },
@@ -32,7 +33,15 @@ export function SiteJsonLd() {
       alternateName: "Stephen McCarthy",
       url: base,
       image: `${base}/stephen-mccarthy-portrait.webp`,
-      jobTitle: "Physician Assistant",
+      jobTitle: ["Physician Assistant", "Behavioral Health Consultant"],
+      knowsAbout: [
+        "Psychiatric care",
+        "Behavioral health clinical AI review",
+        "Clinical documentation",
+        "Patient communication",
+        "Behavioral health workflows",
+        "Psychiatric language and clinical reasoning",
+      ],
       alumniOf: {
         "@type": "CollegeOrUniversity",
         name: "DeSales University",
@@ -48,7 +57,8 @@ export function SiteJsonLd() {
         "https://www.doximity.com/pub/stephen-mccarthy-pa-5ad36978",
         "https://npiregistry.cms.hhs.gov/provider-view/1912308743",
       ],
-      description: "Physician assistant with clinical experience in psychiatric care, addiction treatment, and inpatient and outpatient settings. Writer on diagnostic language and psychiatric ontology.",
+      description:
+        "Physician assistant and behavioral health consultant with clinical experience in psychiatric care, addiction treatment, inpatient and outpatient settings, documentation review, clinical AI, and workflow development.",
     },
   ]
 
