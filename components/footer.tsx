@@ -7,8 +7,8 @@ export default function Footer() {
         <div>
           <div className="footer-brand">Stephen McCarthy</div>
           <p className="footer-summary">
-            A source based professional profile and writing archive focused on psychiatric language,
-            clinical reasoning, and the difference between naming a pattern and explaining it.
+            A source based professional profile, consulting practice, and writing archive focused on behavioral health,
+            clinical AI, clinical reasoning, and clear evidence standards.
           </p>
         </div>
 
@@ -16,6 +16,7 @@ export default function Footer() {
           <h2>Explore</h2>
           <ul>
             <li><Link href="/about">About</Link></li>
+            <li><Link href="/consulting">Consulting</Link></li>
             <li><Link href="/professional-record">Licensure</Link></li>
             <li><Link href="/writing">Writing</Link></li>
             <li><Link href="/briefing/mental-health-theology">Producer briefing</Link></li>
@@ -29,6 +30,7 @@ export default function Footer() {
           <p>6081 Hamilton Boulevard, Suite 600</p>
           <p>Allentown, Pennsylvania 18106</p>
           <p><a href="tel:+14843571916">484 357 1916</a></p>
+          <p><Link href="/contact">Professional contact options</Link></p>
         </div>
       </div>
 
