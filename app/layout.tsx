@@ -9,21 +9,24 @@ const siteUrl = "https://www.stephenmccarthypa.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Stephen McCarthy | Physician Assistant and Mental Health Writer",
+    default: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
     template: "%s | Stephen McCarthy",
   },
   description:
-    "Source based professional profile and writing by Stephen McCarthy, a physician assistant in Allentown, Pennsylvania, focused on psychiatry, diagnostic language, and clinical reasoning.",
+    "Source based professional profile, behavioral health consulting, and writing by Stephen McCarthy, a physician assistant in Allentown, Pennsylvania, focused on clinical AI, psychiatric care, documentation, workflow design, and clinical reasoning.",
   applicationName: "Stephen McCarthy",
   authors: [{ name: "Stephen McCarthy", url: siteUrl }],
   creator: "Stephen McCarthy",
   publisher: "Stephen McCarthy",
-  category: "Professional profile",
+  category: "Professional profile and consulting",
   keywords: [
     "Stephen McCarthy physician assistant",
     "Stephen McCarthy PA",
+    "behavioral health AI consultant",
+    "clinical AI review",
+    "psychiatric documentation review",
+    "behavioral health workflow consulting",
     "psychiatric ontology",
-    "AuDHD critique",
     "mental health diagnosis",
     "Allentown physician assistant",
   ],
@@ -37,24 +40,24 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Stephen McCarthy",
-    title: "Stephen McCarthy | Physician Assistant and Mental Health Writer",
+    title: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
     description:
-      "Clinical experience, source checked professional facts, and writing on psychiatric language and ontology.",
+      "Behavioral health AI and workflow consulting, clinical experience, source checked professional facts, and writing on psychiatric language and clinical reasoning.",
     images: [
       {
         url: "/stephen-mccarthy-og.png",
         width: 1200,
         height: 630,
-        alt: "Stephen McCarthy, physician assistant and writer",
+        alt: "Stephen McCarthy, physician assistant and behavioral health consultant",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stephen McCarthy | Physician Assistant and Mental Health Writer",
+    title: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
     description:
-      "Clinical experience, source checked professional facts, and writing on psychiatric language and ontology.",
+      "Behavioral health AI and workflow consulting, clinical experience, and source checked writing on psychiatric language and clinical reasoning.",
     images: ["/stephen-mccarthy-og.png"],
   },
   robots: {
