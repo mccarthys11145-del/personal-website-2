@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import "./globals.css"
+import "./clinical-ai.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { SiteJsonLd } from "@/components/json-ld"
@@ -9,25 +10,28 @@ const siteUrl = "https://www.stephenmccarthypa.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
+    default: "Stephen McCarthy | Clinical AI Red Team Consultant",
     template: "%s | Stephen McCarthy",
   },
   description:
-    "Source based professional profile, behavioral health consulting, and writing by Stephen McCarthy, a physician assistant in Allentown, Pennsylvania, focused on clinical AI, psychiatric care, documentation, workflow design, and clinical reasoning.",
+    "Source based professional profile, clinical AI red team testing, behavioral health benchmarking, and writing by Stephen McCarthy, a physician assistant in Allentown, Pennsylvania.",
   applicationName: "Stephen McCarthy",
   authors: [{ name: "Stephen McCarthy", url: siteUrl }],
   creator: "Stephen McCarthy",
   publisher: "Stephen McCarthy",
-  category: "Professional profile and consulting",
+  category: "Clinical AI evaluation and professional profile",
   keywords: [
     "Stephen McCarthy physician assistant",
     "Stephen McCarthy PA",
-    "behavioral health AI consultant",
-    "clinical AI review",
-    "psychiatric documentation review",
+    "clinical AI red team testing",
+    "behavioral health AI benchmarking",
+    "psychiatric AI evaluation",
+    "PsychWorkflowBench",
+    "longitudinal psychiatric record synthesis",
+    "clinical documentation fidelity",
+    "medication reconciliation benchmark",
     "behavioral health workflow consulting",
     "psychiatric ontology",
-    "mental health diagnosis",
     "Allentown physician assistant",
   ],
   alternates: {
@@ -40,24 +44,24 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Stephen McCarthy",
-    title: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
+    title: "Stephen McCarthy | Clinical AI Red Team Consultant",
     description:
-      "Behavioral health AI and workflow consulting, clinical experience, source checked professional facts, and writing on psychiatric language and clinical reasoning.",
+      "Clinical AI red team testing and behavioral health benchmarking grounded in frontline psychiatric experience, plus source checked writing on clinical reasoning.",
     images: [
       {
         url: "/stephen-mccarthy-og.png",
         width: 1200,
         height: 630,
-        alt: "Stephen McCarthy, physician assistant and behavioral health consultant",
+        alt: "Stephen McCarthy, physician assistant and clinical AI red team consultant",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stephen McCarthy | Physician Assistant and Behavioral Health Consultant",
+    title: "Stephen McCarthy | Clinical AI Red Team Consultant",
     description:
-      "Behavioral health AI and workflow consulting, clinical experience, and source checked writing on psychiatric language and clinical reasoning.",
+      "Clinical AI red team testing, behavioral health benchmarking, frontline psychiatric experience, and source checked writing on clinical reasoning.",
     images: ["/stephen-mccarthy-og.png"],
   },
   robots: {
