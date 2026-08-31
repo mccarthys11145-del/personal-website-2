@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import "./clinical-ai.css"
+import "./clinical-ai-overrides.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { SiteJsonLd } from "@/components/json-ld"
