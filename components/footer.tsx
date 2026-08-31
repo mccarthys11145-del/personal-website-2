@@ -7,8 +7,8 @@ export default function Footer() {
         <div>
           <div className="footer-brand">Stephen McCarthy</div>
           <p className="footer-summary">
-            A source based professional profile, consulting practice, and writing archive focused on behavioral health,
-            clinical AI, clinical reasoning, and clear evidence standards.
+            A source based professional profile, clinical AI evaluation practice, and writing archive focused on behavioral health,
+            psychiatric record synthesis, documentation fidelity, clinical reasoning, and clear evidence standards.
           </p>
         </div>
 
@@ -16,7 +16,8 @@ export default function Footer() {
           <h2>Explore</h2>
           <ul>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="/consulting">Consulting</Link></li>
+            <li><Link href="/consulting">Clinical AI testing</Link></li>
+            <li><Link href="/psychworkflowbench">PsychWorkflowBench</Link></li>
             <li><Link href="/professional-record">Licensure</Link></li>
             <li><Link href="/writing">Writing</Link></li>
             <li><Link href="/briefing/mental-health-theology">Producer briefing</Link></li>
