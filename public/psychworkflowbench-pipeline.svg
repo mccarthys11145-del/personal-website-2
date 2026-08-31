@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">PsychWorkflowBench evaluation pipeline</title>
+  <desc id="desc">A visual pipeline showing noisy psychiatric records entering a model under test and producing a structured clinical failure map.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12202b"/>
+      <stop offset="1" stop-color="#1f3d4a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#071117" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="780" rx="42" fill="url(#bg)"/>
+  <circle cx="1060" cy="86" r="210" fill="#27647a" opacity=".32"/>
+  <circle cx="90" cy="760" r="230" fill="#b95f35" opacity=".24"/>
+  <text x="74" y="74" fill="#dd9a72" font-family="Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="4">PSYCHWORKFLOWBENCH</text>
+  <text x="74" y="122" fill="#f5f1e8" font-family="Georgia, serif" font-size="42">From chart noise to a scored failure map.</text>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(70 196) rotate(-4 145 92)">
+      <rect width="292" height="182" rx="18" fill="#fbfaf6"/>
+      <rect width="292" height="38" rx="18" fill="#b95f35"/>
+      <rect y="20" width="292" height="18" fill="#b95f35"/>
+      <text x="22" y="26" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.7">GROUP HOME ISP · 2022</text>
+      <g stroke="#c8c3b9" stroke-width="7" stroke-linecap="round">
+        <path d="M24 70h204"/><path d="M24 94h242"/><path d="M24 118h178"/><path d="M24 142h222"/>
+      </g>
+      <rect x="226" y="136" width="44" height="20" rx="10" fill="#f0d9cd"/>
+      <text x="248" y="150" text-anchor="middle" fill="#8d3f1f" font-family="Arial, sans-serif" font-size="9" font-weight="800">OLD</text>
+    </g>
+    <g transform="translate(102 286) rotate(2 145 92)">
+      <rect width="292" height="182" rx="18" fill="#fbfaf6"/>
+      <rect width="292" height="38" rx="18" fill="#27647a"/>
+      <rect y="20" width="292" height="18" fill="#27647a"/>
+      <text x="22" y="26" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.7">CURRENT MAR · 2026</text>
+      <g stroke="#c8c3b9" stroke-width="7" stroke-linecap="round">
+        <path d="M24 70h225"/><path d="M24 94h188"/><path d="M24 118h234"/><path d="M24 142h166"/>
+      </g>
+      <rect x="214" y="136" width="56" height="20" rx="10" fill="#e1ece0"/>
+      <text x="242" y="150" text-anchor="middle" fill="#365238" font-family="Arial, sans-serif" font-size="9" font-weight="800">CURRENT</text>
+    </g>
+    <g transform="translate(68 384) rotate(-1 145 92)">
+      <rect width="292" height="182" rx="18" fill="#fbfaf6"/>
+      <rect width="292" height="38" rx="18" fill="#6f826d"/>
+      <rect y="20" width="292" height="18" fill="#6f826d"/>
+      <text x="22" y="26" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.7">HOSPITAL NOTE · 2024</text>
+      <g stroke="#c8c3b9" stroke-width="7" stroke-linecap="round">
+        <path d="M24 70h204"/><path d="M24 94h242"/><path d="M24 118h146"/><path d="M24 142h226"/>
+      </g>
+      <circle cx="254" cy="142" r="11" fill="#e7dfb7"/>
+      <path d="m249 142 4 4 8-9" fill="none" stroke="#675f2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(108 474) rotate(4 145 92)">
+      <rect width="292" height="182" rx="18" fill="#fbfaf6"/>
+      <rect width="292" height="38" rx="18" fill="#8d3f1f"/>
+      <rect y="20" width="292" height="18" fill="#8d3f1f"/>
+      <text x="22" y="26" fill="#fff" font-family="Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">LEGACY PROBLEM LIST</text>
+      <g stroke="#c8c3b9" stroke-width="7" stroke-linecap="round">
+        <path d="M24 70h238"/><path d="M24 94h196"/><path d="M24 118h232"/><path d="M24 142h184"/>
+      </g>
+      <g fill="#b95f35">
+        <circle cx="252" cy="70" r="5"/><circle cx="232" cy="94" r="5"/><circle cx="248" cy="118" r="5"/>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(474 270)">
+    <circle cx="150" cy="150" r="140" fill="#0b1820" stroke="#f5f1e8" stroke-opacity=".26" stroke-width="2"/>
+    <circle cx="150" cy="150" r="104" fill="none" stroke="#27647a" stroke-width="16" stroke-opacity=".56" stroke-dasharray="28 12"/>
+    <circle cx="150" cy="150" r="65" fill="#f5f1e8"/>
+    <text x="150" y="138" text-anchor="middle" fill="#12202b" font-family="Arial, sans-serif" font-size="14" font-weight="900" letter-spacing="1.8">MODEL</text>
+    <text x="150" y="162" text-anchor="middle" fill="#12202b" font-family="Arial, sans-serif" font-size="14" font-weight="900" letter-spacing="1.8">UNDER TEST</text>
+    <path d="M-70 150h70" stroke="#f5f1e8" stroke-width="4" stroke-opacity=".7"/>
+    <path d="m-2 139 18 11-18 11" fill="none" stroke="#f5f1e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 150h70" stroke="#f5f1e8" stroke-width="4" stroke-opacity=".7"/>
+    <path d="m370 139 18 11-18 11" fill="none" stroke="#f5f1e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(858 206)" filter="url(#shadow)">
+    <rect width="276" height="432" rx="24" fill="#fbfaf6"/>
+    <text x="24" y="42" fill="#12202b" font-family="Arial, sans-serif" font-size="14" font-weight="900" letter-spacing="2">FAILURE MAP</text>
+    <text x="24" y="70" fill="#52636d" font-family="Arial, sans-serif" font-size="12">Every error traces back to source evidence.</text>
+    <g font-family="Arial, sans-serif">
+      <g transform="translate(24 102)">
+        <rect width="228" height="42" rx="12" fill="#e9f0f2"/>
+        <circle cx="22" cy="21" r="7" fill="#27647a"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">TEMPORAL FIDELITY</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">current versus historical</text>
+      </g>
+      <g transform="translate(24 154)">
+        <rect width="228" height="42" rx="12" fill="#edf1ea"/>
+        <circle cx="22" cy="21" r="7" fill="#6f826d"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">MEDICATION RECONCILIATION</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">active, duplicate, discontinued</text>
+      </g>
+      <g transform="translate(24 206)">
+        <rect width="228" height="42" rx="12" fill="#f2e9e3"/>
+        <circle cx="22" cy="21" r="7" fill="#b95f35"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">DIAGNOSTIC COHERENCE</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">supported versus inherited</text>
+      </g>
+      <g transform="translate(24 258)">
+        <rect width="228" height="42" rx="12" fill="#f5eed4"/>
+        <circle cx="22" cy="21" r="7" fill="#927b31"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">CONTRADICTION HANDLING</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">conflicts surfaced, not buried</text>
+      </g>
+      <g transform="translate(24 310)">
+        <rect width="228" height="42" rx="12" fill="#f0e2de"/>
+        <circle cx="22" cy="21" r="7" fill="#8d3f1f"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">UNSUPPORTED ASSERTIONS</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">invented MSE and chart facts</text>
+      </g>
+      <g transform="translate(24 362)">
+        <rect width="228" height="42" rx="12" fill="#e8edf0"/>
+        <circle cx="22" cy="21" r="7" fill="#344550"/>
+        <text x="40" y="17" fill="#12202b" font-size="11" font-weight="800">CRITICAL SAFETY FAILURES</text>
+        <text x="40" y="31" fill="#60717a" font-size="9">severity, source, remediation</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(74 704)" font-family="Arial, sans-serif">
+    <text fill="#f5f1e8" fill-opacity=".58" font-size="13">CURRENT FACTS</text>
+    <circle cx="128" cy="-4" r="3" fill="#dd9a72"/>
+    <text x="146" fill="#f5f1e8" fill-opacity=".58" font-size="13">HISTORICAL FACTS</text>
+    <circle cx="286" cy="-4" r="3" fill="#dd9a72"/>
+    <text x="304" fill="#f5f1e8" fill-opacity=".58" font-size="13">CONTRADICTIONS</text>
+    <circle cx="420" cy="-4" r="3" fill="#dd9a72"/>
+    <text x="438" fill="#f5f1e8" fill-opacity=".58" font-size="13">UNSUPPORTED CLAIMS</text>
+  </g>
+</svg>
