@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/site-metadata"
 export const metadata = createPageMetadata({
   title: "About",
   description:
-    "About Stephen McCarthy, a physician assistant and behavioral health consultant based in Allentown, Pennsylvania, with clinical experience in psychiatric care, addiction treatment, clinical AI review, and workflow development.",
+    "About Stephen McCarthy, a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania, with more than 11 years of psychiatric clinical experience.",
   path: "/about",
 })
 
@@ -19,9 +19,9 @@ export default function AboutPage() {
           <p className="eyebrow">About</p>
           <h1>A professional profile with fewer adjectives and more receipts.</h1>
           <p className="page-deck">
-            Stephen Thomas McCarthy is a physician assistant and behavioral health consultant based in Allentown, Pennsylvania.
+            Stephen Thomas McCarthy is a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania.
             His background includes inpatient and outpatient psychiatric care, addiction treatment, medication management,
-            clinical leadership, documentation review, and work with diverse patient populations.
+            telehealth, clinical leadership, documentation review, and work with diverse patient populations.
           </p>
         </div>
       </section>
@@ -41,14 +41,17 @@ export default function AboutPage() {
             <h2>Background</h2>
             <p>
               McCarthy earned a Master of Science in Physician Assistant Studies and a Bachelor of Science in Medical Studies
-              from DeSales University. His clinical work has centered on mental health settings and the practical problems of
-              assessment, medication management, impairment, documentation quality, and care coordination.
+              from DeSales University. His clinical work has centered on the practical problems of psychiatric assessment,
+              medication management, impairment, documentation quality, longitudinal record review, and care coordination.
             </p>
             <p>
-              His consulting work applies frontline psychiatric judgment to clinical AI outputs, documentation systems,
-              patient communication, prompts, templates, and behavioral health workflows. The aim is to identify clinically
-              important omissions, unsupported conclusions, unclear escalation pathways, and systems that collect information
-              without improving the decision or next action.
+              His consulting work applies frontline psychiatric judgment to clinical AI systems. The current focus is red team testing
+              and benchmarking of longitudinal record synthesis, medication reconciliation, diagnostic coherence, contradiction handling,
+              documentation fidelity, unsupported assertions, and safety behavior.
+            </p>
+            <p>
+              PsychWorkflowBench is the working name for an evaluation framework under development. It is designed to test whether a system
+              can turn noisy psychiatric records into a coherent current representation without copying obsolete information or inventing details.
             </p>
             <p>
               His writing focuses on psychiatric language: what diagnoses measure, what they help clinicians do,
@@ -68,25 +71,26 @@ export default function AboutPage() {
           </div>
           <div className="card-grid three">
             <article className="plain-card">
-              <span className="card-kicker">Stable facts</span>
-              <h3>Identity and education</h3>
+              <span className="card-kicker">Source state</span>
+              <h3>Current, historical, contradictory, unknown</h3>
               <p>
-                Durable information is stated plainly and repeated consistently across the site and controlled profiles.
+                Reviews begin by separating what is current and supported from what is old, copied, conflicting, or unresolved.
               </p>
             </article>
             <article className="plain-card">
               <span className="card-kicker">Clinical review</span>
               <h3>Observation before conclusion</h3>
               <p>
-                Reviews distinguish what the submitted material shows, what can reasonably be inferred, what remains uncertain,
-                and what requires additional evidence.
+                Findings distinguish what the submitted material shows, what can reasonably be inferred,
+                what remains uncertain, and what the system must not invent.
               </p>
             </article>
             <article className="plain-card">
-              <span className="card-kicker">Commentary</span>
+              <span className="card-kicker">Communication</span>
               <h3>Arguments labeled as arguments</h3>
               <p>
-                Essays distinguish a thesis from a verified fact, cite their sources, and make uncertainty visible rather than decorative.
+                Reports and essays distinguish a thesis from a verified fact, cite their sources,
+                and make uncertainty visible rather than decorative.
               </p>
             </article>
           </div>
@@ -96,16 +100,19 @@ export default function AboutPage() {
       <section className="section-pad">
         <div className="shell split-callout">
           <div>
-            <p className="eyebrow">Consulting</p>
-            <h2>Behavioral health AI and workflow review</h2>
+            <p className="eyebrow">Clinical AI evaluation</p>
+            <h2>Red team testing and benchmarking</h2>
           </div>
           <div>
             <p>
-              The founding consulting offer reviews a defined set of deidentified clinical AI outputs, one behavioral health workflow,
-              or one prompt, template, or knowledge base set. The engagement produces a risk matrix, annotated findings,
-              revised priority material, and an implementation roadmap.
+              Private evaluations can test one defined behavioral health workflow, a set of deidentified model outputs,
+              or a model configuration against clinician authored cases and scoring criteria. The result is a severity ranked failure map,
+              source linked findings, remediation priorities, and objective retest criteria.
             </p>
-            <Link className="button primary" href="/consulting">Review the consulting offer</Link>
+            <div className="button-row">
+              <Link className="button primary" href="/consulting">Review evaluation services</Link>
+              <Link className="button secondary" href="/psychworkflowbench">Review PsychWorkflowBench</Link>
+            </div>
           </div>
         </div>
       </section>
