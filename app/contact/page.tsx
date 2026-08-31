@@ -1,10 +1,11 @@
+import Link from "next/link"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Consulting, professional, media, and practice contact routes for Stephen McCarthy, with privacy guidance for clinical information.",
+    "Clinical AI evaluation, consulting, professional, media, and practice contact routes for Stephen McCarthy, with privacy guidance for clinical information.",
   path: "/contact",
 })
 
@@ -15,7 +16,7 @@ export default function ContactPage() {
         <div className="shell">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
           <p className="eyebrow">Contact</p>
-          <h1>Choose the right channel and keep medical information off this site.</h1>
+          <h1>Describe the system and the decision. Keep patient information out of the first message.</h1>
           <p className="page-deck">
             This personal website has no message form, database, or patient intake workflow. It does not collect protected health information.
           </p>
@@ -25,29 +26,33 @@ export default function ContactPage() {
       <section className="section-pad">
         <div className="shell contact-grid">
           <article className="contact-card primary-contact">
-            <span className="card-kicker">Consulting inquiries</span>
-            <h2>Behavioral health AI and workflow review</h2>
+            <span className="card-kicker">Clinical AI evaluation</span>
+            <h2>Red team testing and benchmarking</h2>
             <p>
-              For clinical AI review, documentation analysis, workflow consulting, patient communication review,
-              speaking, or medical education inquiries, send a concise description of the organization, problem,
-              intended decision, and desired timing.
+              For a useful initial discussion, describe the organization, system, intended clinical use,
+              material being processed, current concern, preferred timing, and the decision the evaluation must support.
             </p>
             <a
               className="button primary"
-              href="mailto:mccarthys11145@gmail.com?subject=Behavioral%20health%20consulting%20inquiry"
+              href="mailto:mccarthys11145@gmail.com?subject=Clinical%20AI%20red%20team%20inquiry"
             >
               Email Stephen
             </a>
             <p className="small-note">
-              Do not attach patient records or include protected health information in an initial inquiry.
+              Do not attach patient records, screenshots, medication lists, transcripts, or other protected health information.
             </p>
+            <div className="button-row">
+              <Link className="text-link" href="/consulting">Review evaluation services <span aria-hidden="true">→</span></Link>
+              <Link className="text-link" href="/psychworkflowbench">Review PsychWorkflowBench <span aria-hidden="true">→</span></Link>
+            </div>
           </article>
 
           <article className="contact-card">
             <span className="card-kicker">Professional and media inquiries</span>
             <h2>Professional profile</h2>
             <p>
-              Use LinkedIn for professional networking, commentary requests, introductions, or other nonclinical correspondence.
+              Use LinkedIn for professional networking, commentary requests, introductions, speaking inquiries,
+              medical education opportunities, or other nonclinical correspondence.
             </p>
             <a className="button secondary" href="https://www.linkedin.com/in/stephenmccarthypa" target="_blank" rel="noopener noreferrer">
               Open LinkedIn
@@ -79,7 +84,8 @@ export default function ContactPage() {
           </div>
           <div>
             <p>
-              Do not send diagnoses, medication lists, treatment records, photographs, insurance information, or urgent clinical questions through email or professional networking platforms.
+              Do not send diagnoses, medication lists, treatment records, photographs, insurance information,
+              raw model inputs containing patient information, or urgent clinical questions through email or professional networking platforms.
               For care related matters, use the practice approved channel.
             </p>
             <p>
