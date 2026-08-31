@@ -1,0 +1,23 @@
+.benchmark-feature .section-heading p:not(.eyebrow) {
+  color: #c3cbd0;
+}
+
+.benchmark-feature .section-heading {
+  max-width: 860px;
+}
+
+.benchmark-feature .module-grid {
+  text-align: left;
+}
+
+.benchmark-feature .module-card h3 {
+  color: #f5f1e8;
+}
+
+@media (max-width: 560px) {
+  .red-team-home-art::after {
+    right: 0.75rem;
+    bottom: 0.7rem;
+    font-size: 0.6rem;
+  }
+}
