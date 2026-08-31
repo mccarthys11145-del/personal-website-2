@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.95,
     },
+    {
+      url: `${base}/case-factory`,
+      lastModified: clinicalAiModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     { url: `${base}/professional-record`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/writing`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     {
