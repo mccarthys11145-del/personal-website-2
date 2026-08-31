@@ -21,7 +21,7 @@ export function SiteJsonLd() {
       url: base,
       name: "Stephen McCarthy",
       description:
-        "Professional profile, behavioral health consulting, and writing by Stephen McCarthy, a physician assistant based in Allentown, Pennsylvania.",
+        "Professional profile, clinical AI red team testing, behavioral health benchmarking, and writing by Stephen McCarthy, a physician assistant based in Allentown, Pennsylvania.",
       inLanguage: "en-US",
       publisher: { "@id": `${base}/#person` },
     },
@@ -33,12 +33,15 @@ export function SiteJsonLd() {
       alternateName: "Stephen McCarthy",
       url: base,
       image: `${base}/stephen-mccarthy-portrait.webp`,
-      jobTitle: ["Physician Assistant", "Behavioral Health Consultant"],
+      jobTitle: ["Physician Assistant", "Clinical AI Red Team Consultant"],
       knowsAbout: [
         "Psychiatric care",
-        "Behavioral health clinical AI review",
-        "Clinical documentation",
-        "Patient communication",
+        "Clinical AI red team testing",
+        "Behavioral health AI benchmarking",
+        "Longitudinal psychiatric record synthesis",
+        "Medication reconciliation evaluation",
+        "Clinical documentation fidelity",
+        "Diagnostic coherence",
         "Behavioral health workflows",
         "Psychiatric language and clinical reasoning",
       ],
@@ -58,7 +61,7 @@ export function SiteJsonLd() {
         "https://npiregistry.cms.hhs.gov/provider-view/1912308743",
       ],
       description:
-        "Physician assistant and behavioral health consultant with clinical experience in psychiatric care, addiction treatment, inpatient and outpatient settings, documentation review, clinical AI, and workflow development.",
+        "Physician assistant and clinical AI red team consultant with more than 11 years of psychiatric clinical experience across inpatient care, outpatient care, addiction treatment, telehealth, medication management, documentation review, and workflow development.",
     },
   ]
 
