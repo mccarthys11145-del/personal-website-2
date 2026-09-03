@@ -31,7 +31,7 @@ export default function Footer() {
           <p>Lehigh Valley Wellness</p>
           <p>6081 Hamilton Boulevard, Suite 600</p>
           <p>Allentown, Pennsylvania 18106</p>
-          <p><a href="tel:+14843571916">484 357 1916</a></p>
+          <p><a href="tel:+14842730767">484 273 0767</a></p>
           <p><Link href="/contact">Professional contact options</Link></p>
         </div>
       </div>

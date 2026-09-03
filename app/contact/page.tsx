@@ -66,7 +66,7 @@ export default function ContactPage() {
               6081 Hamilton Boulevard, Suite 600<br />
               Allentown, Pennsylvania 18106
             </address>
-            <p><a href="tel:+14843571916">484 357 1916</a></p>
+            <p><a href="tel:+14842730767">484 273 0767</a></p>
             <p>Hours used for directory corrections: Monday and Thursday, 10:00 a.m. to 6:00 p.m.</p>
             <a className="button secondary" href="https://lehighwellness.org/" target="_blank" rel="noopener noreferrer">
               Visit the practice website
