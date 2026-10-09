@@ -10,8 +10,15 @@ export async function GET() {
     <link>${base}/writing</link>
     <description>Essays on psychiatric ontology, diagnostic language, and clinical reasoning.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2026 04:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</title>
+      <link>${base}/writing/how-to-read-health-claims-and-evidence</link>
+      <guid isPermaLink="true">${base}/writing/how-to-read-health-claims-and-evidence</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A practical guide to study design, risk, uncertainty, and the limits of health claims.</description>
+    </item>
     <item>
       <title>Mental Health Is the New Theology of the West</title>
       <link>${base}/briefing/mental-health-theology</link>
