@@ -26,6 +26,15 @@ export default function WritingPage() {
 
       <section className="section-pad">
         <div className="shell writing-list">
+          <article className="article-card">
+            <div className="article-card-content">
+              <div className="article-meta"><span>Reading research</span><time dateTime="2026-10-08">October 8, 2026</time><span>9 minute read</span></div>
+              <h2><Link href="/writing/how-to-read-health-claims-and-evidence">How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</Link></h2>
+              <p>A practical method for examining study design, comparing absolute and relative risk, and keeping uncertainty visible. Includes an original worked example and linked sources.</p>
+              <Link className="text-link" href="/writing/how-to-read-health-claims-and-evidence">Read the guide <span aria-hidden="true">→</span></Link>
+            </div>
+          </article>
+
           <article className="article-card featured-article-card">
             <Image
               className="article-card-graphic"
