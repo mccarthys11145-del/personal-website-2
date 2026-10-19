@@ -17,7 +17,7 @@ export default function HomePage() {
     "@id": "https://www.stephenmccarthypa.com/#profilepage",
     url: "https://www.stephenmccarthypa.com",
     name: "Stephen McCarthy professional profile",
-    dateModified: "2026-08-31",
+    dateModified: "2026-10-19",
     inLanguage: "en-US",
     mainEntity: { "@id": "https://www.stephenmccarthypa.com/#person" },
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Physician assistant · Clinical AI red team consultant · Allentown, Pennsylvania</p>
-            <h1>Stress test clinical AI against the records it will actually encounter.</h1>
+            <h1>Stephen McCarthy: clinical AI red team consulting.</h1>
             <p className="hero-lead">
               Stephen McCarthy is a physician assistant with more than 11 years of psychiatric clinical experience.
               He evaluates behavioral health AI systems for longitudinal record synthesis, medication reconciliation,
@@ -123,6 +123,24 @@ export default function HomePage() {
               height={620}
               sizes="(max-width: 860px) 100vw, 50vw"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad featured-writing" aria-labelledby="evidence-guide-title">
+        <div className="shell feature-grid">
+          <div>
+            <p className="eyebrow">Featured writing · October 8, 2026</p>
+            <h2 id="evidence-guide-title">How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</h2>
+          </div>
+          <div>
+            <p className="feature-deck">
+              An educational guide to reading health claims, comparing study designs,
+              and keeping conclusions within the evidence.
+            </p>
+            <Link className="text-link" href="/writing/how-to-read-health-claims-and-evidence">
+              Read the research guide <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
