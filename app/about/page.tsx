@@ -4,9 +4,9 @@ import Breadcrumbs from "@/components/breadcrumbs"
 import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
-  title: "About",
+  title: "Physician Assistant in Allentown",
   description:
-    "About Stephen McCarthy, a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania, with more than 11 years of psychiatric clinical experience.",
+    "Stephen McCarthy is a physician assistant and clinical AI consultant in Allentown, Pennsylvania, with a background in psychiatry and clinical documentation.",
   path: "/about",
 })
 
@@ -17,11 +17,12 @@ export default function AboutPage() {
         <div className="shell">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
           <p className="eyebrow">About</p>
-          <h1>A professional profile with fewer adjectives and more receipts.</h1>
+          <h1>About Stephen McCarthy, physician assistant and clinical AI consultant.</h1>
           <p className="page-deck">
-            Stephen Thomas McCarthy is a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania.
-            His background includes inpatient and outpatient psychiatric care, addiction treatment, medication management,
+            Stephen McCarthy is a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania.
+            His psychiatric clinical background includes inpatient and outpatient care, addiction treatment, medication management,
             telehealth, clinical leadership, documentation review, and work with diverse patient populations.
+            His consulting work applies that experience to evaluating behavioral health AI systems.
           </p>
         </div>
       </section>

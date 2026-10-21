@@ -3,8 +3,8 @@ import Breadcrumbs from "@/components/breadcrumbs"
 import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
-  title: "Profiles",
-  description: "Professional profiles for Stephen McCarthy.",
+  title: "Professional Profiles",
+  description: "Find Stephen McCarthy’s professional profiles, physician assistant background, and clinical AI consulting work in Allentown, Pennsylvania.",
   path: "/profiles-and-sources",
 })
 
@@ -38,7 +38,13 @@ export default function SourcesPage() {
         <div className="shell">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Profiles" }]} />
           <p className="eyebrow">Profiles</p>
-          <h1>Professional profiles.</h1>
+          <h1>Stephen McCarthy’s professional profiles.</h1>
+          <p className="page-deck">
+            Find Stephen McCarthy’s professional profiles and the Lehigh Valley Wellness website.
+            For his physician assistant background, psychiatric experience, and clinical AI consulting work in
+            Allentown, Pennsylvania, read{" "}
+            <Link className="text-link" href="/about">About Stephen McCarthy</Link>.
+          </p>
         </div>
       </section>
 
@@ -51,7 +57,7 @@ export default function SourcesPage() {
           <div className="link-card-grid">
             <Link className="link-card" href="/briefing/mental-health-theology">
               <span>
-                <strong>Mental Health Is the New Theology of the West</strong>
+                <strong>Mental Health Is the New Theology of the West</strong>{" "}
                 <small>Producer briefing · video, exhibits, and sources</small>
               </span>
               <span aria-hidden="true">→</span>
@@ -66,7 +72,7 @@ export default function SourcesPage() {
             {profiles.map((profile) => (
               <a className="link-card" href={profile.href} key={profile.href} target="_blank" rel="noopener noreferrer">
                 <span>
-                  <strong>{profile.name}</strong>
+                  <strong>{profile.name}</strong>{" "}
                   <small>{profile.description}</small>
                 </span>
                 <span aria-hidden="true">↗</span>
