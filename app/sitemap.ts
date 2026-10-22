@@ -4,11 +4,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.stephenmccarthypa.com"
   const lastModified = new Date("2026-07-19T00:00:00-04:00")
   const clinicalAiModified = new Date("2026-08-31T00:00:00-04:00")
+  const homeModified = new Date("2026-10-19T20:04:59Z")
+  const profileContentModified = new Date("2026-10-21T15:32:08Z")
 
   return [
     { url: `${base}/writing/how-to-read-health-claims-and-evidence`, lastModified: new Date("2026-10-08T20:00:00-04:00"), changeFrequency: "yearly", priority: 0.9 },
-    { url: `${base}/`, lastModified: clinicalAiModified, changeFrequency: "monthly", priority: 1 },
-    { url: `${base}/about`, lastModified: new Date("2026-08-30T00:00:00-04:00"), changeFrequency: "yearly", priority: 0.8 },
+    { url: `${base}/`, lastModified: homeModified, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/about`, lastModified: profileContentModified, changeFrequency: "yearly", priority: 0.8 },
     {
       url: `${base}/consulting`,
       lastModified: clinicalAiModified,
@@ -41,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.9,
     },
-    { url: `${base}/profiles-and-sources`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/profiles-and-sources`, lastModified: profileContentModified, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/contact`, lastModified: clinicalAiModified, changeFrequency: "monthly", priority: 0.75 },
   ]
 }

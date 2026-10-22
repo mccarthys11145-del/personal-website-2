@@ -29,9 +29,9 @@ export default function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="Stephen McCarthy home">
-          <span className="brand-mark" aria-hidden="true">SM</span>
+          <span className="brand-mark" aria-hidden="true">SM</span>{" "}
           <span className="brand-copy">
-            <strong>Stephen McCarthy</strong>
+            <strong>Stephen McCarthy</strong>{" "}
             <small>Physician assistant and consultant</small>
           </span>
         </Link>
