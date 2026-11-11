@@ -9,19 +9,21 @@ const description =
   "A concise producer briefing by Stephen McCarthy on how psychiatric labels can become causal stories, identities, markets, and moral authority."
 const path = "/briefing/mental-health-theology"
 const canonical = `https://www.stephenmccarthypa.com${path}`
-const publishedVideoUrl = ""
 
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: path },
+  alternates: {
+    canonical: path,
+    types: { "application/rss+xml": [{ url: "/feed.xml", title: "Stephen McCarthy writing" }] },
+  },
   openGraph: {
     type: "article",
     url: canonical,
     title,
     description,
     publishedTime: "2026-07-23T00:00:00-04:00",
-    modifiedTime: "2026-08-15T00:00:00-04:00",
+    modifiedTime: "2026-11-10T22:00:00-05:00",
     authors: ["Stephen McCarthy"],
     section: "Producer briefing",
     tags: [
@@ -79,7 +81,7 @@ const sources = [
   {
     type: "Diagnostic guidance",
     label: "CDC: Diagnosing ADHD",
-    href: "https://www.cdc.gov/adhd/signs-symptoms/index.html",
+    href: "https://www.cdc.gov/adhd/diagnosis/index.html",
   },
   {
     type: "Syndrome definition",
@@ -142,7 +144,7 @@ export default function MentalHealthTheologyBriefingPage() {
     name: title,
     description,
     datePublished: "2026-07-23",
-    dateModified: "2026-08-15",
+    dateModified: "2026-11-10",
     inLanguage: "en-US",
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
     author: { "@id": "https://www.stephenmccarthypa.com/#person" },
@@ -175,7 +177,6 @@ export default function MentalHealthTheologyBriefingPage() {
     isFamilyFriendly: true,
     creator: { "@id": "https://www.stephenmccarthypa.com/#person" },
     isPartOf: { "@id": `${canonical}#webpage` },
-    ...(publishedVideoUrl ? { sameAs: publishedVideoUrl } : {}),
   }
 
   return (
@@ -188,6 +189,7 @@ export default function MentalHealthTheologyBriefingPage() {
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
+              { label: "Writing", href: "/writing" },
               { label: "Producer briefing" },
             ]}
           />
@@ -223,7 +225,7 @@ export default function MentalHealthTheologyBriefingPage() {
                 </a>
               </div>
               <p className="review-note">
-                Condensed August 15, 2026 for faster reading and clearer review.
+                Published July 23, 2026. Final video added August 15, 2026.
               </p>
             </div>
 
@@ -298,16 +300,6 @@ export default function MentalHealthTheologyBriefingPage() {
             <blockquote>
               “A classification is not a pathogen.”
             </blockquote>
-            {publishedVideoUrl ? (
-              <a
-                className="text-link briefing-light-link"
-                href={publishedVideoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Watch on YouTube <span aria-hidden="true">↗</span>
-              </a>
-            ) : null}
           </div>
         </div>
       </section>
@@ -393,8 +385,8 @@ export default function MentalHealthTheologyBriefingPage() {
 
             <h3 className="briefing-thesis-subhead">How the language gains authority</h3>
             <p>
-              Trauma shows how a category can swell. PTSD Criterion A requires exposure to death, threatened
-              death, serious injury, or sexual violence. SAMHSA uses a much broader public health definition:
+              Trauma shows how a category can swell. PTSD Criterion A requires exposure to actual or threatened death,
+              serious injury, or sexual violence. SAMHSA uses a much broader public health definition:
               an event, series of events, or circumstances experienced as physically or emotionally harmful
               or life threatening, with lasting adverse effects.
             </p>
@@ -462,7 +454,7 @@ export default function MentalHealthTheologyBriefingPage() {
                   <a href="https://jamanetwork.com/journals/jama/fullarticle/2492881" target="_blank" rel="noopener noreferrer">
                     the Sepsis 3 consensus definition
                   </a>,{" "}
-                  <a href="https://www.cdc.gov/adhd/signs-symptoms/index.html" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.cdc.gov/adhd/diagnosis/index.html" target="_blank" rel="noopener noreferrer">
                     CDC diagnostic guidance
                   </a>, and{" "}
                   <a href="https://pubmed.ncbi.nlm.nih.gov/17716032/" target="_blank" rel="noopener noreferrer">
@@ -548,7 +540,7 @@ export default function MentalHealthTheologyBriefingPage() {
                 <div className="briefing-defense-grid">
                   <div>
                     <span>PTSD Criterion A</span>
-                    <p>Death, threatened death, serious injury, or sexual violence.</p>
+                    <p>Exposure to actual or threatened death, serious injury, or sexual violence.</p>
                   </div>
                   <div>
                     <span>SAMHSA definition</span>

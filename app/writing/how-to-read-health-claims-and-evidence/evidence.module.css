@@ -1,0 +1,38 @@
+.tableRegion {
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.tableRegion:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.riskTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  line-height: 1.45;
+}
+
+.riskTable caption {
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 0.75rem;
+}
+
+.riskTable th,
+.riskTable td {
+  padding: 0.7rem clamp(0.35rem, 1.2vw, 1rem);
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.riskTable thead th {
+  background-color: var(--paper);
+}
+
+.riskTable tbody th {
+  font-weight: 600;
+}

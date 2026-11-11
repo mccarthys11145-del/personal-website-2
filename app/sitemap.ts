@@ -2,54 +2,51 @@ import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.stephenmccarthypa.com"
-  const lastModified = new Date("2026-07-19T00:00:00-04:00")
-  const clinicalAiModified = new Date("2026-08-31T00:00:00-04:00")
-  const benchmarkRelease = new Date("2026-11-10T00:00:00-05:00")
-  const profileContentModified = new Date("2026-10-21T15:32:08Z")
+  const currentRevision = new Date("2026-11-10T00:00:00-05:00")
 
   return [
-    { url: `${base}/writing/how-to-read-health-claims-and-evidence`, lastModified: new Date("2026-10-08T20:00:00-04:00"), changeFrequency: "yearly", priority: 0.9 },
-    { url: `${base}/`, lastModified: benchmarkRelease, changeFrequency: "monthly", priority: 1 },
-    { url: `${base}/about`, lastModified: profileContentModified, changeFrequency: "yearly", priority: 0.8 },
+    { url: `${base}/writing/how-to-read-health-claims-and-evidence`, lastModified: currentRevision, changeFrequency: "yearly", priority: 0.9 },
+    { url: `${base}/`, lastModified: currentRevision, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/about`, lastModified: currentRevision, changeFrequency: "yearly", priority: 0.8 },
     {
       url: `${base}/consulting`,
-      lastModified: benchmarkRelease,
+      lastModified: currentRevision,
       changeFrequency: "monthly",
       priority: 0.95,
     },
     {
       url: `${base}/psychworkflowbench`,
-      lastModified: benchmarkRelease,
+      lastModified: currentRevision,
       changeFrequency: "monthly",
       priority: 0.95,
     },
     {
       url: `${base}/psychworkflowbench/sample.html`,
-      lastModified: benchmarkRelease,
+      lastModified: currentRevision,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${base}/case-factory`,
-      lastModified: clinicalAiModified,
+      lastModified: currentRevision,
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    { url: `${base}/professional-record`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/writing`, lastModified: new Date("2026-10-08T20:00:00-04:00"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/professional-record`, lastModified: currentRevision, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/writing`, lastModified: currentRevision, changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${base}/writing/audhd-psychiatric-ontology`,
-      lastModified,
+      lastModified: currentRevision,
       changeFrequency: "yearly",
       priority: 0.9,
     },
     {
       url: `${base}/briefing/mental-health-theology`,
-      lastModified: new Date("2026-08-15T00:00:00-04:00"),
+      lastModified: currentRevision,
       changeFrequency: "yearly",
       priority: 0.9,
     },
-    { url: `${base}/profiles-and-sources`, lastModified: profileContentModified, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/contact`, lastModified: clinicalAiModified, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${base}/profiles-and-sources`, lastModified: currentRevision, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/contact`, lastModified: currentRevision, changeFrequency: "monthly", priority: 0.75 },
   ]
 }

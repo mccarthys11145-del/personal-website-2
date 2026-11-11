@@ -1,23 +1,51 @@
+import styles from "./home.module.css"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { JsonLd } from "@/components/json-ld"
+import { createPageMetadata } from "@/lib/site-metadata"
 
+const title = "Stephen McCarthy | Psychiatry and Clinical AI Evaluation"
+const description =
+  "Stephen McCarthy is a physician assistant in Allentown, Pennsylvania. Explore his work testing psychiatric documentation systems and his writing on clinical evidence."
+
+const homeMetadata = createPageMetadata({ title, description, path: "/" })
 export const metadata: Metadata = {
-  title: { absolute: "Stephen McCarthy | Clinical AI Red Team Consultant" },
-  description:
-    "Stephen McCarthy is a physician assistant and clinical AI red team consultant in Allentown, Pennsylvania, focused on behavioral health benchmarking, psychiatric record synthesis, documentation fidelity, and clinical reasoning.",
-  alternates: { canonical: "/" },
+  ...homeMetadata,
+  title: { absolute: title },
+  openGraph: { ...homeMetadata.openGraph, title },
+  twitter: { ...homeMetadata.twitter, title },
 }
 
+const writing = [
+  {
+    href: "/writing/how-to-read-health-claims-and-evidence",
+    title: "How to Read Health Claims and Evidence",
+    text: "A worked example of what changes when a study reports absolute risk alongside relative risk.",
+    kind: "Research guide",
+  },
+  {
+    href: "/briefing/mental-health-theology",
+    title: "Mental Health Is the New Theology of the West",
+    text: "A filmed argument about the authority that psychiatric language has acquired in public life.",
+    kind: "Video briefing",
+  },
+  {
+    href: "/writing/audhd-psychiatric-ontology",
+    title: "AuDHD, Psychiatric Ontology, and the Difference Between Naming and Explaining",
+    text: "What a shared diagnostic label tells us about two people, and what it leaves open.",
+    kind: "Essay",
+  },
+]
+
 export default function HomePage() {
-  const profilePageJson = {
+  const profile = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "@id": "https://www.stephenmccarthypa.com/#profilepage",
-    url: "https://www.stephenmccarthypa.com",
-    name: "Stephen McCarthy professional profile",
-    dateModified: "2026-10-19",
+    url: "https://www.stephenmccarthypa.com/",
+    name: "Stephen McCarthy",
+    dateModified: "2026-11-10",
     inLanguage: "en-US",
     mainEntity: { "@id": "https://www.stephenmccarthypa.com/#person" },
     isPartOf: { "@id": "https://www.stephenmccarthypa.com/#website" },
@@ -25,253 +53,63 @@ export default function HomePage() {
 
   return (
     <>
-      <JsonLd data={profilePageJson} />
-      <section className="hero section-pad">
-        <div className="shell hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Physician assistant · Clinical AI red team consultant · Allentown, Pennsylvania</p>
-            <h1>Stephen McCarthy: clinical AI red team consulting.</h1>
-            <p className="hero-lead">
-              Stephen McCarthy is a physician assistant with more than 11 years of psychiatric clinical experience.
-              He evaluates behavioral health AI systems for longitudinal record synthesis, medication reconciliation,
-              diagnostic coherence, documentation fidelity, unsupported assertions, and safety failures.
+      <JsonLd data={profile} />
+      <section className={styles.intro} aria-labelledby="profile-name">
+        <div className={`shell ${styles.profileGrid}`}>
+          <div>
+            <p className="eyebrow">Physician assistant · Allentown, Pennsylvania</p>
+            <h1 id="profile-name">Stephen McCarthy</h1>
+            <p className={styles.lead}>I practice psychiatry and test the AI systems that write clinical notes.</p>
+            <p className={styles.summary}>
+              I bring more than 11 years of psychiatric experience to documentation review. A medication can stay on a
+              chart long after someone stops taking it. I test whether a system carries that mistake into the next note.
             </p>
             <div className="button-row">
-              <Link className="button primary" href="/consulting">
-                Explore clinical AI testing
-              </Link>
-              <Link className="button secondary" href="/psychworkflowbench">
-                See PsychWorkflowBench
-              </Link>
+              <a className="button primary" href="/psychworkflowbench/sample.html">Read the sample report</a>
+              <Link className="button secondary" href="/about">Clinical background</Link>
             </div>
           </div>
-
-          <div className="portrait-panel">
-            <div className="portrait-frame">
-              <Image
-                src="/stephen-mccarthy-portrait.webp"
-                alt="Stephen McCarthy"
-                width={840}
-                height={960}
-                priority
-                sizes="(max-width: 900px) 86vw, 38vw"
-              />
-            </div>
-            <div className="portrait-caption">
-              <span>Stephen McCarthy</span>
-              <span>Physician assistant, clinical AI evaluator, and writer</span>
-            </div>
-          </div>
+          <Image className={styles.portrait} src="/stephen-mccarthy-portrait.webp" alt="Stephen McCarthy"
+            width={840} height={960} priority sizes="(max-width: 720px) 90vw, (max-width: 1100px) 39vw, 430px" />
         </div>
       </section>
 
-      <section className="fact-band" aria-labelledby="fact-band-title">
+      <section className={styles.work} aria-labelledby="bench-title">
+        <div className={`shell ${styles.workGrid}`}>
+          <div>
+            <p className="eyebrow">Clinical AI evaluation</p>
+            <h2 id="bench-title">PsychWorkflowBench</h2>
+            <p>Six synthetic psychiatric cases test whether a note keeps track of what happened, when it happened,
+              and who reported it. The demonstration scores 71 questions across six constructed notes.</p>
+            <div className={styles.workLinks}>
+              <Link href="/psychworkflowbench">Explore the benchmark</Link>
+              <Link href="/consulting#pilot-review">Commission a private evaluation</Link>
+            </div>
+          </div>
+          <figure className={styles.excerpt}>
+            <figcaption>From the sample report · Case 006</figcaption>
+            <blockquote>“CBC within normal limits.”</blockquote>
+            <p>The chart contained a blood count order. The specimen was never collected.
+              The example note turned an order into a result.</p>
+            <a href="/psychworkflowbench/sample.html#case-006">Read the case finding <span aria-hidden="true">→</span></a>
+          </figure>
+        </div>
+      </section>
+
+      <section className={styles.writing} aria-labelledby="selected-writing">
         <div className="shell">
-          <div className="section-heading compact">
-            <p className="eyebrow light">A cleaner evidence trail</p>
-            <h2 id="fact-band-title">Clinical credibility without ornamental claims</h2>
+          <div className={styles.sectionHeading}>
+            <h2 id="selected-writing">Selected writing</h2>
+            <Link href="/writing">Writing archive <span aria-hidden="true">→</span></Link>
           </div>
-          <div className="fact-grid">
-            <article>
-              <span className="fact-number">01</span>
-              <h3>Frontline psychiatric experience</h3>
-              <p>
-                More than 11 years across inpatient care, outpatient care, addiction treatment, telehealth,
-                geriatric psychiatry, medication management, and clinical leadership.
-              </p>
-            </article>
-            <article>
-              <span className="fact-number">02</span>
-              <h3>Workflow and documentation focus</h3>
-              <p>
-                Clinical review centered on the facts that survive or mutate as records become summaries,
-                notes, prompts, templates, and automated workflows.
-              </p>
-            </article>
-            <article>
-              <span className="fact-number">03</span>
-              <h3>No invented proof</h3>
-              <p>
-                No fabricated testimonials, client outcomes, benchmark results, certifications, awards,
-                safety guarantees, or unsupported deployment claims.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad red-team-home-section" aria-labelledby="red-team-home-title">
-        <div className="shell red-team-home-grid">
-          <div className="red-team-home-copy">
-            <p className="eyebrow">Clinical AI red teaming</p>
-            <h2 id="red-team-home-title">Can the system survive a psychiatric chart full of old diagnoses, duplicate medications, and conflicting records?</h2>
-            <p>
-              Custom evaluations use realistic longitudinal record packets and clinician authored truth states to expose stale chart propagation,
-              medication reconciliation errors, temporal confusion, unsupported mental status findings, missing safety information,
-              and diagnostic lists that grow without becoming coherent.
-            </p>
-            <div className="button-row">
-              <Link className="button primary" href="/consulting">Review the service</Link>
-              <Link className="button secondary" href="/psychworkflowbench">Review the methodology</Link>
-            </div>
-          </div>
-          <div className="red-team-home-art">
-            <Image
-              src="/clinical-ai-failure-map.svg"
-              alt="Clinical AI failure map tracing noisy psychiatric records into a structured truth state and a scored generated note"
-              width={960}
-              height={620}
-              sizes="(max-width: 860px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad featured-writing" aria-labelledby="evidence-guide-title">
-        <div className="shell feature-grid">
-          <div>
-            <p className="eyebrow">Featured writing · October 8, 2026</p>
-            <h2 id="evidence-guide-title">How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</h2>
-          </div>
-          <div>
-            <p className="feature-deck">
-              An educational guide to reading health claims, comparing study designs,
-              and keeping conclusions within the evidence.
-            </p>
-            <Link className="text-link" href="/writing/how-to-read-health-claims-and-evidence">
-              Read the research guide <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad featured-writing">
-        <div className="shell feature-grid">
-          <div>
-            <p className="eyebrow">Evaluation framework</p>
-            <h2>PsychWorkflowBench</h2>
-          </div>
-          <div>
-            <p className="feature-deck">
-              Six synthetic psychiatric cases and 71 scoring questions examine how a note handles medications,
-              competing accounts and missing evidence. Explore the cases and read the sample failure map.
-            </p>
-            <Link className="text-link" href="/psychworkflowbench">
-              Explore PsychWorkflowBench <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad featured-writing">
-        <div className="shell feature-grid">
-          <div>
-            <p className="eyebrow">Producer briefing · August 15, 2026</p>
-            <h2>Mental Health Is the New Theology of the West</h2>
-          </div>
-          <div>
-            <p className="feature-deck">
-              A source led producer briefing on diagnostic reification, commercialized mental health language,
-              and the difference between describing distress and claiming to explain it.
-            </p>
-            <Link className="text-link" href="/briefing/mental-health-theology">
-              Read the producer briefing <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad featured-writing">
-        <div className="shell feature-grid">
-          <div>
-            <p className="eyebrow">Featured writing · July 19, 2026</p>
-            <h2>AuDHD, psychiatric ontology, and the difference between naming and explaining</h2>
-          </div>
-          <div>
-            <p className="feature-deck">
-              A diagnosis can organize observations without explaining their cause. This essay examines AuDHD as shorthand,
-              the difference between a syndrome and a pathogen, and the circularity that appears when a label is treated as
-              the cause of the very symptoms used to assign it.
-            </p>
-            <Link className="text-link" href="/writing/audhd-psychiatric-ontology">
-              Read the essay <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad reasoning-graphic-section" aria-labelledby="reasoning-graphic-title">
-        <div className="shell reasoning-graphic-grid">
-          <div className="reasoning-graphic-copy">
-            <p className="eyebrow">A practical visual guide</p>
-            <h2 id="reasoning-graphic-title">Three jobs, not one shortcut.</h2>
-            <p>
-              Good clinical language starts by recording what is present. A category may then help organize that record,
-              while explanation remains a separate question for evidence to answer.
-            </p>
-            <Link className="text-link" href="/writing/audhd-psychiatric-ontology">
-              See the distinction in the essay <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-          <Image
-            className="reasoning-graphic"
-            src="/clinical-reasoning.svg"
-            alt="Diagram showing observation, classification, and explanation as separate stages of clinical reasoning"
-            width={960}
-            height={620}
-            sizes="(max-width: 860px) 100vw, 48vw"
-          />
-        </div>
-      </section>
-
-      <section className="section-pad principles-section">
-        <div className="shell">
-          <div className="section-heading">
-            <p className="eyebrow">Clinical reasoning</p>
-            <h2>Three distinctions worth protecting</h2>
-            <p>
-              The goal is not to deny suffering. It is to keep description, classification, and causal explanation from melting into one word.
-            </p>
-          </div>
-          <div className="card-grid three">
-            <article className="plain-card">
-              <span className="card-kicker">Observation</span>
-              <h3>Describe before explaining</h3>
-              <p>
-                What is happening, when does it occur, how severe is it, and what function is impaired? Those questions come before the label.
-              </p>
-            </article>
-            <article className="plain-card">
-              <span className="card-kicker">Classification</span>
-              <h3>Utility is not the same as validity</h3>
-              <p>
-                A diagnosis can help communication, access, and treatment planning without proving that it is a discrete disease entity.
-              </p>
-            </article>
-            <article className="plain-card">
-              <span className="card-kicker">Explanation</span>
-              <h3>A label is not its own mechanism</h3>
-              <p>
-                Causal claims need evidence beyond the criteria used to assign the diagnosis. Otherwise the explanation simply walks in a circle.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad quote-section">
-        <div className="shell quote-wrap">
-          <blockquote>
-            A clinical note should be concise because the evidence has been organized, not because the difficult facts disappeared.
-          </blockquote>
-          <div>
-            <p>
-              The same standard applies to clinical AI: preserve what matters, expose what conflicts, and never manufacture certainty to complete a template.
-            </p>
-            <div className="button-row">
-              <Link className="button secondary light-button" href="/consulting">Clinical AI testing</Link>
-              <Link className="text-link" href="/about">About the approach <span aria-hidden="true">→</span></Link>
-            </div>
+          <div className={styles.selection}>
+            {writing.map((item) => (
+              <article key={item.href}>
+                <p className="eyebrow">{item.kind}</p>
+                <h3><Link href={item.href}>{item.title}</Link></h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

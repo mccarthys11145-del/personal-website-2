@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     "Allentown physician assistant",
   ],
   alternates: {
-    canonical: "/",
     types: {
       "application/rss+xml": [{ url: "/feed.xml", title: "Stephen McCarthy writing" }],
     },
@@ -98,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteJsonLd />
         <Header />
-        <main id="main-content">{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
       </body>
     </html>

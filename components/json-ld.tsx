@@ -57,7 +57,7 @@ export function SiteJsonLd() {
       sameAs: [
         "https://www.linkedin.com/in/stephenmccarthypa",
         "https://about.me/stephen_mccarthy_pa",
-        "https://www.doximity.com/pub/stephen-mccarthy-pa-5ad36978",
+        "https://www.doximity.com/pub/stephen-mccarthy-pa-11423bed",
         "https://npiregistry.cms.hhs.gov/provider-view/1912308743",
       ],
       description:

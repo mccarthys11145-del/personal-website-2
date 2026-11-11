@@ -4,8 +4,7 @@ import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
   title: "Contact",
-  description:
-    "Clinical AI evaluation, consulting, professional, media, and practice contact routes for Stephen McCarthy, with privacy guidance for clinical information.",
+  description: "Contact Stephen McCarthy about clinical AI evaluation, writing, or speaking. Find appointment and practice contact information for Lehigh Valley Wellness.",
   path: "/contact",
 })
 
@@ -15,85 +14,42 @@ export default function ContactPage() {
       <section className="page-hero section-pad-sm">
         <div className="shell">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
-          <p className="eyebrow">Contact</p>
-          <h1>Describe the system and the decision. Keep patient information out of the first message.</h1>
-          <p className="page-deck">
-            This personal website has no message form, database, or patient intake workflow. It does not collect protected health information.
-          </p>
+          <h1>Contact Stephen</h1>
+          <p className="page-deck">For consulting or writing, use the professional contacts below.
+            For appointments or questions about your care, contact Lehigh Valley Wellness directly.</p>
         </div>
       </section>
 
-      <section className="section-pad">
-        <div className="shell contact-grid">
-          <article className="contact-card primary-contact">
-            <span className="card-kicker">Clinical AI evaluation</span>
-            <h2>Red team testing and benchmarking</h2>
-            <p>
-              For a useful initial discussion, describe the organization, system, intended clinical use,
-              material being processed, current concern, preferred timing, and the decision the evaluation must support.
-            </p>
-            <a
-              className="button primary"
-              href="mailto:mccarthys11145@gmail.com?subject=Clinical%20AI%20red%20team%20inquiry"
-            >
-              Email Stephen
-            </a>
-            <p className="small-note">
-              Do not attach patient records, screenshots, medication lists, transcripts, or other protected health information.
-            </p>
-            <div className="button-row">
-              <Link className="text-link" href="/consulting">Review evaluation services <span aria-hidden="true">→</span></Link>
-              <Link className="text-link" href="/psychworkflowbench">Review PsychWorkflowBench <span aria-hidden="true">→</span></Link>
-            </div>
-          </article>
-
-          <article className="contact-card">
-            <span className="card-kicker">Professional and media inquiries</span>
-            <h2>Professional profile</h2>
-            <p>
-              Use LinkedIn for professional networking, commentary requests, introductions, speaking inquiries,
-              medical education opportunities, or other nonclinical correspondence.
-            </p>
-            <a className="button secondary" href="https://www.linkedin.com/in/stephenmccarthypa" target="_blank" rel="noopener noreferrer">
-              Open LinkedIn
-            </a>
-          </article>
-
-          <article className="contact-card">
-            <span className="card-kicker">Practice scheduling and clinical matters</span>
-            <h2>Lehigh Valley Wellness</h2>
-            <address>
-              6081 Hamilton Boulevard, Suite 600<br />
-              Allentown, Pennsylvania 18106
-            </address>
-            <p><a href="tel:+14842730767">484 273 0767</a></p>
-            <p>Hours used for directory corrections: Monday and Thursday, 10:00 a.m. to 6:00 p.m.</p>
-            <a className="button secondary" href="https://lehighwellness.org/" target="_blank" rel="noopener noreferrer">
-              Visit the practice website
-            </a>
-            <p className="small-note">Practice information reviewed July 2026. Confirm current hours and availability directly.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="section-pad soft-section">
-        <div className="shell privacy-panel">
+      <div className="shell contact-directory">
+        <section className="contact-entry" aria-labelledby="consulting-contact">
+          <div><p className="eyebrow">Consulting</p><h2 id="consulting-contact">Clinical AI evaluation</h2></div>
           <div>
-            <p className="eyebrow">Privacy</p>
-            <h2>No personal health information</h2>
+            <p>Tell me what your system writes, who uses the note, and which decision the evaluation should help you make.
+              A brief description is enough for a first conversation. Please keep patient information out of your email.</p>
+            <a className="contact-address" href="mailto:mccarthys11145@gmail.com?subject=Clinical%20AI%20evaluation">mccarthys11145@gmail.com</a>
+            <p className="contact-related"><Link href="/consulting#pilot-review">Review pilot scope and pricing</Link></p>
           </div>
+        </section>
+
+        <section className="contact-entry" aria-labelledby="press-contact">
+          <div><p className="eyebrow">Professional inquiries</p><h2 id="press-contact">Writing and speaking</h2></div>
           <div>
-            <p>
-              Do not send diagnoses, medication lists, treatment records, photographs, insurance information,
-              raw model inputs containing patient information, or urgent clinical questions through email or professional networking platforms.
-              For care related matters, use the practice approved channel.
-            </p>
-            <p>
-              This website is not monitored for emergencies. Contact local emergency services when immediate safety is at risk.
-            </p>
+            <p>For commentary, interviews, medical education, or speaking, include the topic, audience, and any deadline.</p>
+            <a href="https://www.linkedin.com/in/stephenmccarthypa">Contact Stephen on LinkedIn</a>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="contact-entry" id="practice" aria-labelledby="practice-contact">
+          <div><p className="eyebrow">Patient care</p><h2 id="practice-contact">Lehigh Valley Wellness</h2></div>
+          <div>
+            <p>Call the practice or visit its website for appointments, current hours, and questions about your care.</p>
+            <address>6081 Hamilton Boulevard, Suite 600<br />Allentown, Pennsylvania 18106</address>
+            <p className="practice-phone"><a href="tel:+14842730767">(484) 273 0767</a></p>
+            <a className="button primary" href="https://lehighwellness.org/">Visit Lehigh Valley Wellness</a>
+            <p className="contact-emergency">For an immediate emergency, call 911.</p>
+          </div>
+        </section>
+      </div>
     </>
   )
 }

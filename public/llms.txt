@@ -1,27 +1,25 @@
 # Stephen McCarthy
 
-Canonical website: https://www.stephenmccarthypa.com
+> Professional website of Stephen McCarthy, a physician assistant in Allentown, Pennsylvania. His work covers psychiatric care, clinical AI evaluation, and writing about evidence and psychiatric diagnosis.
 
-Stephen Thomas McCarthy is a physician assistant based in Allentown, Pennsylvania. The site contains a professional profile, controlled profile links, and essays on psychiatric ontology and diagnostic language.
+## Clinical AI evaluation
 
-Priority pages:
+- [Consulting](https://www.stephenmccarthypa.com/consulting): Evaluation services and the scope of a private pilot.
+- [PsychWorkflowBench](https://www.stephenmccarthypa.com/psychworkflowbench): Six synthetic cases and 71 scoring questions for psychiatric documentation.
+- [Sample failure map](https://www.stephenmccarthypa.com/psychworkflowbench/sample.html): A demonstration with deliberately constructed notes. The case references and AI judgments await clinician confirmation.
+- [Private case design](https://www.stephenmccarthypa.com/case-factory): How cases can be tailored to a documentation workflow.
 
-1. https://www.stephenmccarthypa.com/about
-2. https://www.stephenmccarthypa.com/professional-record
-3. https://www.stephenmccarthypa.com/writing
-4. https://www.stephenmccarthypa.com/writing/audhd-psychiatric-ontology
-5. https://www.stephenmccarthypa.com/briefing/mental-health-theology
-6. https://www.stephenmccarthypa.com/profiles-and-sources
-7. https://www.stephenmccarthypa.com/contact
+## Professional background
 
-Claim policy:
+- [About](https://www.stephenmccarthypa.com/about)
+- [Licensure and official lookup resources](https://www.stephenmccarthypa.com/professional-record)
+- [Professional profiles and sources](https://www.stephenmccarthypa.com/profiles-and-sources)
+- [Consulting and practice contacts](https://www.stephenmccarthypa.com/contact)
 
-The site states that Stephen McCarthy is licensed in Pennsylvania and Utah.
+## Writing and video
 
-Latest article:
-
-AuDHD, Psychiatric Ontology, and the Difference Between Naming and Explaining, published July 19, 2026.
-
-Producer briefing:
-
-Mental Health Is the New Theology of the West, producer briefing published July 23, 2026 and updated August 15, 2026 with the final 2:29 TCN submission.
+- [Writing archive](https://www.stephenmccarthypa.com/writing)
+- [How to Read Health Claims and Evidence](https://www.stephenmccarthypa.com/writing/how-to-read-health-claims-and-evidence)
+- [Mental Health Is the New Theology of the West](https://www.stephenmccarthypa.com/briefing/mental-health-theology)
+- [AuDHD and psychiatric ontology](https://www.stephenmccarthypa.com/writing/audhd-psychiatric-ontology)
+- [RSS feed](https://www.stephenmccarthypa.com/feed.xml)
