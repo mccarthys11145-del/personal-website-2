@@ -38,7 +38,7 @@
 .red-team-hero-art::before {
   content: "";
   position: absolute;
-  inset: 8% -5% -8% 7%;
+  inset: 8% 1% -4% 7%;
   border: 1px solid rgba(18, 32, 43, 0.14);
   border-radius: 38px;
   transform: rotate(3deg);
@@ -373,7 +373,7 @@
 }
 
 .pilot-label {
-  color: #efb18e;
+  color: #ffe0c9;
   font-size: 0.74rem;
   font-weight: 900;
   letter-spacing: 0.1em;

@@ -15,19 +15,24 @@ const profiles = [
     href: "https://www.linkedin.com/in/stephenmccarthypa",
   },
   {
-    name: "About.me",
-    description: "Identity profile",
-    href: "https://about.me/stephen_mccarthy_pa",
-  },
-  {
     name: "Doximity",
     description: "Clinician profile",
-    href: "https://www.doximity.com/pub/stephen-mccarthy-pa-5ad36978",
+    href: "https://www.doximity.com/pub/stephen-mccarthy-pa-11423bed",
   },
   {
     name: "Lehigh Valley Wellness",
     description: "Practice website",
     href: "https://lehighwellness.org/",
+  },
+  {
+    name: "National Provider Identifier Registry",
+    description: "Federal provider identifier 1912308743",
+    href: "https://npiregistry.cms.hhs.gov/provider-view/1912308743",
+  },
+  {
+    name: "About.me",
+    description: "Identity profile",
+    href: "https://about.me/stephen_mccarthy_pa",
   },
 ]
 
@@ -40,10 +45,8 @@ export default function SourcesPage() {
           <p className="eyebrow">Profiles</p>
           <h1>Stephen McCarthy’s professional profiles.</h1>
           <p className="page-deck">
-            Find Stephen McCarthy’s professional profiles and the Lehigh Valley Wellness website.
-            For his physician assistant background, psychiatric experience, and clinical AI consulting work in
-            Allentown, Pennsylvania, read{" "}
-            <Link className="text-link" href="/about">About Stephen McCarthy</Link>.
+            These profiles cover McCarthy’s clinical background and practice. For state credentials,
+            see the <Link className="text-link" href="/professional-record">licensure page</Link>.
           </p>
         </div>
       </section>
@@ -51,22 +54,7 @@ export default function SourcesPage() {
       <section className="section-pad">
         <div className="shell">
           <div className="section-heading compact">
-            <p className="eyebrow">Featured link</p>
-            <h2>Read the latest producer briefing.</h2>
-          </div>
-          <div className="link-card-grid">
-            <Link className="link-card" href="/briefing/mental-health-theology">
-              <span>
-                <strong>Mental Health Is the New Theology of the West</strong>{" "}
-                <small>Producer briefing · video, exhibits, and sources</small>
-              </span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-
-          <div className="section-heading compact">
-            <p className="eyebrow">Professional links</p>
-            <h2>Profiles and practice.</h2>
+            <h2>Profiles and practice</h2>
           </div>
           <div className="link-card-grid">
             {profiles.map((profile) => (

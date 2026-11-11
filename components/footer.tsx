@@ -12,8 +12,8 @@ export default function Footer() {
           </p>
         </div>
 
-        <div>
-          <h2>Explore</h2>
+        <nav aria-labelledby="footer-links-heading">
+          <h2 id="footer-links-heading">Explore</h2>
           <ul>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/consulting">Clinical AI testing</Link></li>
@@ -24,7 +24,7 @@ export default function Footer() {
             <li><Link href="/briefing/mental-health-theology">Producer briefing</Link></li>
             <li><Link href="/profiles-and-sources">Profiles and sources</Link></li>
           </ul>
-        </div>
+        </nav>
 
         <div>
           <h2>Practice information</h2>

@@ -28,9 +28,9 @@ export default function WritingPage() {
         <div className="shell writing-list">
           <article className="article-card">
             <div className="article-card-content">
-              <div className="article-meta"><span>Reading research</span><time dateTime="2026-10-08">October 8, 2026</time><span>9 minute read</span></div>
+              <div className="article-meta"><span>Reading research</span><time dateTime="2026-10-08">October 8, 2026</time></div>
               <h2><Link href="/writing/how-to-read-health-claims-and-evidence">How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</Link></h2>
-              <p>A practical method for examining study design, comparing absolute and relative risk, and keeping uncertainty visible. Includes an original worked example and linked sources.</p>
+              <p>A practical method for examining study design, comparing absolute and relative risk, and keeping uncertainty visible. The guide works through a claim that an intervention cut risk in half.</p>
               <Link className="text-link" href="/writing/how-to-read-health-claims-and-evidence">Read the guide <span aria-hidden="true">→</span></Link>
             </div>
           </article>
@@ -57,7 +57,7 @@ export default function WritingPage() {
               </h2>
               <p>
                 A producer briefing that separates the reality of suffering from the claim that a diagnostic
-                label explains it, with exhibits, a captioned opening video, and linked source material.
+                label explains it, with exhibits, the captioned final video, and linked source material.
               </p>
               <div className="tag-row" aria-label="Topics">
                 <span>Diagnostic reification</span>
@@ -83,7 +83,6 @@ export default function WritingPage() {
               <div className="article-meta">
                 <span>Psychiatric ontology</span>
                 <time dateTime="2026-07-19">July 19, 2026</time>
-                <span>14 minute read</span>
               </div>
               <h2>
                 <Link href="/writing/audhd-psychiatric-ontology">
@@ -91,7 +90,7 @@ export default function WritingPage() {
                 </Link>
               </h2>
               <p>
-                AuDHD can be useful shorthand for the co occurrence of autism and ADHD. It does not, by itself, establish a third disease entity or a causal mechanism.
+                AuDHD is shorthand for autism and ADHD occurring together. It does not, by itself, establish a third disease entity or a causal mechanism.
                 The article develops a broader argument: a diagnosis may classify a symptom pattern, but the label alone cannot explain the symptoms used to create it.
               </p>
               <div className="tag-row" aria-label="Topics">
@@ -105,21 +104,6 @@ export default function WritingPage() {
               </Link>
             </div>
           </article>
-        </div>
-      </section>
-
-      <section className="section-pad soft-section">
-        <div className="shell split-callout">
-          <div>
-            <p className="eyebrow">Publication standard</p>
-            <h2>Useful beats frequent</h2>
-          </div>
-          <div>
-            <p>
-              New work is published when it makes a distinct argument, identifies its sources, separates fact from inference, and avoids patient specific advice.
-              Thin SEO filler has been politely escorted from the building.
-            </p>
-          </div>
         </div>
       </section>
     </>

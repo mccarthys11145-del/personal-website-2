@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import Breadcrumbs from "@/components/breadcrumbs"
 import { JsonLd } from "@/components/json-ld"
@@ -11,48 +10,25 @@ export const metadata = createPageMetadata({
   path: "/case-factory",
 })
 
-const packetComponents = [
-  {
-    title: "Longitudinal residential records",
-    text: "Several synthetic group home ISPs from different periods, with realistic repetition, changing function, and copied background material.",
-  },
-  {
-    title: "Competing medication sources",
-    text: "A current MAR, old medication lists, pharmacy history, discontinued entries, duplicate strengths, and one unresolved status conflict.",
-  },
-  {
-    title: "Accumulated diagnosis history",
-    text: "Supported, historical, provisional, overlapping, and unsupported psychiatric labels that must not simply be copied into the final note.",
-  },
-  {
-    title: "Current interview and collateral",
-    text: "Patient report, staff report, recent clinician documentation, and at least one clinically meaningful disagreement between sources.",
-  },
-  {
-    title: "Known traps and missing facts",
-    text: "Seeded stale facts, old symptoms, tempting template fields, and information the evaluated model should identify as unknown.",
-  },
-]
-
 const outputs = [
   {
     label: "Source inventory",
-    text: "A coded map of record types, chronology, clinical domains, contradiction potential, benchmark value, and privacy risk.",
+    text: "A coded map of record types, chronology, clinical domains, known conflicts and privacy considerations.",
   },
   {
     label: "Fact matrix",
-    text: "Every clinically relevant fact linked to provenance, temporal status, reliability, conflict group, and current support level.",
+    text: "The source and date for each fact, along with what is current, what conflicts and what is uncertain.",
   },
   {
     label: "Synthetic packet",
     text: "A new case that preserves the reasoning traps while changing identity, biography, dates, facilities, and distinctive narrative details.",
   },
   {
-    label: "Gold clinical state",
+    label: "Reference clinical state",
     text: "Current medications, discontinued medications, supported diagnoses, historical diagnoses, symptoms, contradictions, unknowns, and safety facts.",
   },
   {
-    label: "Gold note",
+    label: "Reference note",
     text: "A concise current psychiatric note written only from the structured truth state, without invented examination findings or obsolete chart content.",
   },
   {
@@ -84,137 +60,74 @@ export default function CaseFactoryPage() {
     <>
       <JsonLd data={serviceJson} />
 
-      <section className="page-hero benchmark-page-hero section-pad-sm">
+      <section className="page-hero benchmark-page-hero section-pad-sm" id="service">
         <div className="shell red-team-hero-grid">
           <div className="red-team-hero-copy">
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Case Factory" }]} />
-            <div className="benchmark-status">Private workflow under development</div>
-            <p className="eyebrow">PsychWorkflowBench Case Factory</p>
-            <h1>Turn authorized chart complexity into synthetic cases that expose clinical AI failure.</h1>
+            <p className="eyebrow">PsychWorkflowBench Case Factory · In development</p>
+            <h1>Private test cases for psychiatric documentation.</h1>
             <p className="page-deck">
-              The case factory converts the reasoning structure of difficult psychiatric records into synthetic benchmark packets,
-              structured truth states, gold notes, scoring rubrics, and private regression suites. It preserves the clinical puzzle
-              while removing the identity and biography of any real person.
+              Build synthetic records around a problem your system needs to handle, such as a medication order that conflicts
+              with what staff administered. Pair each case with a private reference answer and a rule for judging the note.
             </p>
             <div className="button-row">
-              <a
-                className="button primary"
-                href="mailto:mccarthys11145@gmail.com?subject=Private%20benchmark%20case%20factory%20inquiry"
-              >
-                Discuss a private case suite
-              </a>
-              <Link className="button secondary" href="/psychworkflowbench">
-                Review PsychWorkflowBench
-              </Link>
+              <a className="button primary" href="mailto:mccarthys11145@gmail.com?subject=Private%20benchmark%20case%20factory%20inquiry">Discuss a private case suite</a>
+              <a className="button secondary" href="/psychworkflowbench/sample.html">See the public sample</a>
             </div>
           </div>
-
-          <div className="red-team-hero-art">
-            <Image
-              src="/psychworkflowbench-pipeline.svg"
-              alt="PsychWorkflowBench pipeline from noisy psychiatric records through a model under test to a scored clinical failure map"
-              width={1200}
-              height={780}
-              priority
-              sizes="(max-width: 860px) 100vw, 46vw"
-            />
-          </div>
+          <aside className="contact-card" aria-labelledby="factory-example">
+            <p className="eyebrow">An example from the public suite</p>
+            <h2 id="factory-example">Does a pharmacy fill mean the patient took the drug?</h2>
+            <p>
+              In case 001, olanzapine was stopped in February 2025 and no longer appeared on the administration record.
+              A later pharmacy fill created a discrepancy. Listing the medication as current lost that distinction.
+            </p>
+            <a className="text-link" href="/psychworkflowbench/sample.html#case-001">Read the source references and retest criterion <span aria-hidden="true">→</span></a>
+          </aside>
         </div>
       </section>
 
-      <section className="fact-band" aria-labelledby="factory-proof-title">
-        <div className="shell">
-          <div className="section-heading compact">
-            <p className="eyebrow light">Three transformations</p>
-            <h2 id="factory-proof-title">Preserve the reasoning difficulty, replace the identifying story, and keep the answer key private.</h2>
-          </div>
-          <div className="fact-grid">
-            <article>
-              <span className="fact-number">01</span>
-              <h3>Map the source pattern</h3>
-              <p>
-                Identify chronology, medication conflicts, diagnosis pileup, copied errors, collateral disagreement,
-                missing information, and the clinically important facts buried in repetition.
-              </p>
-            </article>
-            <article>
-              <span className="fact-number">02</span>
-              <h3>Build a synthetic twin</h3>
-              <p>
-                Change identity, demographics, facilities, dates, family structure, quotations, and distinctive life events
-                while preserving the same reasoning traps and scoring target.
-              </p>
-            </article>
-            <article>
-              <span className="fact-number">03</span>
-              <h3>Create a held out test</h3>
-              <p>
-                Keep the truth state, rubric, critical failure flags, and selected variants private so the evaluation measures
-                system behavior rather than answer retrieval.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad" aria-labelledby="factory-sequence-title">
+      <section className="section-pad soft-section" aria-labelledby="factory-sequence-title">
         <div className="shell">
           <div className="section-heading">
-            <p className="eyebrow">Case factory sequence</p>
-            <h2 id="factory-sequence-title">A reproducible path from authorized source material to a scorable synthetic case.</h2>
+            <p className="eyebrow">Case design</p>
+            <h2 id="factory-sequence-title">How a private case is built</h2>
           </div>
           <div className="process-track">
             <article className="process-node">
-              <h3>Inventory and code</h3>
-              <p>Assign source codes, relative chronology, record type, privacy risk, contradiction potential, and benchmark value.</p>
+              <h3>Define the question</h3>
+              <p>Identify the task, records available at the encounter and discrepancy the system should recognize.</p>
             </article>
             <article className="process-node">
-              <h3>Construct the fact matrix</h3>
-              <p>Separate patient report, staff collateral, observation, prior assessment, MAR data, problem list entries, and copied text.</p>
+              <h3>Write the source packet</h3>
+              <p>Construct fictional events, dates and records. Keep patient report, staff observations, orders and administration records distinguishable.</p>
             </article>
             <article className="process-node">
-              <h3>Generate and challenge</h3>
-              <p>Create a synthetic base case plus controlled variants for medication contamination, diagnosis pileup, and timeline conflict.</p>
+              <h3>Write the reference</h3>
+              <p>Specify the facts the records support, the uncertainties the note should retain and the assertions that would count as errors.</p>
             </article>
             <article className="process-node">
-              <h3>Adjudicate and lock</h3>
-              <p>Complete clinician review, privacy review, gold state, gold note, scoring rubric, and private release status.</p>
+              <h3>Review and reserve</h3>
+              <p>Check the clinical reasoning, privacy and scoring rules. Keep the reference and reserved variants separate from the inputs shown to the system being tested.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section-pad soft-section" aria-labelledby="packet-title">
+      <section className="section-pad" aria-labelledby="factory-output-title">
         <div className="shell record-chaos-grid">
           <div className="record-chaos-copy">
-            <p className="eyebrow">Synthetic packet design</p>
-            <h2 id="packet-title">The packet should feel like a real chart without representing a real patient.</h2>
+            <p className="eyebrow">Case package</p>
+            <h2 id="factory-output-title">What a reviewer works from</h2>
             <p>
-              A difficult case needs enough redundancy and contradiction to force genuine synthesis. It also needs a stable gold state
-              so different models, prompts, retrieval systems, or workflow configurations can be compared fairly.
+              Each target claim needs a source. Before locking a case, reviewers check the dates, medication doses and
+              intended disagreements, then verify that the synthetic packet contains enough information to score the task.
+              Missing information can itself be the intended finding.
             </p>
           </div>
           <div className="record-list">
-            {packetComponents.map((item) => (
-              <article key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad benchmark-feature" aria-labelledby="factory-output-title">
-        <div className="shell">
-          <div className="section-heading">
-            <p className="eyebrow">Case package</p>
-            <h2 id="factory-output-title">Every case should be reviewable, scorable, and usable without reopening the real source record.</h2>
-          </div>
-          <div className="module-grid">
-            {outputs.map((item, index) => (
-              <article className="module-card" key={item.label}>
-                <span>OUTPUT {String(index + 1).padStart(2, "0")}</span>
+            {outputs.map((item) => (
+              <article key={item.label}>
                 <h3>{item.label}</h3>
                 <p>{item.text}</p>
               </article>
@@ -223,65 +136,25 @@ export default function CaseFactoryPage() {
         </div>
       </section>
 
-      <section className="section-pad" aria-labelledby="review-title">
-        <div className="shell benchmark-feature-grid">
-          <div className="benchmark-visual">
-            <Image
-              src="/clinical-ai-failure-map.svg"
-              alt="Diagram showing noisy records converted into a clinician truth state and then a sentence level scored clinical note"
-              width={960}
-              height={620}
-              sizes="(max-width: 860px) 100vw, 50vw"
-            />
-          </div>
-          <div>
-            <p className="eyebrow">Quality control</p>
-            <h2 id="review-title">The benchmark must be difficult for the right reason.</h2>
-            <p>
-              Case review checks whether the dates remain internally consistent, medication doses remain plausible,
-              intended contradictions survived synthesis, the gold note contains no invented findings, and the task can be scored
-              without access to the real source record.
-            </p>
-            <p>
-              Privacy review remains separate from clinical review. A synthetic case is not treated as approved for public release
-              merely because it contains no direct identifier.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad soft-section" aria-labelledby="factory-boundaries-title">
         <div className="shell privacy-panel">
           <div>
-            <p className="eyebrow">Privacy and research boundaries</p>
-            <h2 id="factory-boundaries-title">Clinical access does not automatically authorize benchmark use.</h2>
+            <p className="eyebrow">Discuss a workflow</p>
+            <h2 id="factory-boundaries-title">Describe the problem without sending a chart.</h2>
           </div>
           <div>
             <p>
-              Real records should be processed only inside an approved environment with appropriate authorization, contracts,
-              data controls, and human review. Initial inquiries must not include patient records or protected health information.
+              For the first email, name the documentation task and the kind of error you need to test. Use fictional
+              examples and keep patient records and protected health information out of the message.
             </p>
             <p>
-              Public release, publication, external research, client distribution, and regulatory use are separate decisions.
-              Each requires its own governance, privacy review, permissions, and validation plan.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad quote-section">
-        <div className="shell quote-wrap">
-          <blockquote>
-            The synthetic case should preserve the trap, not the person.
-          </blockquote>
-          <div>
-            <p>
-              A private case suite can begin with one narrow workflow and a small set of clinician reviewed cases before expanding
-              into a larger benchmark or continuous regression program.
+              Work drawing on real records requires authorization, an approved environment, appropriate agreements,
+              data controls and human review. Clinical review and privacy review address different questions.
+              Public release, research and distribution require separate decisions.
             </p>
             <div className="button-row">
-              <Link className="button secondary light-button" href="/consulting">Review red team services</Link>
-              <Link className="text-link" href="/psychworkflowbench">Benchmark methodology <span aria-hidden="true">→</span></Link>
+              <Link className="button primary" href="/consulting#pilot-review">Review private pilot scope</Link>
+              <Link className="button secondary" href="/psychworkflowbench">Benchmark methodology</Link>
             </div>
           </div>
         </div>

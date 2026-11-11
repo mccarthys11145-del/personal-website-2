@@ -1,0 +1,151 @@
+.intro {
+  background: linear-gradient(110deg, #f1ecdf, #faf8f1 60%, #e9eee8);
+  border-bottom: 1px solid var(--line);
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .85fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+  padding-block: clamp(2.5rem, 5vw, 5.5rem);
+}
+
+.profileGrid h1 {
+  max-width: 10ch;
+  margin: 0 0 1.4rem;
+  font-size: clamp(3.4rem, 7vw, 6.6rem);
+  font-weight: 500;
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+.lead {
+  max-width: 32ch;
+  margin: 0 0 1rem;
+  font: 500 clamp(1.35rem, 2.2vw, 1.9rem)/1.25 Georgia, serif;
+}
+
+.summary {
+  max-width: 55ch;
+  color: var(--ink-soft);
+}
+
+.portrait {
+  justify-self: end;
+  width: min(100%, 430px);
+  height: auto;
+  border-radius: 5px;
+}
+
+.work {
+  padding-block: clamp(3rem, 5.5vw, 5.2rem);
+  background: #152d32;
+  color: #faf8f1;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.workGrid h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  overflow-wrap: anywhere;
+  font-weight: 500;
+}
+
+.workGrid p { max-width: 52ch; }
+.workGrid :global(.eyebrow) { color: #edb39c; }
+
+.workLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem 1.7rem;
+  margin-top: 1.6rem;
+}
+
+.workLinks a, .excerpt a, .sectionHeading a {
+  font-weight: 650;
+  text-underline-offset: .3em;
+}
+
+.excerpt {
+  margin: 0;
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  border-left: 3px solid #dfa587;
+  background: #203b40;
+}
+
+.excerpt figcaption {
+  font-size: .85rem;
+  color: #e2cdc2;
+}
+
+.excerpt blockquote {
+  margin: .85rem 0;
+  font: 500 clamp(1.7rem, 3.3vw, 2.65rem)/1.14 Georgia, serif;
+}
+
+.writing {
+  padding-block: clamp(3rem, 6vw, 5.7rem);
+}
+
+.sectionHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .6rem 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.selection {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.selection article {
+  padding: 1.8rem clamp(1.1rem, 2.4vw, 2.5rem);
+  border-right: 1px solid var(--line);
+}
+
+.selection article:first-child { padding-left: 0; }
+.selection article:last-child { border-right: 0; padding-right: 0; }
+.selection p:last-child { margin-bottom: 0; color: var(--ink-soft); }
+.selection h3 { font: 550 clamp(1.4rem, 2.25vw, 2rem)/1.2 Georgia, serif; }
+.selection a { text-decoration-thickness: 1px; text-underline-offset: .15em; }
+
+@media (max-width: 720px) {
+  .profileGrid, .workGrid, .selection { grid-template-columns: 1fr; }
+  .profileGrid { gap: 1.25rem; }
+  .profileGrid :global(.button-row) { margin: 1.45rem 0 .5rem; }
+  .profileGrid h1 { max-width: none; }
+  .portrait {
+    justify-self: start;
+    width: min(100%, 32rem);
+    max-height: 24rem;
+    object-fit: cover;
+    object-position: 50% 39%;
+  }
+  .selection article, .selection article:first-child, .selection article:last-child {
+    padding: 1.5rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media print {
+  .profileGrid { display: block; }
+  .portrait, .workLinks, .excerpt a, .sectionHeading a { display: none; }
+  .work, .excerpt { color: black; background: white; }
+  .workGrid :global(.eyebrow), .excerpt figcaption { color: #333; }
+}

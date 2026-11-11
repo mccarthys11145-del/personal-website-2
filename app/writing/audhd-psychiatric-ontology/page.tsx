@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title,
     description,
     publishedTime: "2026-07-19T00:00:00-04:00",
-    modifiedTime: "2026-07-19T00:00:00-04:00",
+    modifiedTime: "2026-11-10T22:00:00-05:00",
     authors: ["Stephen McCarthy"],
     section: "Psychiatric ontology",
     tags: ["AuDHD", "psychiatric diagnosis", "ontology", "reification", "clinical reasoning"],
@@ -88,7 +88,7 @@ export default function AudhdOntologyPage() {
     mainEntityOfPage: canonical,
     url: canonical,
     datePublished: "2026-07-19",
-    dateModified: "2026-07-19",
+    dateModified: "2026-11-10",
     inLanguage: "en-US",
     articleSection: "Psychiatric ontology",
     keywords: ["AuDHD", "psychiatric ontology", "diagnostic reification", "mental disorder", "causal explanation"],
@@ -148,7 +148,7 @@ export default function AudhdOntologyPage() {
 
           <div className="article-body prose">
             <p className="lead-paragraph">
-              The term <em>AuDHD</em> has become a compact way to describe the co occurrence of autism and attention deficit hyperactivity disorder.
+              The term <em>AuDHD</em> has become a compact way to describe autism and attention deficit hyperactivity disorder occurring in the same person.
               The American Psychiatric Association uses the term in patient facing material while still describing autism and ADHD as two diagnoses that may occur together.
               That makes AuDHD useful shorthand. It does not automatically make AuDHD a third disease entity, a unified mechanism, or an explanation for every difficulty attributed to it.
             </p>
@@ -224,11 +224,11 @@ export default function AudhdOntologyPage() {
               <li>there is one unified disease process producing every feature;</li>
               <li>the combination forms a new formal diagnosis with validated boundaries;</li>
               <li>every difficulty commonly discussed online is a criterion of autism or ADHD;</li>
-              <li>co occurrence explains the causal path from biology and environment to an individual symptom;</li>
+              <li>the overlap explains the causal path from biology and environment to an individual symptom;</li>
               <li>a treatment response confirms the ontology of the label.</li>
             </ul>
             <p>
-              Co occurrence is an observation about classification. It may generate useful causal hypotheses, but it is not itself the causal proof.
+              The overlap is an observation about classification. It may generate useful causal hypotheses, but it is not itself the causal proof.
               The APA notes that an individual may receive both diagnoses. That is compatible with using AuDHD as shorthand and with remaining careful about what the shorthand explains.
             </p>
 

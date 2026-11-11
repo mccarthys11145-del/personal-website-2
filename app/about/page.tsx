@@ -17,12 +17,11 @@ export default function AboutPage() {
         <div className="shell">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
           <p className="eyebrow">About</p>
-          <h1>About Stephen McCarthy, physician assistant and clinical AI consultant.</h1>
+          <h1>Stephen McCarthy</h1>
           <p className="page-deck">
-            Stephen McCarthy is a physician assistant and clinical AI red team consultant based in Allentown, Pennsylvania.
-            His psychiatric clinical background includes inpatient and outpatient care, addiction treatment, medication management,
-            telehealth, clinical leadership, documentation review, and work with diverse patient populations.
-            His consulting work applies that experience to evaluating behavioral health AI systems.
+            Stephen McCarthy is a physician assistant in Allentown, Pennsylvania. His experience spans inpatient
+            psychiatry, outpatient medication management, addiction treatment, and telehealth. He draws on that work
+            to evaluate how AI systems document psychiatric care.
           </p>
         </div>
       </section>
@@ -46,20 +45,20 @@ export default function AboutPage() {
               medication management, impairment, documentation quality, longitudinal record review, and care coordination.
             </p>
             <p>
-              His consulting work applies frontline psychiatric judgment to clinical AI systems. The current focus is red team testing
-              and benchmarking of longitudinal record synthesis, medication reconciliation, diagnostic coherence, contradiction handling,
-              documentation fidelity, unsupported assertions, and safety behavior.
+              In a psychiatric chart, an old medication list can outlive the prescription. A note can also carry a
+              diagnosis forward for years after a clinician questioned it. McCarthy tests whether AI systems catch
+              those discrepancies when they write the next note.
             </p>
             <p>
-              PsychWorkflowBench is the working name for an evaluation framework under development. It is designed to test whether a system
-              can turn noisy psychiatric records into a coherent current representation without copying obsolete information or inventing details.
+              The public <Link className="text-link" href="/psychworkflowbench">PsychWorkflowBench demonstration</Link> uses
+              six synthetic cases and 71 checks. In the sample report, each finding identifies a source in the
+              synthetic chart and describes what a corrected note would need to say.
             </p>
             <p>
-              His writing focuses on psychiatric language: what diagnoses measure, what they help clinicians do,
-              and what they cannot explain without independent causal evidence. The central concern is precision, not denial.
-              Symptoms, distress, and impairment can be real even when the ontology of a diagnostic category remains unsettled.
+              He writes about what psychiatric diagnoses measure, how they guide care, and what it takes to explain
+              a symptom beyond naming it.
             </p>
-            <p>Stephen McCarthy is licensed in Pennsylvania and Utah.</p>
+            <p><Link className="text-link" href="/professional-record">Physician assistant licensure in Pennsylvania and Utah</Link></p>
           </div>
         </div>
       </section>
@@ -107,8 +106,8 @@ export default function AboutPage() {
           <div>
             <p>
               Private evaluations can test one defined behavioral health workflow, a set of deidentified model outputs,
-              or a model configuration against clinician authored cases and scoring criteria. The result is a severity ranked failure map,
-              source linked findings, remediation priorities, and objective retest criteria.
+              or a model configuration against cases and scoring criteria chosen for the engagement. Each finding identifies
+              an error, cites its source, and describes what a corrected output must do on retest.
             </p>
             <div className="button-row">
               <Link className="button primary" href="/consulting">Review evaluation services</Link>
@@ -122,12 +121,12 @@ export default function AboutPage() {
         <div className="shell split-callout">
           <div>
             <p className="eyebrow">Current writing focus</p>
-            <h2>Psychiatric ontology without the fog machine</h2>
+            <h2>What can a diagnosis explain?</h2>
           </div>
           <div>
             <p>
-              The newest essay argues that a syndrome label may be useful while remaining different from an independently observed disease process.
-              It uses AuDHD to show why co occurrence, classification, and causation must not be collapsed into a single word.
+              The AuDHD essay examines what a shared label for autism and ADHD tells us about a person,
+              and what evidence we still need to explain a particular symptom.
             </p>
             <Link className="button secondary" href="/writing/audhd-psychiatric-ontology">Read the essay</Link>
           </div>

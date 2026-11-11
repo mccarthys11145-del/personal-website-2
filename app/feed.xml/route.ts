@@ -8,9 +8,9 @@ export async function GET() {
   <channel>
     <title>Stephen McCarthy Writing</title>
     <link>${base}/writing</link>
-    <description>Essays on psychiatric ontology, diagnostic language, and clinical reasoning.</description>
+    <description>Essays and video briefings on psychiatric diagnosis, clinical reasoning, and how to read health research.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 03:00:00 GMT</lastBuildDate>
     <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Read Health Claims and Evidence: Association, Causation, and Uncertainty</title>
