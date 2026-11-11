@@ -166,7 +166,7 @@ export default function ConsultingPage() {
             </div>
             <p className="status-line">
               <span className="status-dot" aria-hidden="true" />
-              Private custom evaluations are available while the public benchmark methodology is under development.
+              PsychWorkflowBench v0.1.0 includes six synthetic cases and a public sample failure map.
             </p>
           </div>
 
@@ -294,10 +294,10 @@ export default function ConsultingPage() {
           </div>
           <div>
             <p className="eyebrow">PsychWorkflowBench</p>
-            <h2 id="benchmark-heading">A working framework for longitudinal psychiatric reasoning, documentation, and safety.</h2>
+            <h2 id="benchmark-heading">See how a documentation error is scored.</h2>
             <p>
-              PsychWorkflowBench is the working name for a clinician authored evaluation framework under development.
-              The framework is designed to test real psychiatric workflow performance rather than exam style medical recall.
+              PsychWorkflowBench tests whether a psychiatric note accurately represents a dated encounter.
+              In the public sample, a note calls an old lithium level therapeutic without saying when it was drawn or which dose the patient was taking.
             </p>
             <div className="benchmark-module-list" aria-label="PsychWorkflowBench modules">
               <span>Record synthesis</span>
@@ -308,12 +308,13 @@ export default function ConsultingPage() {
               <span>Safety and escalation</span>
             </div>
             <p>
-              Custom private cases can be built around a client system now. Public benchmark publication, validation,
-              and any research use remain separate later phases.
+              The sample traces six constructed notes through 71 scoring questions. The judgments are provisional
+              and await clinician review. A private pilot tests a configuration you specify.
             </p>
-            <Link className="text-link" href="/psychworkflowbench">
-              Review the methodology <span aria-hidden="true">→</span>
-            </Link>
+            <div className="button-row">
+              <a className="button secondary" href="/psychworkflowbench/sample.html">Read the sample failure map</a>
+              <Link className="text-link" href="/psychworkflowbench">Review the methodology <span aria-hidden="true">→</span></Link>
+            </div>
           </div>
         </div>
       </section>

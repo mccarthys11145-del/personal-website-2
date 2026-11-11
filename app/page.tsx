@@ -153,8 +153,8 @@ export default function HomePage() {
           </div>
           <div>
             <p className="feature-deck">
-              A clinician authored framework under development for testing longitudinal psychiatric record synthesis,
-              medication reconciliation, diagnostic coherence, contradiction handling, documentation fidelity, and safety.
+              Six synthetic psychiatric cases and 71 scoring questions examine how a note handles medications,
+              competing accounts and missing evidence. Explore the cases and read the sample failure map.
             </p>
             <Link className="text-link" href="/psychworkflowbench">
               Explore PsychWorkflowBench <span aria-hidden="true">→</span>

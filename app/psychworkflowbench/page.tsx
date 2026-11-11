@@ -4,33 +4,39 @@ import Breadcrumbs from "@/components/breadcrumbs"
 import { JsonLd } from "@/components/json-ld"
 import { createPageMetadata } from "@/lib/site-metadata"
 
+const description =
+  "Explore six synthetic psychiatric cases and 71 scoring questions. The sample failure map shows how documentation errors are traced to the record."
+
 export const metadata = createPageMetadata({
   title: "PsychWorkflowBench",
-  description:
-    "PsychWorkflowBench is a clinician authored evaluation framework under development for longitudinal psychiatric record synthesis, medication reconciliation, diagnostic coherence, documentation fidelity, and safety.",
+  description,
   path: "/psychworkflowbench",
 })
 
-const caseIngredients = [
+const cases = [
   {
-    title: "Longitudinal residential records",
-    text: "Multiple group home ISPs, staff reports, functional descriptions, and copied background material from different years.",
+    title: "Group home records",
+    text: "Three years of copied history, pharmacy fills and administration records tell different stories about the current regimen.",
   },
   {
-    title: "Contaminated medication history",
-    text: "Current MAR data mixed with obsolete chart lists, duplicate strengths, discontinued medications, and pharmacy records.",
+    title: "Medication reconciliation after discharge",
+    text: "Hospital orders, pharmacy records and the patient report disagree about what was prescribed and what was taken.",
   },
   {
-    title: "Accumulated diagnosis lists",
-    text: "Overlapping or contradictory labels carried forward without clear evidence that each remains active or supported.",
+    title: "A visit by telephone",
+    text: "The template asks for visual findings. The clinician discusses a dose change and withdraws it during the call.",
   },
   {
-    title: "Conflicting sources",
-    text: "Patient report, staff collateral, hospital documentation, prior evaluations, and current observations that do not perfectly agree.",
+    title: "Six imported diagnoses",
+    text: "An evaluation must distinguish historical labels from a provisional current formulation and identify what still needs assessment.",
   },
   {
-    title: "Missing present tense evidence",
-    text: "Documentation templates invite the model to fill fields that were not actually observed, asked, or supplied.",
+    title: "Three accounts of suicide risk",
+    text: "The patient, a family member and a screening questionnaire describe different time periods and perspectives. Each account needs a source and a date.",
+  },
+  {
+    title: "Orders and unfinished care",
+    text: "A specimen was never collected and a therapy visit was scheduled. The note must describe what had actually happened by the encounter date.",
   },
 ]
 
@@ -98,8 +104,12 @@ const metrics = [
     text: "Current diagnostic formulation supported by the supplied evidence.",
   },
   {
+    name: "Contradiction and unknown handling",
+    text: "Conflicting accounts and unanswered questions that remain visible in the note.",
+  },
+  {
     name: "Unsupported detail rate",
-    text: "Clinical claims or findings added without source support.",
+    text: "Share of seeded opportunities where the note asserted an unsupported detail.",
   },
   {
     name: "Legacy error propagation",
@@ -111,7 +121,7 @@ const metrics = [
   },
   {
     name: "Critical failure rate",
-    text: "Errors with plausible safety, treatment, handoff, or deployment consequences.",
+    text: "Share of decided critical probes that failed. Unresolved probes are reported separately.",
   },
 ]
 
@@ -122,8 +132,8 @@ export default function PsychWorkflowBenchPage() {
     "@id": "https://www.stephenmccarthypa.com/psychworkflowbench#framework",
     name: "PsychWorkflowBench",
     url: "https://www.stephenmccarthypa.com/psychworkflowbench",
-    description:
-      "A clinician authored evaluation framework under development for testing longitudinal psychiatric record synthesis, medication reconciliation, diagnostic coherence, documentation fidelity, and safety in clinical AI systems.",
+    description,
+    version: "0.1.0",
     creator: { "@id": "https://www.stephenmccarthypa.com/#person" },
     inLanguage: "en-US",
     keywords: [
@@ -143,24 +153,16 @@ export default function PsychWorkflowBenchPage() {
         <div className="shell red-team-hero-grid">
           <div className="red-team-hero-copy">
             <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "PsychWorkflowBench" }]} />
-            <div className="benchmark-status">Framework under development</div>
+            <div className="benchmark-status">Version 0.1.0 · Demonstration</div>
             <p className="eyebrow">PsychWorkflowBench</p>
-            <h1>Benchmark whether an AI system can turn a psychiatric record novel into a coherent current note.</h1>
+            <h1>Can a psychiatric note keep the record straight?</h1>
             <p className="page-deck">
-              PsychWorkflowBench is a clinician authored evaluation framework for longitudinal psychiatric reasoning,
-              record synthesis, medication reconciliation, diagnostic coherence, documentation fidelity, and safety.
-              The central question is simple: can the system separate the current clinical signal from years of chart debris?
+              Six synthetic cases and 71 scoring questions test whether a note preserves what matters at the time of the visit.
+              The sample failure map traces errors in deliberately constructed notes back to the record.
             </p>
             <div className="button-row">
-              <a
-                className="button primary"
-                href="mailto:mccarthys11145@gmail.com?subject=PsychWorkflowBench%20evaluation%20inquiry"
-              >
-                Discuss a private evaluation
-              </a>
-              <Link className="button secondary" href="/consulting">
-                Review red team services
-              </Link>
+              <a className="button primary" href="/psychworkflowbench/sample.html">Read the sample failure map</a>
+              <Link className="button secondary" href="/consulting#pilot-review">Explore the private pilot</Link>
             </div>
           </div>
 
@@ -177,39 +179,26 @@ export default function PsychWorkflowBenchPage() {
         </div>
       </section>
 
-      <section className="section-pad" aria-labelledby="definition-heading">
-        <div className="shell benchmark-definition">
-          <div>
-            <p className="eyebrow">The evaluation target</p>
-            <h2 id="definition-heading">Not medical trivia. Clinical state reconstruction under noise.</h2>
-          </div>
-          <div>
-            <p>
-              Many clinical AI demonstrations begin with a clean vignette and ask for a diagnosis or summary.
-              Real psychiatric records often contain multiple facilities, repeated ISPs, contradictory histories,
-              medication lists from different dates, accumulated diagnoses, copied forward errors, and large amounts of irrelevant text.
-            </p>
-            <p>
-              The benchmark is designed around that harder task. A model must determine what is current, what is historical,
-              what is duplicated, what conflicts, what is unsupported, and what remains unknown before it writes the final note.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad soft-section" aria-labelledby="case-heading">
         <div className="shell record-chaos-grid">
           <div className="record-chaos-copy">
-            <p className="eyebrow">Case construction</p>
-            <h2 id="case-heading">Each case is a controlled chart contamination problem.</h2>
+            <p className="eyebrow">The six cases</p>
+            <h2 id="case-heading">What belongs in the note today?</h2>
             <p>
-              A benchmark case can preserve the reasoning difficulty of a real record while using synthetic or properly deidentified material.
-              Known stale facts, contradictions, duplicate medications, unsupported diagnoses, and missing information are deliberately mapped
-              so that the evaluation can measure exactly what the model carries forward or invents.
+              Each case supplies records for one dated encounter. A scoring question checks whether the note kept a
+              required fact, introduced an unsupported claim, or preserved an important discrepancy or unknown.
             </p>
+            <p>
+              An AI reviewer scored 29 checks as passes and 41 as failures. One critical judgment remains open.
+              The reference answers and all 70 decided judgments await clinician review. The notes were written for this
+              demonstration. Testing a model or vendor product is a separate step.
+            </p>
+            <a className="text-link" href="/psychworkflowbench/sample.html">
+              See the evidence for each case <span aria-hidden="true">→</span>
+            </a>
           </div>
           <div className="record-list">
-            {caseIngredients.map((item) => (
+            {cases.map((item) => (
               <article key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
@@ -222,11 +211,11 @@ export default function PsychWorkflowBenchPage() {
       <section className="section-pad" aria-labelledby="truth-heading">
         <div className="shell benchmark-definition">
           <div>
-            <p className="eyebrow">Gold standard</p>
+            <p className="eyebrow">Reference answers</p>
             <h2 id="truth-heading">Score against a structured truth state before judging the prose.</h2>
             <p>
-              Each case should have two reference outputs: a structured clinical state and a high quality note written from that state.
-              This allows factual and temporal scoring to remain separate from style, readability, and usefulness.
+              The reference for each case records what the sources establish at the encounter date, where they disagree,
+              and what remains unknown. The demonstration uses provisional references drafted with AI.
             </p>
           </div>
           <div className="truth-state-grid">
@@ -367,15 +356,14 @@ export default function PsychWorkflowBenchPage() {
         <div className="shell pilot-panel">
           <div>
             <span className="pilot-label">Current status</span>
-            <strong className="pilot-price">V0.1</strong>
-            <p>Working methodology and private pilot design.</p>
+            <strong className="pilot-price">v0.1.0</strong>
+            <p>Six synthetic cases · November 2026</p>
           </div>
           <div>
-            <h2 id="status-heading">The framework is under development. Custom evaluations can begin with one narrow workflow.</h2>
+            <h2 id="status-heading">A private pilot tests one documentation workflow.</h2>
             <p>
-              The immediate product is a private, fixed scope evaluation tailored to a client system.
-              A public benchmark, larger clinician review study, formal validation, publication, or regulatory use would require separate development,
-              governance, privacy review, statistical planning, and independent review.
+              The sample shows the report format. A pilot applies the scoring method to a specified system and
+              documents the source evidence and retest criterion for each finding.
             </p>
             <a
               className="button secondary light-button"
