@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A sample psychiatric documentation failure map, with scoring for six synthetic cases and selected findings traced to the source record.">
+  <link rel="canonical" href="https://www.stephenmccarthypa.com/psychworkflowbench/sample.html">
+  <title>Sample failure map | PsychWorkflowBench</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #faf8f4;
+      --ink: #182838;
+      --muted: #515d65;
+      --rust: #893e26;
+      --line: #cfc8bd;
+      --wash: #f1ece3;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+    .page { max-width: 74rem; margin: auto; padding: 0 clamp(1rem, 4vw, 3.8rem); }
+    a { color: var(--rust); text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--rust); outline-offset: 4px; }
+    .skip { position: absolute; left: 1rem; top: -6rem; padding: .5rem 1rem; background: white; z-index: 1; }
+    .skip:focus { top: .5rem; }
+    .masthead, footer { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .6rem 1.4rem; }
+    .masthead { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
+    .identity { color: var(--ink); font: 700 1.13rem Georgia, serif; text-decoration: none; }
+    .masthead nav, footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .92rem; }
+    main { padding-bottom: 1.5rem; }
+    .intro { padding: clamp(2rem, 6vw, 4.7rem) 0 1.5rem; }
+    .meta, .eyebrow { margin: 0 0 .55rem; font-weight: 650; font-size: .83rem; color: var(--rust); letter-spacing: .035em; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.14; }
+    h1 { margin: 0; font-size: clamp(2.8rem, 7.5vw, 5.5rem); font-weight: 500; letter-spacing: -.044em; }
+    h2 { margin: 0 0 .6rem; font-size: clamp(1.8rem, 4vw, 2.65rem); font-weight: 500; letter-spacing: -.026em; }
+    h3 { font-size: 1.35rem; margin: 0 0 .7rem; }
+    p { margin: 0 0 .85rem; }
+    .lede { max-width: 57rem; margin: 1.1rem 0 0; font-size: clamp(1.05rem, 2vw, 1.23rem); }
+    .indicators { display: grid; grid-template-columns: repeat(4,1fr); margin: .1rem 0 1.1rem; border-block: 1px solid var(--line); }
+    .indicator { padding: .85rem .75rem .9rem 0; }
+    .indicator strong { display: block; line-height: 1.14; font: 500 clamp(1.7rem, 3.5vw, 2.8rem)/1.14 Georgia, serif; font-variant-numeric: lining-nums tabular-nums; }
+    .indicator span { color: var(--muted); font-size: .9rem; }
+    .method { max-width: 64rem; color: var(--muted); }
+    .contents { display: flex; flex-wrap: wrap; gap: .35rem 1.2rem; margin-top: 1rem; font-size: .92rem; }
+    section { margin: clamp(2rem, 5vw, 3.4rem) 0; scroll-margin-top: 1rem; }
+    .section-intro { color: var(--muted); max-width: 55rem; margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    caption { text-align: left; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    th, td { text-align: left; padding: .65rem .65rem; vertical-align: top; border-bottom: 1px solid var(--line); }
+    thead th { background: var(--wash); font-size: .82rem; font-weight: 700; }
+    tbody th { font-weight: 600; }
+    .metric-name { width: 31%; }
+    .num { text-align: right; white-space: nowrap; }
+    .measure { color: var(--muted); }
+    .metrics th:first-child, .cases th:first-child { padding-left: .65rem; }
+    .cases thead th:not(:first-child) { text-align: right; }
+    .cases tbody th { width: 62%; }
+    .case-code { color: var(--rust); white-space: nowrap; font-weight: 650; }
+    .case-title { display: block; font-size: .95rem; font-weight: 500; }
+    .note { margin: .9rem 0 0; padding: .7rem 1rem; border-left: 3px solid var(--rust); background: var(--wash); max-width: 60rem; }
+    .findings { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 2.5rem; }
+    article { padding: 1.25rem 0 .85rem; border-top: 1px solid var(--line); }
+    .eyebrow { font-size: .8rem; }
+    blockquote { margin: .6rem 0 .8rem; font-size: 1.1rem; font-family: Georgia, serif; }
+    .source { color: var(--muted); font-size: .85rem; }
+    footer { border-top: 1px solid var(--line); padding: 1.1rem 0 2rem; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 42rem) {
+      .findings { grid-template-columns: 1fr; }
+      .indicators { grid-template-columns: repeat(2,1fr); }
+      .indicator { padding: .6rem .4rem .7rem 0; }
+      .indicator:nth-child(n+3) { border-top: 1px solid var(--line); }
+      th, td { padding: .6rem .25rem; font-size: .89rem; }
+      thead th { font-size: .77rem; }
+      .cases tbody th { width: auto; }
+      .measure { font-size: .86rem; }
+      .case-title { font-size: .85rem; }
+    }
+    @media (max-width: 33rem) {
+      .metric-name { width: auto; }
+      .metrics thead th:last-child { display: none; }
+      .metrics tbody tr { display: grid; grid-template-columns: minmax(0,1fr) 4.25rem 3.15rem; border-bottom: 1px solid var(--line); padding: .45rem .2rem; }
+      .metrics thead tr { display: grid; grid-template-columns: minmax(0,1fr) 4.25rem 3.15rem; }
+      .metrics th, .metrics td { padding: .18rem .25rem; border: 0; }
+      .metrics th:first-child { padding-left: .25rem; }
+      .metrics .measure { grid-column: 1/-1; }
+      .cases th:first-child { padding-left: .2rem; }
+      .cases .num { font-size: .85rem; }
+      .cases th { overflow-wrap: anywhere; }
+    }
+    @media print {
+      :root { --paper: white; --ink: black; --muted: #333; --rust: #333; --line: #bbb; }
+      @page { margin: 15mm; }
+      body { font-size: 10pt; }
+      .page { padding: 0; max-width: none; }
+      .masthead nav, .contents, footer nav, .skip { display: none; }
+      .intro { padding: 1rem 0; }
+      .indicators { grid-template-columns: repeat(4,1fr); }
+      .indicator { border: 0 !important; }
+      section { margin: 1.5rem 0; }
+      h1 { font-size: 32pt; }
+      h2 { font-size: 20pt; }
+      h1, h2, h3 { break-after: avoid; }
+      h3 { font-size: 14pt; }
+      thead { display: table-header-group; }
+      tr, blockquote, article, .note { break-inside: avoid; }
+      .findings { display: block; }
+      article { padding: .7rem 0 .3rem; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#report">Skip to report</a>
+  <div class="page">
+    <header class="masthead">
+      <a class="identity" href="/psychworkflowbench">PsychWorkflowBench</a>
+      <nav aria-label="Site"><a href="/psychworkflowbench">Benchmark overview</a><a href="/consulting#pilot-review">Pilot review</a></nav>
+    </header>
+    <main id="report">
+      <div class="intro">
+        <p class="meta">Suite v0.1.0 · Scored November 10, 2026</p>
+        <h1>Sample failure map</h1>
+        <p class="lede">Six synthetic psychiatric records were paired with six notes written for this demonstration. Each finding shows what the note said, which source records matter, and what a corrected note should document. No model or vendor generated these notes.</p>
+      </div>
+      <div class="indicators" aria-label="Sample totals">
+        <div class="indicator"><strong>71</strong><span>probes reviewed</span></div>
+        <div class="indicator"><strong>29</strong><span>passed</span></div>
+        <div class="indicator"><strong>41</strong><span>failed</span></div>
+        <div class="indicator"><strong>1</strong><span>unresolved</span></div>
+      </div>
+      <p class="method">Claude, an AI judge, scored the sample. All 70 decided judgments are provisional. No clinician has confirmed those judgments, and the AI drafted case references await clinician approval.</p>
+      <nav class="contents" aria-label="Report sections"><a href="#metrics">Metrics</a><a href="#cases">Case results</a><a href="#findings">Selected findings</a></nav>
+      <section aria-labelledby="metrics">
+        <h2 id="metrics">Metrics</h2>
+        <p class="section-intro">Each count uses the decided probes eligible for that measure. A probe can contribute to several measures, and one charting error can fail several probes. The percentages describe only these constructed example notes.</p>
+        <table class="metrics">
+          <caption class="sr-only">Scores and eligible probe counts for nine measures</caption>
+          <thead><tr><th scope="col" class="metric-name">Measure</th><th scope="col" class="num">Count</th><th scope="col" class="num">Result</th><th scope="col">What the count measures</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Fact fidelity</th><td class="num">18 / 27</td><td class="num">67%</td><td class="measure">Required source facts preserved.</td></tr>
+            <tr><th scope="row">Temporal fidelity</th><td class="num">14 / 22</td><td class="num">64%</td><td class="measure">Checks that correctly distinguished current, past and discontinued information.</td></tr>
+            <tr><th scope="row">Medication reconciliation accuracy</th><td class="num">11 / 20</td><td class="num">55%</td><td class="measure">Medication checks passed.</td></tr>
+            <tr><th scope="row">Diagnostic coherence</th><td class="num">4 / 10</td><td class="num">40%</td><td class="measure">Diagnosis checks passed.</td></tr>
+            <tr><th scope="row">Contradiction and unknown handling</th><td class="num">3 / 13</td><td class="num">23%</td><td class="measure">Conflicts or unknowns the note identified.</td></tr>
+            <tr><th scope="row">Clinically relevant recall</th><td class="num">9 / 17</td><td class="num">53%</td><td class="measure">Required facts of high or critical severity preserved.</td></tr>
+            <tr><th scope="row">Unsupported detail rate</th><td class="num">10 / 12</td><td class="num">83%</td><td class="measure">Seeded opportunities where the note invented a finding. Lower is better.</td></tr>
+            <tr><th scope="row">Legacy error propagation</th><td class="num">12 / 18</td><td class="num">67%</td><td class="measure">Seeded stale entries presented as current. Lower is better.</td></tr>
+            <tr><th scope="row">Critical failure rate</th><td class="num">13 / 16</td><td class="num">81%</td><td class="measure">Decided critical probes that failed. One additional critical probe remains unresolved. Lower is better.</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="cases">
+        <h2 id="cases">Case results</h2>
+        <p class="section-intro">Four of six notes had at least one critical probe scored as a failure. The critical failures are included in each row’s failed count.</p>
+        <table class="cases">
+          <caption class="sr-only">Results by synthetic case, with critical failures included in total failures</caption>
+          <thead><tr><th scope="col">Synthetic case</th><th scope="col">Passed</th><th scope="col">Failed</th><th scope="col">Unresolved</th><th scope="col">Critical failures</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="case-code">PWB 001</span><span class="case-title">Three years of copied group home history</span></th><td class="num">5</td><td class="num">7</td><td class="num">0</td><td class="num">1</td></tr>
+            <tr><th scope="row"><span class="case-code">PWB 002</span><span class="case-title">Three sources for a medication list after discharge</span></th><td class="num">8</td><td class="num">4</td><td class="num">0</td><td class="num">3</td></tr>
+            <tr><th scope="row"><span class="case-code">PWB 003</span><span class="case-title">A phone visit and a template for visual findings</span></th><td class="num">3</td><td class="num">8</td><td class="num">0</td><td class="num">4</td></tr>
+            <tr><th scope="row"><span class="case-code">PWB 004</span><span class="case-title">Imported diagnoses at a new evaluation</span></th><td class="num">5</td><td class="num">6</td><td class="num">1</td><td class="num">0</td></tr>
+            <tr><th scope="row"><span class="case-code">PWB 005</span><span class="case-title">Patient, spouse and questionnaire accounts of suicide risk</span></th><td class="num">4</td><td class="num">8</td><td class="num">0</td><td class="num">5</td></tr>
+            <tr><th scope="row"><span class="case-code">PWB 006</span><span class="case-title">Orders, referrals and results at follow up</span></th><td class="num">4</td><td class="num">8</td><td class="num">0</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+        <p class="note"><strong>Open judgment.</strong> Case 004 has one unresolved critical probe about whether the note presented an imported schizophrenia label as an established diagnosis. It contributes to neither the passed nor the failed count.</p>
+      </section>
+      <section aria-labelledby="findings">
+        <h2 id="findings">Selected findings</h2>
+        <p class="section-intro">Each example quotes a constructed note. Source numbers identify documents within that synthetic case. Retest criteria describe what to look for when the note is generated again from the same record.</p>
+        <div class="findings">
+          <article>
+            <p class="eyebrow">Case 001 · Probe 02 · Critical</p>
+            <h3>A stopped medication appears as current</h3>
+            <blockquote>“olanzapine 20 mg at bedtime”</blockquote>
+            <p><strong>Retest.</strong> Record that olanzapine was stopped in February 2025 and was no longer being administered. A later pharmacy fill cannot establish that the patient was taking it.</p>
+            <p class="source">Discontinuation and administration status (S1, S2, S3, S4). Later fill discrepancy (S5, S6).</p>
+          </article>
+          <article>
+            <p class="eyebrow">Case 002 · Probe 07 · Critical</p>
+            <h3>An inpatient lithium level loses its date and dose</h3>
+            <blockquote>“Lithium level 0.9 mEq/L, therapeutic.”</blockquote>
+            <p><strong>Retest.</strong> Tie the value to September 9, during admission, when the prescribed dose was 1200 mg. Follow up labs had been ordered and had yet to be drawn.</p>
+            <p class="source">Lithium result, dose and status of follow up testing (S2, S4).</p>
+          </article>
+          <article>
+            <p class="eyebrow">Case 003 · Probe 01 · Critical</p>
+            <h3>A phone note invents a visual examination</h3>
+            <blockquote>“Appearance: well groomed. Eye contact: good.”</blockquote>
+            <p><strong>Retest.</strong> State that the clinician could not observe appearance or eye contact during this audio call.</p>
+            <p class="source">Visit modality and examination context (S1, S3, S4).</p>
+          </article>
+          <article>
+            <p class="eyebrow">Case 004 · Probe 04 · High</p>
+            <h3>A working diagnosis loses its qualifier</h3>
+            <blockquote>“Major depressive disorder, single episode, moderate”</blockquote>
+            <p><strong>Retest.</strong> Preserve the clinician’s characterization of this diagnosis as provisional.</p>
+            <p class="source">Current diagnostic evaluation (S4).</p>
+          </article>
+          <article>
+            <p class="eyebrow">Case 005 · Probe 05 · Critical</p>
+            <h3>An old entry obscures a new report about firearms</h3>
+            <blockquote>“No firearms in the home.”</blockquote>
+            <p><strong>Retest.</strong> Date the earlier entry to July. Attribute the later account of rifles stored in the basement since August to the spouse. The patient’s access remains an open question.</p>
+            <p class="source">Prior entry, collateral report and visit account (S1, S2, S3).</p>
+          </article>
+          <article>
+            <p class="eyebrow">Case 006 · Probe 09 · High</p>
+            <h3>An uncollected specimen becomes a normal result</h3>
+            <blockquote>“CBC within normal limits.”</blockquote>
+            <p><strong>Retest.</strong> Record that the complete blood count was ordered on September 22 and the specimen was never collected. No result was available.</p>
+            <p class="source">Lab order and collection status (S4).</p>
+          </article>
+        </div>
+        <p class="note"><strong>Case 005 scoring wording.</strong> One question accepts either the spouse’s report or the questionnaire response alongside the patient’s denial. Its retest criterion requires both. The sample note omitted both, so this wording difference does not change its failure. A future note that includes only one needs a clarified rule.</p>
+        <p class="note"><strong>Case 006 timeline.</strong> A separate probe that includes rash onset around October 1 passed, while another flagged the note’s “yesterday” onset as incorrect. The full note is needed to reconcile those judgments. The table preserves the original scores.</p>
+      </section>
+    </main>
+    <footer>
+      <span>PsychWorkflowBench · Suite v0.1.0</span>
+      <nav aria-label="Related pages"><a href="/psychworkflowbench">Benchmark overview</a><a href="/consulting#pilot-review">Founding pilot review</a></nav>
+    </footer>
+  </div>
+</body>
+</html>
